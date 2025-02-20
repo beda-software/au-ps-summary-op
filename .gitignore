@@ -1,0 +1,8 @@
+.DS_Store
+node_modules
+pgdata
+.env
+.env.prod
+.env.dev
+.idea
+.DS_STORE
