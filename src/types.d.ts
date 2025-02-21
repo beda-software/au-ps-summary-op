@@ -93,41 +93,30 @@ export type SimpleNarrativeEntry = Array<{
 
 export type SectionName =
   | "ProblemList"
-  | "IllnessHistory"
   | "AllergyIntolerance"
   | "MedicationSummary"
-  | "Immunizations"
-  | "Procedures"
-  | "MedicalDevices"
-  | "DiagnosticResults"
-  | "VitalSigns"
-  | "Pregnancy"
-  | "SocialHistory"
-  | "StatusFunctional"
-  | "CarePlan"
-  | "Alerts"
-  | "AdvancedDirectives";
+  | "Immunizations";
 
 export type IpsProfile =
+  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-allergyintolerance"
+  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"
+  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-encounter"
+  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"
+  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medication"
   |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement"
   |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest"
-  |  "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/AllergiaInt-cl-ips"
-  |  "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Procedimientos-cl-ips"
-  |  "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Inmunizacion-cl-ips"
-  |  "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Declaracion-uso-dispositivo-cl-ips"
-  |  "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/DiagnosticReport-cl-ips"
-  |  "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-laboratorio-patologico-cl-ips"
-  |  "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-radiology-cl-ips"
-  |  "http://hl7.org/fhir/StructureDefinition/vitalsigns"
-  |  "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Condition-cl-ips"
-  |  "http://hl7.org/fhir/StructureDefinition/ClinicalImpression"
-  |  "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-estado-del-embarazo-cl-ips"
-  |  "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-del-embarazo-cl-ips"
-  |  "http://hl7.org/fhir/StructureDefinition/CarePlan"  
-  |  "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-uso-de-tabaco-cl-ips"
-  |  "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-uso-de-alcohol-cl-ips"
-  |  "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Flag-alerta-cl-ips"
-  |  "http://hl7.org/fhir/StructureDefinition/Consent";
+  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization"
+  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"
+  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitioner"
+  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitionerrole"
+  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-procedure"
+  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-relatedperson"
+  |  "http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"
+  |  "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips"
+  |  "http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips"
+  |  "http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"
+  |  "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"
+  |  "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips";
 
 export type SectionToGenerateFuncMap = {
   [K in SectionName]?: any;

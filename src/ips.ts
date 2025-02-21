@@ -49,68 +49,14 @@ const sectionProfiles: SectionProfiles = {
   },
   AllergyIntolerance: {
     AllergyIntolerance: [
-      "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/AllergiaInt-cl-ips",
+      "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-allergyintolerance",
     ],
   },
   ProblemList: {
-    Condition: ["https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Condition-cl-ips"],
-  },
-  Procedures: {
-    Procedure: ["https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Procedimientos-cl-ips"],
+    Condition: ["http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"],
   },
   Immunizations: {
-    Immunization: ["https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Inmunizacion-cl-ips"],
-  },
-  MedicalDevices: {
-    DeviceUseStatement: [
-      "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Declaracion-uso-dispositivo-cl-ips",
-    ],
-  },
-  DiagnosticResults: {
-    DiagnosticReport: [
-      "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/DiagnosticReport-cl-ips",
-    ],
-    Observation: [
-      "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-laboratorio-patologico-cl-ips",
-      "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-radiology-cl-ips",
-    ],
-  },
-  VitalSigns: { Observation: ["http://hl7.org/fhir/StructureDefinition/vitalsigns"] },
-  IllnessHistory: {
-    Condition: ["https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Condition-cl-ips"],
-  },
-  StatusFunctional: {
-    Condition: [
-      "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Condition-cl-ips",
-    ],
-    ClinicalImpression: [
-      "http://hl7.org/fhir/StructureDefinition/ClinicalImpression"
-    ]
-  },
-  Pregnancy: {
-    Observation: [
-      "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-estado-del-embarazo-cl-ips",
-      "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-resultado-del-embarazo-cl-ips",
-    ],
-  },
-  CarePlan: {
-    CarePlan: [
-      "http://hl7.org/fhir/StructureDefinition/CarePlan"  
-    ]
-  },
-  SocialHistory: {
-    Observation: [
-      "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-uso-de-tabaco-cl-ips",
-      "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Observation-uso-de-alcohol-cl-ips",
-    ],
-  },
-  Alerts: {
-    Flag: ["https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Flag-alerta-cl-ips"]
-  },
-  AdvancedDirectives: {
-    Consent: [
-      "http://hl7.org/fhir/StructureDefinition/Consent"
-    ]
+    Immunization: ["http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"],
   }
 };
 
@@ -154,13 +100,13 @@ const generateProblemListSection = (patientData: PatientData) => {
   const validConditions = getSectionResources(patientData, sectionProfiles.ProblemList);
 
   const section = {
-    title: "Problemas de Salud",
+    title: "IPS Problems Section",
     code: {
       coding: [
         {
           system: "http://loinc.org",
           code: "11450-4",
-          display: "Lista de problemas",
+          display: "Problem list - Reported",
         },
       ],
     },
@@ -178,13 +124,13 @@ const generateAllergyIntoleranceSection = (patientData: PatientData) => {
   );
 
   const section = {
-    title: "Alergias e Intolerancias",
+    title: "IPS Allergies and Intolerances Section",
     code: {
       coding: [
         {
           system: "http://loinc.org",
           code: "48765-2",
-          display: "Alergias y reacciones adversas",
+          display: "Allergies and adverse reactions Document",
         },
       ],
     },
@@ -227,13 +173,13 @@ const generateImmunizationsSection = (patientData: PatientData) => {
   );
 
   const section = {
-    title: "Inmunizaciones",
+    title: "Immunizations Section",
     code: {
       coding: [
         {
           system: "http://loinc.org",
           code: "11369-6",
-          display: "Antecedente de inmunización",
+          display: "History of Immunization Narrative",
         },
       ],
     },
@@ -243,264 +189,21 @@ const generateImmunizationsSection = (patientData: PatientData) => {
   return buildSection(section, validImmunizations);
 };
 
-const generateProceduresSection = (patientData: PatientData) => {
-  const validProcedures = getSectionResources(patientData, sectionProfiles.Procedures);
-
-  const section = {
-    title: "Procedimientos",
-    code: {
-      coding: [
-        {
-          system: "http://loinc.org",
-          code: "47519-4",
-          display: "Historia de los procedimientos",
-        },
-      ],
-    },
-    text: generateSimpleNarrative(validProcedures as SimpleNarrativeEntry),
-  };
-
-  return buildSection(section, validProcedures);
-};
-
-const generateMedicalDevicesSection = (patientData: PatientData, http: HttpClient) => {
-  const validDevices = getSectionResources(patientData, sectionProfiles.MedicalDevices);
-
-  const section = {
-    title: "Dispositivos Médicos",
-    code: {
-      coding: [
-        {
-          system: "http://loinc.org",
-          code: "46264-8",
-          display: "Historial de uso de dispositivos médicos",
-        },
-      ],
-    },
-    text: {
-      status: "generated",
-      div: '<div xmlns="http://www.w3.org/1999/xhtml">No known devices in use</div>',
-    },
-  };
-
-  return buildSection(section, validDevices);
-};
-
-const generateDiagnosticResultsSection = (patientData: PatientData, http: HttpClient) => {
-  const validDiagnosticResults = getSectionResources(
-    patientData,
-    sectionProfiles.DiagnosticResults
-  );
-
-  const section = {
-    title: "Resultados",
-    code: {
-      coding: [
-        {
-          system: "http://loinc.org",
-          code: "30954-2",
-          display: "Pruebas diagnósticas relevantes y/o información de laboratorio",
-        },
-      ],
-    },
-    text: generateSimpleNarrative(
-      validDiagnosticResults.filter(
-        ({ resource }) => resource.resourceType === "Observation"
-      ) as SimpleNarrativeEntry
-    ),
-  };
-
-  return buildSection(section, validDiagnosticResults);
-};
 
 // ----- Optional sections -----
-const generateVitalSignsSection = (patientData: PatientData, http: HttpClient) => {
-  const validVitalSigns = getSectionResources(patientData, sectionProfiles.VitalSigns);
-
-  const section = {
-    title: "Signos Vitales",
-    code: {
-      coding: [
-        {
-          system: "http://loinc.org",
-          code: "8716-3",
-          display: "Hallazgos físicos",
-        },
-      ],
-    },
-    text: generateSimpleNarrative(validVitalSigns as SimpleNarrativeEntry),
-  };
-
-  return buildSection(section, validVitalSigns);
-};
-
-const generatePregnancySection = (patientData: PatientData, http: HttpClient) => {
-  const validObservations = getSectionResources(patientData, sectionProfiles.Pregnancy);
-
-  const section = {
-    title: "Historial de Embarazos",
-    code: {
-      coding: [
-        {
-          system: "http://loinc.org",
-          code: "10162-6",
-          display: "Antecedentes de embarazos",
-        },
-      ],
-    },
-    text: generateSimpleNarrative(validObservations as SimpleNarrativeEntry),
-  };
-
-  return buildSection(section, validObservations);
-};
-
-const generateAlertsSection = (patientData: PatientData, http: HttpClient) => {
-  const resources = getSectionResources(
-    patientData,
-    sectionProfiles.Alerts
-  );
-
-  const section = {
-    title: "Flag - Alertas",
-    code: {
-      coding: [
-        {
-          system: "http://loinc.org",
-          code: "104605-1",
-          display: "Alerta",
-        },
-      ],
-    },
-    text: generateSimpleNarrative(resources as SimpleNarrativeEntry),
-  };
-
-  return buildSection(section, resources);
-};
-
-const generateCarePlanSection = (patientData: PatientData, http: HttpClient) => {
-  const resources = getSectionResources(
-    patientData,
-    sectionProfiles.CarePlan
-  );
-
-  const section = {
-    title: "Plan de Cuidado",
-    code: {
-      coding: [
-        {
-          system: "http://loinc.org",
-          code: "18776-5",
-          display: "Plan de tratamiento",
-        },
-      ],
-    },
-    text: generateSimpleNarrative(resources as SimpleNarrativeEntry),
-  };
-
-  return buildSection(section, resources);
-};
-
-const generateAdvencedDirectivesSection = (patientData: PatientData, http: HttpClient) => {
-  const resources = getSectionResources(
-    patientData,
-    sectionProfiles.AdvancedDirectives
-  );
-
-  const section = {
-    title: "Sección de Consentimientos",
-    code: {
-      coding: [
-        {
-          system: "http://loinc.org",
-          code: "42348-3",
-          display: "Directivas avanzadas",
-        },
-      ],
-    },
-    text: generateSimpleNarrative(resources as SimpleNarrativeEntry),
-  };
-
-  return buildSection(section, resources);
-};
-
-const generateSocialHistorySection = (patientData: PatientData, http: HttpClient) => {
-  const validObservations = getSectionResources(
-    patientData,
-    sectionProfiles.SocialHistory
-  );
-
-  const section = {
-    title: "Historia Social",
-    code: {
-      coding: [
-        {
-          system: "http://loinc.org",
-          code: "29762-2",
-          display: "Antecedentes sociales",
-        },
-      ],
-    },
-    text: generateSimpleNarrative(validObservations as SimpleNarrativeEntry),
-  };
-
-  return buildSection(section, validObservations);
-};
-
-const generateIllnessHistorySection = (patientData: PatientData) => {
-  const validConditions = getSectionResources(
-    patientData,
-    sectionProfiles.IllnessHistory
-  );
-
-  const section = {
-    title: "Histórico de enfermedades",
-    code: {
-      coding: [
-        {
-          system: "http://loinc.org",
-          code: "11348-0",
-          display: "Antecedentes de enfermedades pasadas",
-        },
-      ],
-    },
-    text: generateSimpleNarrative(validConditions as SimpleNarrativeEntry),
-  };
-
-  return buildSection(section, validConditions);
-};
 
 const sectionNames: Array<SectionName> = [
-  "MedicationSummary",
-  "AllergyIntolerance",
   "ProblemList",
-  "Procedures",
+  "AllergyIntolerance",
+  "MedicationSummary",
   "Immunizations",
-  "MedicalDevices",
-  "DiagnosticResults",
-  "VitalSigns",
-  "IllnessHistory",
-  "Pregnancy",
-  "SocialHistory",
-  "Alerts",
-  "CarePlan",
-  "AdvancedDirectives"
 ];
 
 const sectionToGenerateFuncMap: SectionToGenerateFuncMap = {
   ProblemList: generateProblemListSection,
-  IllnessHistory: generateIllnessHistorySection,
   AllergyIntolerance: generateAllergyIntoleranceSection,
   MedicationSummary: generateMedicationSummarySection,
   Immunizations: generateImmunizationsSection,
-  Procedures: generateProceduresSection,
-  MedicalDevices: generateMedicalDevicesSection,
-  DiagnosticResults: generateDiagnosticResultsSection,
-  VitalSigns: generateVitalSignsSection,
-  Pregnancy: generatePregnancySection,
-  SocialHistory: generateSocialHistorySection,
-  Alerts: generateAlertsSection, 
-  CarePlan: generateCarePlanSection,
-  AdvancedDirectives: generateAdvencedDirectivesSection
 };
 
 export const addFullUrl = (
