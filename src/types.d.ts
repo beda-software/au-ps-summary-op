@@ -109,8 +109,8 @@ export type SectionName =
   | "AdvancedDirectives";
 
 export type IpsProfile =
-  |  "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/RegMedicamentos-cl-ips"
-  |  "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/MedicationRequest-cl-ips"
+  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement"
+  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest"
   |  "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/AllergiaInt-cl-ips"
   |  "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Procedimientos-cl-ips"
   |  "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Inmunizacion-cl-ips"

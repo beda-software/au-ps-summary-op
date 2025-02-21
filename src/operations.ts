@@ -25,7 +25,7 @@ const generateSummary = async ({ http, appConfig }: Request, patient: Patient) =
       type: "document",
       timestamp: new Date().toISOString(),
       meta: {
-        profile: ["https://hl7chile.cl/fhir/ig/clips/StructureDefinition/Bundle-documento-ips-cl"],
+        profile: ["http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"],
       },
       identifier: { system: "urn:oid:2.16.724.4.8.10.200.10", value: randomUUID() },
       entry: [

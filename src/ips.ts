@@ -41,10 +41,10 @@ const buildSection = (
 const sectionProfiles: SectionProfiles = {
   MedicationSummary: {
     MedicationStatement: [
-      "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/RegMedicamentos-cl-ips",
+      "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement",
     ],
     MedicationRequest: [
-      "https://hl7chile.cl/fhir/ig/clips/StructureDefinition/MedicationRequest-cl-ips",
+      "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest",
     ],
   },
   AllergyIntolerance: {
@@ -202,13 +202,13 @@ const generateMedicationSummarySection = (patientData: PatientData) => {
   );
 
   const section = {
-    title: "Resumen de Medicamentos IPS",
+    title: "Medication Summary section",
     code: {
       coding: [
         {
           system: "http://loinc.org",
           code: "10160-0",
-          display: "Antecedentes de consumo de medicaciones",
+          display: "History of Medication use Narrative",
         },
       ],
     },
@@ -685,7 +685,7 @@ export const createComposition = (sections: any, patientId: string) => {
     resourceType: "Composition",
     id: randomUUID(),
     meta: {
-      profile: ["http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips"],
+      profile: ["http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-composition"],
     },
     date: now.toISOString(),
     status: "final",
