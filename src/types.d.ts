@@ -95,7 +95,15 @@ export type SectionName =
   | "ProblemList"
   | "AllergyIntolerance"
   | "MedicationSummary"
-  | "Immunizations";
+  | "Immunizations"
+  | "Encounters"
+  | "RelatedPersons"
+  | "DocumentReferences"
+  | "Consents"
+  | "CarePlans"
+  | "ClinicalImpressions"
+  | "Specimens"
+  | "Flags";
 
 export type IpsProfile =
   |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-allergyintolerance"
@@ -116,8 +124,13 @@ export type IpsProfile =
   |  "http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips"
   |  "http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"
   |  "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"
-  |  "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips";
-
+  |  "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips"
+  |  "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+  |  "http://hl7.org/fhir/StructureDefinition/Consent"
+  |  "http://hl7.org/fhir/StructureDefinition/CarePlan"
+  |  "http://hl7.org/fhir/structuredefinition/clinicalimpression"
+  |  "http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips"
+  |  "http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips";
 export type SectionToGenerateFuncMap = {
   [K in SectionName]?: any;
 };

@@ -57,6 +57,30 @@ const sectionProfiles: SectionProfiles = {
   },
   Immunizations: {
     Immunization: ["http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"],
+  },
+  Encounters: {
+    Encounter: ["http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-encounter"]
+  },
+  RelatedPersons: {
+    RelatedPerson: ["http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-relatedperson"]
+  },
+  DocumentReferences: {
+    DocumentReference: ["http://hl7.org/fhir/StructureDefinition/DocumentReference"]
+  },
+  Consents: {
+    Consent: ["http://hl7.org/fhir/StructureDefinition/Consent"]
+  },
+  CarePlans: {
+    CarePlan: ["http://hl7.org/fhir/StructureDefinition/CarePlan"]
+  },
+  ClinicalImpressions: {
+    ClinicalImpression: ["http://hl7.org/fhir/structuredefinition/clinicalimpression"]
+  },
+  Flags: {
+    Flag: ["http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"]
+  },
+  Specimens: {
+    Specimen: ["http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"]
   }
 };
 
@@ -197,6 +221,14 @@ const sectionNames: Array<SectionName> = [
   "AllergyIntolerance",
   "MedicationSummary",
   "Immunizations",
+  "Encounters",
+  "RelatedPersons",
+  "DocumentReferences",
+  "Consents",
+  "CarePlans",
+  "ClinicalImpressions",
+  "Specimens",
+  "Flags"
 ];
 
 const sectionToGenerateFuncMap: SectionToGenerateFuncMap = {
@@ -204,6 +236,14 @@ const sectionToGenerateFuncMap: SectionToGenerateFuncMap = {
   AllergyIntolerance: generateAllergyIntoleranceSection,
   MedicationSummary: generateMedicationSummarySection,
   Immunizations: generateImmunizationsSection,
+  Encounters: () => {},
+  RelatedPersons: () => {},
+  DocumentReferences: () => {},
+  Consents: () => {},
+  CarePlans: () => {},
+  ClinicalImpressions: () => {},
+  Flags: () => {},
+  Specimens: () => {},
 };
 
 export const addFullUrl = (
