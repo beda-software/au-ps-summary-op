@@ -12,6 +12,7 @@ import { MedicationRequest } from "@aidbox/sdk-r4/types/hl7-fhir-r4-core/Medicat
 import { MedicationStatement } from "@aidbox/sdk-r4/types/hl7-fhir-r4-core/MedicationStatement";
 import { Observation } from "@aidbox/sdk-r4/types/hl7-fhir-r4-core/Observation";
 import { Procedure } from "@aidbox/sdk-r4/types/hl7-fhir-r4-core/Procedure";
+import { ImagingStudy } from "@aidbox/sdk-r4/types/hl7-fhir-r4-core/ImagingStudy";
 import { FastifyReply, FastifyRequest } from "fastify";
 type BasicAuthorization = {
   method: "basic";
@@ -71,20 +72,21 @@ export type Operation<T extends Request = any, U = any> = AppResourceOperation &
 
 export type PatientData = Array<{
   resource:
-    | Condition
-    | AllergyIntolerance
-    | Medication
-    | MedicationRequest
-    | MedicationStatement
-    | Immunization
-    | Procedure
-    | DeviceUseStatement
-    | DiagnosticReport
-    | Observation
-    | CarePlan
-    | Consent
-    | Flag
-    ;
+  | Condition
+  | AllergyIntolerance
+  | Medication
+  | MedicationRequest
+  | MedicationStatement
+  | Immunization
+  | Procedure
+  | DeviceUseStatement
+  | DiagnosticReport
+  | Observation
+  | CarePlan
+  | Consent
+  | ImagingStudy
+  | Flag
+  ;
 }>;
 
 export type SimpleNarrativeEntry = Array<{
@@ -103,34 +105,58 @@ export type SectionName =
   | "CarePlans"
   | "ClinicalImpressions"
   | "Specimens"
+  | "Devices"
+  | "DeviceUseStatements"
+  | "DiagnosticReports"
+  | "ImagingStudies"
+  | "ObservationPregnancyEdd"
+  | "ObservationPregnancyOutcome"
+  | "ObservationPregnancyStatus"
+  | "ObservationAlcoholUse"
+  | "ObservationTobaccoUse"
+  | "ObservationLabPath"
+  | "ObservationResultRadiology"
+  | "ObservationVitalSigns"
   | "Flags";
 
 export type IpsProfile =
-  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-allergyintolerance"
-  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"
-  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-encounter"
-  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"
-  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medication"
-  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement"
-  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest"
-  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization"
-  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"
-  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitioner"
-  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitionerrole"
-  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-procedure"
-  |  "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-relatedperson"
-  |  "http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"
-  |  "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips"
-  |  "http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips"
-  |  "http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"
-  |  "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"
-  |  "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips"
-  |  "http://hl7.org/fhir/StructureDefinition/DocumentReference"
-  |  "http://hl7.org/fhir/StructureDefinition/Consent"
-  |  "http://hl7.org/fhir/StructureDefinition/CarePlan"
-  |  "http://hl7.org/fhir/structuredefinition/clinicalimpression"
-  |  "http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips"
-  |  "http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips";
+  | "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-allergyintolerance"
+  | "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"
+  | "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-encounter"
+  | "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"
+  | "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medication"
+  | "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement"
+  | "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest"
+  | "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-organization"
+  | "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"
+  | "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitioner"
+  | "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-practitionerrole"
+  | "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-procedure"
+  | "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-relatedperson"
+  | "http://hl7.org.au/fhir/core/StructureDefinition/au-core-location"
+  | "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips"
+  | "http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips"
+  | "http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"
+  | "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"
+  | "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips"
+  | "http://hl7.org/fhir/StructureDefinition/DocumentReference"
+  | "http://hl7.org/fhir/StructureDefinition/Consent"
+  | "http://hl7.org/fhir/StructureDefinition/CarePlan"
+  | "http://hl7.org/fhir/structuredefinition/clinicalimpression"
+  | "http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips"
+  | "http://hl7.org/fhir/StructureDefinition/Device"
+  | "http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips"
+  | "http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"
+  | "http://hl7.org/fhir/uv/ips/StructureDefinition/ImagingStudy-uv-ips"
+  | "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips"
+  | "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips"
+  | "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips"
+  | "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips"
+  | "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips"
+  | "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"
+  | "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips"
+  | "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+  | "http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips";
 export type SectionToGenerateFuncMap = {
   [K in SectionName]?: any;
 };

@@ -81,6 +81,42 @@ const sectionProfiles: SectionProfiles = {
   },
   Specimens: {
     Specimen: ["http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"]
+  },
+  Devices: {
+    Device: ["http://hl7.org/fhir/StructureDefinition/Device"]
+  },
+  DeviceUseStatements: {
+    DeviceUseStatement: ["http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips"]
+  },
+  DiagnosticReports: {
+    DiagnosticReport: ["http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"]
+  },
+  ImagingStudies: {
+    ImagingStudy: ["http://hl7.org/fhir/uv/ips/StructureDefinition/ImagingStudy-uv-ips"]
+  },
+  ObservationPregnancyEdd: {
+    Observation: ["http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips"]
+  },
+  ObservationPregnancyOutcome: {
+    Observation: ["http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips"]
+  },
+  ObservationPregnancyStatus: {
+    Observation: ["http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips"]
+  },
+  ObservationAlcoholUse: {
+    Observation: ["http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips"]
+  },
+  ObservationTobaccoUse: {
+    Observation: ["http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips"]
+  },
+  ObservationLabPath: {
+    Observation: ["http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"]
+  },
+  ObservationResultRadiology: {
+    Observation: ["http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips"]
+  },
+  ObservationVitalSigns: {
+    Observation: ["http://hl7.org/fhir/StructureDefinition/vitalsigns"]
   }
 };
 
@@ -228,7 +264,19 @@ const sectionNames: Array<SectionName> = [
   "CarePlans",
   "ClinicalImpressions",
   "Specimens",
-  "Flags"
+  "Devices",
+  "DeviceUseStatements",
+  "DiagnosticReports",
+  "ImagingStudies",
+  "ObservationPregnancyEdd",
+  "ObservationPregnancyOutcome",
+  "ObservationPregnancyStatus",
+  "ObservationAlcoholUse",
+  "ObservationTobaccoUse",
+  "ObservationLabPath",
+  "ObservationResultRadiology",
+  "ObservationVitalSigns",
+  "Flags",
 ];
 
 const sectionToGenerateFuncMap: SectionToGenerateFuncMap = {
@@ -243,7 +291,19 @@ const sectionToGenerateFuncMap: SectionToGenerateFuncMap = {
   CarePlans: () => {},
   ClinicalImpressions: () => {},
   Flags: () => {},
+  Devices: () => {},
   Specimens: () => {},
+  DeviceUseStatements: () => {},
+  DiagnosticReports: () => {},
+  ObservationPregnancyEdd: () => {},
+  ObservationPregnancyOutcome: () => {},
+  ObservationPregnancyStatus: () => {},
+  ObservationAlcoholUse: () => {},
+  ObservationTobaccoUse: () => {},
+  ObservationLabPath: () => {},
+  ObservationResultRadiology: () => {},
+  ObservationVitalSigns: () => {},
+  ImagingStudies: () => {}
 };
 
 export const addFullUrl = (
