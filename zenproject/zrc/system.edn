@@ -1,0 +1,19 @@
+{ns system
+ import #{aidbox
+          aidbox.rest
+          aidbox.search-parameter.v1
+          aidbox.repository.v1
+          hl7-fhir-r4-core
+          zen.fhir}
+
+ box
+ {:zen/tags #{aidbox/system}
+  :zen/desc "AU PS"
+  :services {:seed seed}}
+
+ seed
+ {:zen/tags  #{aidbox/service}
+  :engine    aidbox/seed
+  :files ["seeds.ndjson.gz"]}
+
+}
