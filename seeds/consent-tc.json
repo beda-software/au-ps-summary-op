@@ -1,0 +1,63 @@
+{
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "59284-0",
+          "system": "http://loinc.org"
+        }
+      ]
+    }
+  ],
+  "dateTime": "2016-05-11",
+  "id": "consent-tc",
+  "meta": {
+    "lastUpdated": "2025-02-23T05:47:21.709410Z",
+    "versionId": "1458",
+    "extension": [
+      {
+        "url": "ex:createdAt",
+        "valueInstant": "2025-02-23T05:47:21.709410Z"
+      }
+    ]
+  },
+  "organization": [
+    {
+      "reference": "Organization/organization-medical-center-tc"
+    }
+  ],
+  "patient": {
+    "reference": "Patient/patient-tc"
+  },
+  "policyRule": {
+    "coding": [
+      {
+        "code": "OPTIN",
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+      }
+    ]
+  },
+  "provision": {
+    "period": {
+      "end": "2016-01-01",
+      "start": "1964-01-01"
+    }
+  },
+  "resourceType": "Consent",
+  "scope": {
+    "coding": [
+      {
+        "code": "patient-privacy",
+        "system": "http://terminology.hl7.org/CodeSystem/consentscope"
+      }
+    ]
+  },
+  "sourceAttachment": {
+    "title": "The terms of the consent in lawyer speak."
+  },
+  "status": "active",
+  "text": {
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<p>\n\tAuthorize Normal access for Treatment\n\t\t\t</p>\n\t\t\t<p>\n    Patient &quot;P. van de Heuvel&quot; wishes to have all of the PHI collected at the Good Health Psychiatric Hospital \n   available for normal treatment use.\n\t\t\t</p>\n\t\t</div>",
+    "status": "generated"
+  }
+}
