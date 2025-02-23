@@ -1,0 +1,10 @@
+services:
+  build-seeds:
+    image: bedasoftware/fhirsnake:latest
+    command:
+      - export
+      - --output
+      - /app/zenproject/seeds.ndjson.gz
+    volumes:
+      - ./zenproject:/app/zenproject
+      - ./seeds:/app/resources

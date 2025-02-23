@@ -151,19 +151,7 @@
   "meta": {
     "profile": [
       "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"
-    ],
-    "lastUpdated": "2025-02-23T05:25:33.107954Z",
-    "extension": [
-      {
-        "url": "http://fhir.aidbox.app/extension/createdat",
-        "valueInstant": "2024-03-18T03:10:49.882528Z"
-      },
-      {
-        "url": "ex:createdAt",
-        "valueInstant": "2025-02-20T13:08:20.578943Z"
-      }
-    ],
-    "versionId": "1416"
+    ]
   },
   "name": [
     {

@@ -372,6 +372,7 @@ const filterResourcesByProfiles = async (http: HttpClient, patientData: PatientD
   for (const resource of patientData) {
     let verifiedOnce = false;
     const resourceType = resource.resource.resourceType;
+    console.log('resourceType', resourceType)
 
     for (const sectionName of sectionNames) {
       const sectionProfileEntries = Object.entries(sectionProfiles[sectionName]);
@@ -381,6 +382,7 @@ const filterResourcesByProfiles = async (http: HttpClient, patientData: PatientD
           for (const profile of profiles as Array<string>) {
             const result = await validateByAidbox(http, resource.resource, resourceType, profile);
             const validationResult = (result.response.data as Record<string, any>)["id"] as string;
+            console.log('validationResult', validationResult)
             if (validationResult === "allok") {
               verifiedOnce = true;
 

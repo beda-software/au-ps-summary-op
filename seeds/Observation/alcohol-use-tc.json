@@ -13,14 +13,6 @@
   "meta": {
     "profile": [
       "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips"
-    ],
-    "lastUpdated": "2025-02-23T09:14:43.787783Z",
-    "versionId": "1773",
-    "extension": [
-      {
-        "url": "ex:createdAt",
-        "valueInstant": "2025-02-23T09:14:43.787783Z"
-      }
     ]
   },
   "performer": [
