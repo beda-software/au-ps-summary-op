@@ -1,0 +1,49 @@
+{
+  "code": {
+    "coding": [
+      {
+        "code": "72166-2",
+        "system": "http://loinc.org",
+        "display": "Tobacco smoking status"
+      }
+    ]
+  },
+  "effectiveDateTime": "2019-07-15",
+  "id": "tobacco-use-tc",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips"
+    ],
+    "lastUpdated": "2025-02-23T09:17:53.949770Z",
+    "versionId": "1794",
+    "extension": [
+      {
+        "url": "ex:createdAt",
+        "valueInstant": "2025-02-23T09:17:53.949770Z"
+      }
+    ]
+  },
+  "performer": [
+    {
+      "reference": "Patient/patient-tc"
+    }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+    "reference": "Patient/patient-tc"
+  },
+  "text": {
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation tobacco-use-example</b></p><a name=\"tobacco-use-example\"> </a><a name=\"hctobacco-use-example\"> </a><a name=\"tobacco-use-example-en-US\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 72166-2}\">Tobacco smoking status</span></p><p><b>subject</b>: <a href=\"Patient-patient-example-female.html\">Martha DeLarosa  Female, DoB: 1992-05-01 ( urn:oid:2.16.840.1.113883.2.4.6.3#574687583)</a></p><p><b>effective</b>: 2019-07-15</p><p><b>performer</b>: <a href=\"Patient-eumfh-39-07.html\">Alexander Heig  Male, DoB: 1957 ( http://trilliumbridge.eu/fhir/demos/eumfh/inject#39-07)</a></p><p><b>value</b>: <span title=\"Codes:{http://loinc.org LA15920-4}\">Former smoker</span></p></div>",
+    "status": "generated"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "LA15920-4",
+        "system": "http://loinc.org",
+        "display": "Former smoker"
+      }
+    ]
+  }
+}

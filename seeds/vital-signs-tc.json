@@ -1,0 +1,60 @@
+{
+  "category": [
+    {
+      "text": "Vital Signs",
+      "coding": [
+        {
+          "code": "vital-signs",
+          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+          "display": "Vital Signs"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "text": "Heart rate",
+    "coding": [
+      {
+        "code": "8867-4",
+        "system": "http://loinc.org",
+        "display": "Heart rate"
+      },
+      {
+        "code": "364075005",
+        "system": "http://snomed.info/sct",
+        "display": "Heart rate"
+      }
+    ]
+  },
+  "effectiveDateTime": "2016-07-02",
+  "id": "vital-signs-tc",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/vitalsigns"
+    ],
+    "lastUpdated": "2025-02-23T09:30:26.483581Z",
+    "versionId": "1859",
+    "extension": [
+      {
+        "url": "ex:createdAt",
+        "valueInstant": "2025-02-23T09:30:26.483581Z"
+      }
+    ]
+  },
+  "performer": [
+    {
+      "reference": "Patient/patient-tc"
+    }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+    "reference": "Patient/patient-tc"
+  },
+  "valueQuantity": {
+    "code": "/min",
+    "unit": "beats/minute",
+    "value": 80,
+    "system": "http://unitsofmeasure.org"
+  }
+}

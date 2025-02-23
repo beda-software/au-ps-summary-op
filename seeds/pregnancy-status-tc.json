@@ -1,0 +1,49 @@
+{
+  "code": {
+    "coding": [
+      {
+        "code": "82810-3",
+        "system": "http://loinc.org",
+        "display": "Pregnancy status"
+      }
+    ]
+  },
+  "effectiveDateTime": "2020-01-10",
+  "id": "pregnancy-status-tc",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips"
+    ],
+    "lastUpdated": "2025-02-23T09:10:35.057762Z",
+    "versionId": "1752",
+    "extension": [
+      {
+        "url": "ex:createdAt",
+        "valueInstant": "2025-02-23T09:10:35.057762Z"
+      }
+    ]
+  },
+  "performer": [
+    {
+      "reference": "Patient/patient-tc"
+    }
+  ],
+  "resourceType": "Observation",
+  "status": "final",
+  "subject": {
+    "reference": "Patient/patient-tc"
+  },
+  "text": {
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation pregnancy-status-example</b></p><a name=\"pregnancy-status-example\"> </a><a name=\"hcpregnancy-status-example\"> </a><a name=\"pregnancy-status-example-en-US\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 82810-3}\">Pregnancy status</span></p><p><b>subject</b>: <a href=\"Patient-patient-example-female.html\">Martha DeLarosa  Female, DoB: 1992-05-01 ( urn:oid:2.16.840.1.113883.2.4.6.3#574687583)</a></p><p><b>effective</b>: 2020-01-10</p><p><b>performer</b>: <a href=\"Patient-eumfh-39-07.html\">Alexander Heig  Male, DoB: 1957 ( http://trilliumbridge.eu/fhir/demos/eumfh/inject#39-07)</a></p><p><b>value</b>: <span title=\"Codes:{http://loinc.org LA15173-0}\">Pregnant</span></p><p><b>hasMember</b>: <a href=\"Observation-pregnancy-edd-example.html\">Observation Delivery date Estimated</a></p></div>",
+    "status": "generated"
+  },
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "code": "LA15173-0",
+        "system": "http://loinc.org",
+        "display": "Pregnant"
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "id": "device-tc",
+  "identifier": [
+    {
+      "value": "345675",
+      "system": "http://goodcare.org/devices/id"
+    }
+  ],
+  "meta": {
+    "lastUpdated": "2025-02-23T08:11:59.842173Z",
+    "versionId": "1548",
+    "extension": [
+      {
+        "url": "ex:createdAt",
+        "valueInstant": "2025-02-23T08:11:59.842173Z"
+      }
+    ]
+  },
+  "patient": {
+    "reference": "Patient/patient-tc"
+  },
+  "resourceType": "Device",
+  "text": {
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>identifier</b>: 345675</p></div>",
+    "status": "generated"
+  }
+}

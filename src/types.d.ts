@@ -117,6 +117,7 @@ export type SectionName =
   | "ObservationLabPath"
   | "ObservationResultRadiology"
   | "ObservationVitalSigns"
+  | "Procedures"
   | "Flags";
 
 export type IpsProfile =

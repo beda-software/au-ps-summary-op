@@ -80,7 +80,7 @@ const sectionProfiles: SectionProfiles = {
     Flag: ["http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"]
   },
   Specimens: {
-    Specimen: ["http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"]
+    Specimen: ["http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips"]
   },
   Devices: {
     Device: ["http://hl7.org/fhir/StructureDefinition/Device"]
@@ -117,6 +117,9 @@ const sectionProfiles: SectionProfiles = {
   },
   ObservationVitalSigns: {
     Observation: ["http://hl7.org/fhir/StructureDefinition/vitalsigns"]
+  },
+  Procedures: {
+    Procedure: ["http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-procedure"]
   }
 };
 
@@ -277,6 +280,7 @@ const sectionNames: Array<SectionName> = [
   "ObservationResultRadiology",
   "ObservationVitalSigns",
   "Flags",
+  "Procedures"
 ];
 
 const sectionToGenerateFuncMap: SectionToGenerateFuncMap = {
@@ -303,7 +307,8 @@ const sectionToGenerateFuncMap: SectionToGenerateFuncMap = {
   ObservationLabPath: () => {},
   ObservationResultRadiology: () => {},
   ObservationVitalSigns: () => {},
-  ImagingStudies: () => {}
+  ImagingStudies: () => {},
+  Procedures: () => {},
 };
 
 export const addFullUrl = (

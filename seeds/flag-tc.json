@@ -1,0 +1,62 @@
+{
+  "category": [
+    {
+      "text": "Subject Contact",
+      "coding": [
+        {
+          "code": "contact",
+          "system": "http://terminology.hl7.org/CodeSystem/flag-category",
+          "display": "Subject Contact"
+        }
+      ]
+    }
+  ],
+  "code": {
+    "text": "Patient Immunocompromised",
+    "coding": [
+      {
+        "code": "370388006",
+        "system": "http://snomed.info/sct",
+        "display": "Patient immunocompromised (finding)"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/flag-priority",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "PH",
+            "system": "http://hl7.org/fhir/flag-priority-code",
+            "display": "High priority"
+          }
+        ]
+      }
+    }
+  ],
+  "id": "flag-tc",
+  "language": "en-US",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"
+    ],
+    "lastUpdated": "2025-02-23T08:16:42.681762Z",
+    "versionId": "1569",
+    "extension": [
+      {
+        "url": "ex:createdAt",
+        "valueInstant": "2025-02-23T08:16:42.681762Z"
+      }
+    ]
+  },
+  "resourceType": "Flag",
+  "status": "active",
+  "subject": {
+    "reference": "Patient/patient-tc"
+  },
+  "text": {
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-US\" lang=\"en-US\"><p class=\"res-header-id\"><b>Generated Narrative: Flag 546482</b></p><a name=\"546482\"> </a><a name=\"hc546482\"> </a><a name=\"546482-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en-US</p></div><p><b>Flag Priority</b>: <span title=\"Codes:{http://hl7.org/fhir/flag-priority-code PH}\">High priority</span></p><p><b>status</b>: Active</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/flag-category contact}\">Subject Contact</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 370388006}\">Patient Immunocompromised</span></p><p><b>subject</b>: <a href=\"Patient-66033.html\">Marie Lux-Brennard  Female, DoB: 1998-04-17 ( urn:oid:1.3.182.4.4#1998041799999)</a></p></div>",
+    "status": "extensions"
+  }
+}
