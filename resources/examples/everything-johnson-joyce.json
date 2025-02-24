@@ -1,0 +1,1618 @@
+{
+  "resourceType": "Bundle",
+  "id": "a4d2b9e8-8a75-49bf-b7e9-06e630098e2f",
+  "meta": {
+    "lastUpdated": "2025-02-24T06:53:54.724+00:00"
+  },
+  "type": "searchset",
+  "total": 15,
+  "link": [ {
+    "relation": "self",
+    "url": "http://proxy.smartforms.io/fhir/Patient/johnson-joyce/$everything"
+  } ],
+  "entry": [ {
+    "fullUrl": "http://proxy.smartforms.io/fhir/Patient/johnson-joyce",
+    "resource": {
+      "resourceType": "Patient",
+      "id": "johnson-joyce",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2025-02-03T02:09:09.141+00:00",
+        "source": "#p1tcGUw0ksrrZkUQ",
+        "profile": [ "http://hl7.org.au/fhir/core/StructureDefinition/au-core-patient" ]
+      },
+      "extension": [ {
+        "url": "http://hl7.org.au/fhir/StructureDefinition/indigenous-status",
+        "valueCoding": {
+          "system": "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1",
+          "code": "4",
+          "display": "Neither Aboriginal nor Torres Strait Islander origin"
+        }
+      } ],
+      "identifier": [ {
+        "extension": [ {
+          "url": "http://hl7.org.au/fhir/StructureDefinition/ihi-status",
+          "valueCoding": {
+            "system": "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1",
+            "code": "active"
+          }
+        }, {
+          "url": "http://hl7.org.au/fhir/StructureDefinition/ihi-record-status",
+          "valueCoding": {
+            "system": "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1",
+            "code": "verified",
+            "display": "verified"
+          }
+        } ],
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "NI"
+          } ],
+          "text": "IHI"
+        },
+        "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+        "value": "8003608500314679"
+      }, {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MC"
+          } ],
+          "text": "Medicare Number"
+        },
+        "system": "http://ns.electronichealth.net.au/id/medicare-number",
+        "value": "29545401611"
+      } ],
+      "name": [ {
+        "use": "official",
+        "family": "JOHNSON",
+        "given": [ "Joyce" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "0270108012",
+        "use": "home"
+      }, {
+        "system": "phone",
+        "value": "0491571804",
+        "use": "mobile"
+      }, {
+        "system": "phone",
+        "value": "0270109558",
+        "use": "work"
+      } ],
+      "gender": "female",
+      "birthDate": "1985-02-06",
+      "address": [ {
+        "line": [ "139 River Lane" ],
+        "city": "Palmvale",
+        "state": "NSW",
+        "postalCode": "2484",
+        "country": "AU"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://proxy.smartforms.io/fhir/QuestionnaireResponse/444",
+    "resource": {
+      "resourceType": "QuestionnaireResponse",
+      "id": "444",
+      "meta": {
+        "versionId": "3",
+        "lastUpdated": "2025-02-07T05:44:39.993+00:00",
+        "source": "https://smartforms.csiro.au#gzTZwhDrd1EiAPRV"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"font-size:20px; font-weight: bold\">AU Patient Summary Test Data</div><hr/><div style=\"font-size: 18px; font-weight: bold; margin-top: 15px\">Problems</div><div style=\"font-size: 15px; font-weight: bold; margin-top: 15px\">Problem/Diagnosis summary</div><div style=\"margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Gestational diabetes mellitus</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Clinical status</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Active</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Comment</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Recent diagnosis, referring to Endo &amp; Dietitian</div></div></div><div style=\"height: 1px; width: 100%; background-color: #E5EAF2;margin-top: 15px\"/><div style=\"margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Anaemia</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Clinical status</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Active</div></div></div><div style=\"height: 1px; width: 100%; background-color: #E5EAF2;margin-top: 15px\"/><div style=\"margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Upper respiratory tract infection</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Clinical status</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Resolved</div></div></div><div style=\"height: 1px; width: 100%; background-color: #E5EAF2;margin-top: 15px\"/><div style=\"margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Epidermal burn of multiple sites</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Body site</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Upper back structure</div><div>Shoulder region structure</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Clinical status</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Resolved</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Comment</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Severe sunburn, upper shoulders and back</div></div></div><div style=\"height: 1px; width: 100%; background-color: #E5EAF2;margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Appendicitis</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Clinical status</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Resolved</div></div></div><div style=\"margin-bottom: 30px;\"/><div style=\"margin-bottom: 30px;\"/><div style=\"margin: 55px 0 20px\"/><div style=\"font-size: 18px; font-weight: bold; margin-top: 15px\">Allergies and intolerances</div><div style=\"font-size: 15px; font-weight: bold; margin-top: 15px\">Adverse reaction risk summary</div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Substance</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>No known allergy</div></div></div><div style=\"margin-bottom: 30px;\"/><div style=\"margin-bottom: 30px;\"/><div style=\"margin: 55px 0 20px\"/><div style=\"font-size: 18px; font-weight: bold; margin-top: 15px\">Medication summary</div><div style=\"font-size: 15px; font-weight: bold; margin-top: 15px\">Medication use statement</div><div style=\"margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Elevit</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Form</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Tablet</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Route of adminsitration</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Oral route</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Dose amount</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>1</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Dose timing</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Daily</div></div></div><div style=\"height: 1px; width: 100%; background-color: #E5EAF2;margin-top: 15px\"/><div style=\"margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Humulin NPH Isophane</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Form</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Injection</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Route of adminsitration</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Subcutaneous route</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Dose amount</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>10</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Dose timing</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>BID</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Comment</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>*Tooling note: need to add IU to units; also change dose timing to AM and PM</div></div></div><div style=\"height: 1px; width: 100%; background-color: #E5EAF2;margin-top: 15px\"/><div style=\"margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Humulin R Regular</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Form</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Injection</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Route of adminsitration</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Subcutaneous route</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Dose amount</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>5</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Dose timing</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>TID</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Comment</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>*Tooling note: need to add IU to units; also change dose timing to before each meal; change dose timing value set</div></div></div><div style=\"height: 1px; width: 100%; background-color: #E5EAF2;margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Metformin</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Form</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Tablet</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Route of adminsitration</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Oral route</div></div></div><div style=\"font-size: 15px; font-weight: bold; margin-top: 15px\">Dose amount</div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">undefined</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Mg</div></div></div><div style=\"margin-bottom: 30px;\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Dose timing</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>BID</div></div></div><div style=\"margin-bottom: 30px;\"/><div style=\"margin-bottom: 30px;\"/><div style=\"margin: 55px 0 20px\"/><div style=\"font-size: 18px; font-weight: bold; margin-top: 15px\">Immunizations</div><div style=\"font-size: 15px; font-weight: bold; margin-top: 15px\">Vaccination administered event</div><div style=\"margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Date of administration</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>2024-10-05</div></div></div><div style=\"height: 1px; width: 100%; background-color: #E5EAF2;margin-top: 15px\"/><div style=\"margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Influenza quadrivalent vaccine 2024</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Date of administration</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>2024-05-05</div></div></div><div style=\"height: 1px; width: 100%; background-color: #E5EAF2;margin-top: 15px\"/><div style=\"margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Influenza quadrivalent vaccine 2023</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Date of administration</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>2023-05-15</div></div></div><div style=\"height: 1px; width: 100%; background-color: #E5EAF2;margin-top: 15px\"/><div style=\"margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Spikevax Bivalent Original/Omicron</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Date of administration</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>2023-05-15</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Comment</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>*tooling note - change to COVID-19 mRNA-1273 Vaccine (Moderna) injection, 0.5 mL syringe</div></div></div><div style=\"height: 1px; width: 100%; background-color: #E5EAF2;margin-top: 15px\"/><div style=\"margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Influenza quadrivalent vaccine 2022</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Date of administration</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>2022-06-01</div></div></div><div style=\"height: 1px; width: 100%; background-color: #E5EAF2;margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Comirnaty</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Date of administration</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>2022-02-02</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Comment</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>*tooling note - change to Covid vaccine - Pfizer</div></div></div><div style=\"margin-bottom: 30px;\"/><div style=\"margin-bottom: 30px;\"/><div style=\"margin: 20px 0 20px\"/></div>"
+      },
+      "questionnaire": "https://smartforms.csiro.au/ig/Questionnaire/AUPatientSummary",
+      "_questionnaire": {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/display",
+          "valueString": "AU Patient Summary Test Data"
+        } ]
+      },
+      "status": "completed",
+      "subject": {
+        "reference": "Patient/johnson-joyce",
+        "type": "Patient",
+        "display": " Joyce JOHNSON"
+      },
+      "authored": "2025-02-07T15:44:39+10:00",
+      "author": {
+        "reference": "Practitioner/burrows-ginger",
+        "type": "Practitioner",
+        "display": " Ginger BURROWS"
+      },
+      "item": [ {
+        "linkId": "tab-container",
+        "text": "Patient Summary Test Data",
+        "item": [ {
+          "linkId": "problems",
+          "text": "Problems",
+          "item": [ {
+            "linkId": "problems-problemdiagnosissummary",
+            "text": "Problem/Diagnosis summary",
+            "item": [ {
+              "linkId": "problems-problemdiagnosissummary-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "11687002",
+                  "display": "Gestational diabetes mellitus"
+                }
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-status",
+              "text": "Clinical status",
+              "answer": [ {
+                "valueString": "Active"
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-comment",
+              "text": "Comment",
+              "answer": [ {
+                "valueString": "Recent diagnosis, referring to Endo & Dietitian"
+              } ]
+            } ]
+          }, {
+            "linkId": "problems-problemdiagnosissummary",
+            "text": "Problem/Diagnosis summary",
+            "item": [ {
+              "linkId": "problems-problemdiagnosissummary-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "271737000",
+                  "display": "Anaemia"
+                }
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-status",
+              "text": "Clinical status",
+              "answer": [ {
+                "valueString": "Active"
+              } ]
+            } ]
+          }, {
+            "linkId": "problems-problemdiagnosissummary",
+            "text": "Problem/Diagnosis summary",
+            "item": [ {
+              "linkId": "problems-problemdiagnosissummary-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "54150009",
+                  "display": "Upper respiratory tract infection"
+                }
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-status",
+              "text": "Clinical status",
+              "answer": [ {
+                "valueString": "Resolved"
+              } ]
+            } ]
+          }, {
+            "linkId": "problems-problemdiagnosissummary",
+            "text": "Problem/Diagnosis summary",
+            "item": [ {
+              "linkId": "problems-problemdiagnosissummary-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "77830003",
+                  "display": "Epidermal burn of multiple sites"
+                }
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-bodysite",
+              "text": "Body site",
+              "answer": [ {
+                "id": "problems-problemdiagnosissummary-bodysite-repeat-JLt-7UXD3HqgVIkFkuLxo",
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "35549004",
+                  "display": "Upper back structure"
+                }
+              }, {
+                "id": "problems-problemdiagnosissummary-bodysite-repeat-zoD6KA43Xc-cDoVJJ2Y_2",
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "16982005",
+                  "display": "Shoulder region structure"
+                }
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-status",
+              "text": "Clinical status",
+              "answer": [ {
+                "valueString": "Resolved"
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-comment",
+              "text": "Comment",
+              "answer": [ {
+                "valueString": "Severe sunburn, upper shoulders and back"
+              } ]
+            } ]
+          }, {
+            "linkId": "problems-problemdiagnosissummary",
+            "text": "Problem/Diagnosis summary",
+            "item": [ {
+              "linkId": "problems-problemdiagnosissummary-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "74400008",
+                  "display": "Appendicitis"
+                }
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-status",
+              "text": "Clinical status",
+              "answer": [ {
+                "valueString": "Resolved"
+              } ]
+            } ]
+          } ]
+        }, {
+          "linkId": "allergyintolerances",
+          "text": "Allergies and intolerances",
+          "item": [ {
+            "linkId": "allergyintolerances-adversereactionrisksummary",
+            "text": "Adverse reaction risk summary",
+            "item": [ {
+              "linkId": "allergyintolerances-adversereactionrisksummary-substance",
+              "text": "Substance",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "716186003",
+                  "display": "No known allergy"
+                }
+              } ]
+            } ]
+          } ]
+        }, {
+          "linkId": "medicationsummary",
+          "text": "Medication summary",
+          "item": [ {
+            "linkId": "medicationsummary-medicationusestatement",
+            "text": "Medication use statement",
+            "item": [ {
+              "linkId": "medicationsummary-medicationusestatement-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "61571000168101",
+                  "display": "Elevit"
+                }
+              } ]
+            }, {
+              "linkId": "medicationsummary-medicationusestatement-form",
+              "text": "Form",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "385055001",
+                  "display": "Tablet"
+                }
+              } ]
+            }, {
+              "linkId": "medicationsummary-medicationusestatement-route",
+              "text": "Route of adminsitration",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              } ]
+            }, {
+              "linkId": "medicationsummary-medicationusestatement-doseamount",
+              "text": "Dose amount",
+              "answer": [ {
+                "valueDecimal": 1
+              } ]
+            }, {
+              "linkId": "medicationsummary-medicationusestatement-dosetiming",
+              "text": "Dose timing",
+              "answer": [ {
+                "valueString": "daily"
+              } ]
+            } ]
+          }, {
+            "linkId": "medicationsummary-medicationusestatement",
+            "text": "Medication use statement",
+            "item": [ {
+              "linkId": "medicationsummary-medicationusestatement-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "10931000168100",
+                  "display": "Humulin NPH Isophane"
+                }
+              } ]
+            }, {
+              "linkId": "medicationsummary-medicationusestatement-form",
+              "text": "Form",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "129011000036109",
+                  "display": "Injection"
+                }
+              } ]
+            }, {
+              "linkId": "medicationsummary-medicationusestatement-route",
+              "text": "Route of adminsitration",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "34206005",
+                  "display": "Subcutaneous route"
+                }
+              } ]
+            }, {
+              "linkId": "medicationsummary-medicationusestatement-doseamount",
+              "text": "Dose amount",
+              "answer": [ {
+                "valueDecimal": 10
+              } ]
+            }, {
+              "linkId": "medicationsummary-medicationusestatement-dosetiming",
+              "text": "Dose timing",
+              "answer": [ {
+                "valueString": "BID"
+              } ]
+            }, {
+              "linkId": "medicationsummary-medicationusestatement-comment",
+              "text": "Comment",
+              "answer": [ {
+                "valueString": "*Tooling note: need to add IU to units; also change dose timing to AM and PM"
+              } ]
+            } ]
+          }, {
+            "linkId": "medicationsummary-medicationusestatement",
+            "text": "Medication use statement",
+            "item": [ {
+              "linkId": "medicationsummary-medicationusestatement-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "17171000168104",
+                  "display": "Humulin R Regular"
+                }
+              } ]
+            }, {
+              "linkId": "medicationsummary-medicationusestatement-form",
+              "text": "Form",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "129011000036109",
+                  "display": "Injection"
+                }
+              } ]
+            }, {
+              "linkId": "medicationsummary-medicationusestatement-route",
+              "text": "Route of adminsitration",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "34206005",
+                  "display": "Subcutaneous route"
+                }
+              } ]
+            }, {
+              "linkId": "medicationsummary-medicationusestatement-doseamount",
+              "text": "Dose amount",
+              "answer": [ {
+                "valueDecimal": 5
+              } ]
+            }, {
+              "linkId": "medicationsummary-medicationusestatement-dosetiming",
+              "text": "Dose timing",
+              "answer": [ {
+                "valueString": "TID"
+              } ]
+            }, {
+              "linkId": "medicationsummary-medicationusestatement-comment",
+              "text": "Comment",
+              "answer": [ {
+                "valueString": "*Tooling note: need to add IU to units; also change dose timing to before each meal; change dose timing value set"
+              } ]
+            } ]
+          }, {
+            "linkId": "medicationsummary-medicationusestatement",
+            "text": "Medication use statement",
+            "item": [ {
+              "linkId": "medicationsummary-medicationusestatement-name",
+              "text": "Name",
+              "answer": [ {
+                "valueString": "metformin"
+              } ]
+            }, {
+              "linkId": "medicationsummary-medicationusestatement-form",
+              "text": "Form",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "385055001",
+                  "display": "Tablet"
+                }
+              } ]
+            }, {
+              "linkId": "medicationsummary-medicationusestatement-route",
+              "text": "Route of adminsitration",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              } ]
+            }, {
+              "linkId": "medicationsummary-medicationusestatement-doseamount",
+              "text": "Dose amount",
+              "answer": [ {
+                "valueDecimal": 500
+              } ],
+              "item": [ {
+                "linkId": "medicationsummary-medicationusestatement-doseamount-unit",
+                "answer": [ {
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mg",
+                    "display": "mg"
+                  }
+                } ]
+              } ]
+            }, {
+              "linkId": "medicationsummary-medicationusestatement-dosetiming",
+              "text": "Dose timing",
+              "answer": [ {
+                "valueString": "BID"
+              } ]
+            } ]
+          } ]
+        }, {
+          "linkId": "immunizations",
+          "text": "Immunizations",
+          "item": [ {
+            "linkId": "immunizations-vaccinationadministeredevent",
+            "text": "Vaccination administered event",
+            "item": [ {
+              "linkId": "immunizations-vaccinationadministeredevent-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "version": "http://snomed.info/sct/32506021000036107/version/20250131",
+                  "code": "1789191000168109",
+                  "display": "Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe"
+                }
+              } ]
+            }, {
+              "linkId": "immunizations-vaccinationadministeredevent-administrationDate",
+              "text": "Date of administration",
+              "answer": [ {
+                "valueDateTime": "2024-10-05"
+              } ]
+            } ]
+          }, {
+            "linkId": "immunizations-vaccinationadministeredevent",
+            "text": "Vaccination administered event",
+            "item": [ {
+              "linkId": "immunizations-vaccinationadministeredevent-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "version": "http://snomed.info/sct/32506021000036107/version/20250131",
+                  "code": "1731151000168108",
+                  "display": "Influenza quadrivalent vaccine 2024"
+                }
+              } ]
+            }, {
+              "linkId": "immunizations-vaccinationadministeredevent-administrationDate",
+              "text": "Date of administration",
+              "answer": [ {
+                "valueDateTime": "2024-05-05"
+              } ]
+            } ]
+          }, {
+            "linkId": "immunizations-vaccinationadministeredevent",
+            "text": "Vaccination administered event",
+            "item": [ {
+              "linkId": "immunizations-vaccinationadministeredevent-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "version": "http://snomed.info/sct/32506021000036107/version/20250131",
+                  "code": "1653851000168105",
+                  "display": "Influenza quadrivalent vaccine 2023"
+                }
+              } ]
+            }, {
+              "linkId": "immunizations-vaccinationadministeredevent-administrationDate",
+              "text": "Date of administration",
+              "answer": [ {
+                "valueDateTime": "2023-05-15"
+              } ]
+            } ]
+          }, {
+            "linkId": "immunizations-vaccinationadministeredevent",
+            "text": "Vaccination administered event",
+            "item": [ {
+              "linkId": "immunizations-vaccinationadministeredevent-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "version": "http://snomed.info/sct/32506021000036107/version/20250131",
+                  "code": "1632631000168108",
+                  "display": "Spikevax Bivalent Original/Omicron"
+                }
+              } ]
+            }, {
+              "linkId": "immunizations-vaccinationadministeredevent-administrationDate",
+              "text": "Date of administration",
+              "answer": [ {
+                "valueDateTime": "2023-05-15"
+              } ]
+            }, {
+              "linkId": "immunizations-vaccinationadministeredevent-comment",
+              "text": "Comment",
+              "answer": [ {
+                "valueString": "*tooling note - change to COVID-19 mRNA-1273 Vaccine (Moderna) injection, 0.5 mL syringe"
+              } ]
+            } ]
+          }, {
+            "linkId": "immunizations-vaccinationadministeredevent",
+            "text": "Vaccination administered event",
+            "item": [ {
+              "linkId": "immunizations-vaccinationadministeredevent-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "version": "http://snomed.info/sct/32506021000036107/version/20250131",
+                  "code": "1602211000168109",
+                  "display": "Influenza quadrivalent vaccine 2022"
+                }
+              } ]
+            }, {
+              "linkId": "immunizations-vaccinationadministeredevent-administrationDate",
+              "text": "Date of administration",
+              "answer": [ {
+                "valueDateTime": "2022-06-01"
+              } ]
+            } ]
+          }, {
+            "linkId": "immunizations-vaccinationadministeredevent",
+            "text": "Vaccination administered event",
+            "item": [ {
+              "linkId": "immunizations-vaccinationadministeredevent-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "version": "http://snomed.info/sct/32506021000036107/version/20250131",
+                  "code": "1525011000168107",
+                  "display": "Comirnaty"
+                }
+              } ]
+            }, {
+              "linkId": "immunizations-vaccinationadministeredevent-administrationDate",
+              "text": "Date of administration",
+              "answer": [ {
+                "valueDateTime": "2022-02-02"
+              } ]
+            }, {
+              "linkId": "immunizations-vaccinationadministeredevent-comment",
+              "text": "Comment",
+              "answer": [ {
+                "valueString": "*tooling note - change to Covid vaccine - Pfizer"
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://proxy.smartforms.io/fhir/QuestionnaireResponse/445",
+    "resource": {
+      "resourceType": "QuestionnaireResponse",
+      "id": "445",
+      "meta": {
+        "versionId": "2",
+        "lastUpdated": "2025-02-07T05:47:19.978+00:00",
+        "source": "https://smartforms.csiro.au#hgT8LqWEYEuRZkYd"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"font-size:20px; font-weight: bold\">AU Patient Summary Test Data</div><hr/><div style=\"font-size: 18px; font-weight: bold; margin-top: 15px\">Allergies and intolerances</div><div style=\"font-size: 15px; font-weight: bold; margin-top: 15px\">Adverse reaction risk summary</div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Substance</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>No known allergy</div></div></div><div style=\"margin-bottom: 30px;\"/><div style=\"margin-bottom: 30px;\"/><div style=\"margin: 20px 0 20px\"/></div>"
+      },
+      "questionnaire": "https://smartforms.csiro.au/ig/Questionnaire/AUPatientSummary",
+      "_questionnaire": {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/display",
+          "valueString": "AU Patient Summary Test Data"
+        } ]
+      },
+      "status": "completed",
+      "subject": {
+        "reference": "Patient/johnson-joyce",
+        "type": "Patient",
+        "display": " Joyce JOHNSON"
+      },
+      "authored": "2025-02-07T15:47:19+10:00",
+      "author": {
+        "reference": "Practitioner/burrows-ginger",
+        "type": "Practitioner",
+        "display": " Ginger BURROWS"
+      },
+      "item": [ {
+        "linkId": "tab-container",
+        "text": "Patient Summary Test Data",
+        "item": [ {
+          "linkId": "allergyintolerances",
+          "text": "Allergies and intolerances",
+          "item": [ {
+            "linkId": "allergyintolerances-adversereactionrisksummary",
+            "text": "Adverse reaction risk summary",
+            "item": [ {
+              "linkId": "allergyintolerances-adversereactionrisksummary-substance",
+              "text": "Substance",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "716186003",
+                  "display": "No known allergy"
+                }
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://proxy.smartforms.io/fhir/AllergyIntolerance/446",
+    "resource": {
+      "resourceType": "AllergyIntolerance",
+      "id": "446",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2025-02-07T05:47:20.383+00:00",
+        "source": "#Rzm7iVMr2BOG25Dw",
+        "profile": [ "http://hl7.org.au/fhir/core/StructureDefinition/au-core-allergyintolerance" ]
+      },
+      "clinicalStatus": {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+          "code": "active"
+        } ]
+      },
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "716186003",
+          "display": "No known allergy"
+        } ],
+        "text": "No known allergy"
+      },
+      "patient": {
+        "reference": "Patient/johnson-joyce",
+        "type": "Patient",
+        "display": "Joyce JOHNSON"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://proxy.smartforms.io/fhir/QuestionnaireResponse/447",
+    "resource": {
+      "resourceType": "QuestionnaireResponse",
+      "id": "447",
+      "meta": {
+        "versionId": "5",
+        "lastUpdated": "2025-02-09T22:55:17.012+00:00",
+        "source": "https://smartforms.csiro.au#zNCzj1ObL9pkIgiZ"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"font-size:20px; font-weight: bold\">AU Patient Summary Test Data</div><hr/><div style=\"font-size: 18px; font-weight: bold; margin-top: 15px\">Problems</div><div style=\"font-size: 15px; font-weight: bold; margin-top: 15px\">Problem/Diagnosis summary</div><div style=\"margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Gestational diabetes mellitus</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Clinical status</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Active</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Comment</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Recent diagnosis, referring to Endo &amp; Dietitian</div></div></div><div style=\"height: 1px; width: 100%; background-color: #E5EAF2;margin-top: 15px\"/><div style=\"margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Anaemia</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Clinical status</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Active</div></div></div><div style=\"height: 1px; width: 100%; background-color: #E5EAF2;margin-top: 15px\"/><div style=\"margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Appendicitis</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Clinical status</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Resolved</div></div></div><div style=\"height: 1px; width: 100%; background-color: #E5EAF2;margin-top: 15px\"/><div style=\"margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Upper respiratory tract infection</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Clinical status</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Resolved</div></div></div><div style=\"height: 1px; width: 100%; background-color: #E5EAF2;margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Epidermal burn of multiple sites</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Body site</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Shoulder region structure</div><div>Upper back structure</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Clinical status</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Resolved</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Comment</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Severe sunburn, upper shoulders and back</div></div></div><div style=\"margin-bottom: 30px;\"/><div style=\"margin-bottom: 30px;\"/><div style=\"margin: 55px 0 20px\"/><div style=\"font-size: 18px; font-weight: bold; margin-top: 15px\">Medication summary</div><div style=\"font-size: 15px; font-weight: bold; margin-top: 15px\">Medication use statement</div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Metformin</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Form</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Tablet</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Route of adminsitration</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Oral route</div></div></div><div style=\"font-size: 15px; font-weight: bold; margin-top: 15px\">Dose amount</div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">undefined</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Mg</div></div></div><div style=\"margin-bottom: 30px;\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Dose timing</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>BID</div></div></div><div style=\"margin-bottom: 30px;\"/><div style=\"margin-bottom: 30px;\"/><div style=\"margin: 55px 0 20px\"/><div style=\"font-size: 18px; font-weight: bold; margin-top: 15px\">Immunizations</div><div style=\"font-size: 15px; font-weight: bold; margin-top: 15px\">Vaccination administered event</div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Date of administration</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>2024-10-05</div></div></div><div style=\"margin-bottom: 30px;\"/><div style=\"margin-bottom: 30px;\"/><div style=\"margin: 20px 0 20px\"/></div>"
+      },
+      "questionnaire": "https://smartforms.csiro.au/ig/Questionnaire/AUPatientSummary",
+      "_questionnaire": {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/display",
+          "valueString": "AU Patient Summary Test Data"
+        } ]
+      },
+      "status": "completed",
+      "subject": {
+        "reference": "Patient/johnson-joyce",
+        "type": "Patient",
+        "display": " Joyce JOHNSON"
+      },
+      "authored": "2025-02-10T09:55:16+11:00",
+      "author": {
+        "reference": "Practitioner/bradley-jill",
+        "type": "Practitioner",
+        "display": "Jill Bradley"
+      },
+      "item": [ {
+        "linkId": "tab-container",
+        "text": "Patient Summary Test Data",
+        "item": [ {
+          "linkId": "problems",
+          "text": "Problems",
+          "item": [ {
+            "linkId": "problems-problemdiagnosissummary",
+            "text": "Problem/Diagnosis summary",
+            "item": [ {
+              "linkId": "problems-problemdiagnosissummary-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "11687002",
+                  "display": "Gestational diabetes mellitus"
+                }
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-status",
+              "text": "Clinical status",
+              "answer": [ {
+                "valueString": "Active"
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-comment",
+              "text": "Comment",
+              "answer": [ {
+                "valueString": "Recent diagnosis, referring to Endo & Dietitian"
+              } ]
+            } ]
+          }, {
+            "linkId": "problems-problemdiagnosissummary",
+            "text": "Problem/Diagnosis summary",
+            "item": [ {
+              "linkId": "problems-problemdiagnosissummary-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "271737000",
+                  "display": "Anaemia"
+                }
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-status",
+              "text": "Clinical status",
+              "answer": [ {
+                "valueString": "Active"
+              } ]
+            } ]
+          }, {
+            "linkId": "problems-problemdiagnosissummary",
+            "text": "Problem/Diagnosis summary",
+            "item": [ {
+              "linkId": "problems-problemdiagnosissummary-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "74400008",
+                  "display": "Appendicitis"
+                }
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-status",
+              "text": "Clinical status",
+              "answer": [ {
+                "valueString": "Resolved"
+              } ]
+            } ]
+          }, {
+            "linkId": "problems-problemdiagnosissummary",
+            "text": "Problem/Diagnosis summary",
+            "item": [ {
+              "linkId": "problems-problemdiagnosissummary-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "54150009",
+                  "display": "Upper respiratory tract infection"
+                }
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-status",
+              "text": "Clinical status",
+              "answer": [ {
+                "valueString": "Resolved"
+              } ]
+            } ]
+          }, {
+            "linkId": "problems-problemdiagnosissummary",
+            "text": "Problem/Diagnosis summary",
+            "item": [ {
+              "linkId": "problems-problemdiagnosissummary-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "77830003",
+                  "display": "Epidermal burn of multiple sites"
+                }
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-bodysite",
+              "text": "Body site",
+              "answer": [ {
+                "id": "problems-problemdiagnosissummary-bodysite-repeat-pw4MzGLSW0bSEGXQXp9wF",
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "16982005",
+                  "display": "Shoulder region structure"
+                }
+              }, {
+                "id": "problems-problemdiagnosissummary-bodysite-repeat-JTIf6FfUaaaDEiS7ZxZI3",
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "35549004",
+                  "display": "Upper back structure"
+                }
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-status",
+              "text": "Clinical status",
+              "answer": [ {
+                "valueString": "Resolved"
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-comment",
+              "text": "Comment",
+              "answer": [ {
+                "valueString": "Severe sunburn, upper shoulders and back"
+              } ]
+            } ]
+          } ]
+        }, {
+          "linkId": "medicationsummary",
+          "text": "Medication summary",
+          "item": [ {
+            "linkId": "medicationsummary-medicationusestatement",
+            "text": "Medication use statement",
+            "item": [ {
+              "linkId": "medicationsummary-medicationusestatement-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "109081006",
+                  "display": "Metformin"
+                }
+              } ]
+            }, {
+              "linkId": "medicationsummary-medicationusestatement-form",
+              "text": "Form",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "385055001",
+                  "display": "Tablet"
+                }
+              } ]
+            }, {
+              "linkId": "medicationsummary-medicationusestatement-route",
+              "text": "Route of adminsitration",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "26643006",
+                  "display": "Oral route"
+                }
+              } ]
+            }, {
+              "linkId": "medicationsummary-medicationusestatement-doseamount",
+              "text": "Dose amount",
+              "answer": [ {
+                "valueDecimal": 500
+              } ],
+              "item": [ {
+                "linkId": "medicationsummary-medicationusestatement-doseamount-unit",
+                "answer": [ {
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mg",
+                    "display": "mg"
+                  }
+                } ]
+              } ]
+            }, {
+              "linkId": "medicationsummary-medicationusestatement-dosetiming",
+              "text": "Dose timing",
+              "answer": [ {
+                "valueString": "BID"
+              } ]
+            } ]
+          } ]
+        }, {
+          "linkId": "immunizations",
+          "text": "Immunizations",
+          "item": [ {
+            "linkId": "immunizations-vaccinationadministeredevent",
+            "text": "Vaccination administered event",
+            "item": [ {
+              "linkId": "immunizations-vaccinationadministeredevent-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "version": "http://snomed.info/sct/32506021000036107/version/20250131",
+                  "code": "1789171000168108",
+                  "display": "Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe"
+                }
+              } ]
+            }, {
+              "linkId": "immunizations-vaccinationadministeredevent-administrationDate",
+              "text": "Date of administration",
+              "answer": [ {
+                "valueDateTime": "2024-10-05"
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://proxy.smartforms.io/fhir/QuestionnaireResponse/448",
+    "resource": {
+      "resourceType": "QuestionnaireResponse",
+      "id": "448",
+      "meta": {
+        "versionId": "11",
+        "lastUpdated": "2025-02-14T07:27:36.297+00:00",
+        "source": "https://smartforms.csiro.au#vbHUgqtLGeszrHNt"
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div style=\"font-size:20px; font-weight: bold\">AU Patient Summary Test Data</div><hr/><div style=\"font-size: 18px; font-weight: bold; margin-top: 15px\">Problems</div><div style=\"font-size: 15px; font-weight: bold; margin-top: 15px\">Problem/Diagnosis summary</div><div style=\"margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Gestational diabetes mellitus</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Clinical status</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Active</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Comment</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Recent diagnosis, referring to Endo &amp; Dietitian</div></div></div><div style=\"height: 1px; width: 100%; background-color: #E5EAF2;margin-top: 15px\"/><div style=\"margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Anaemia</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Clinical status</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Active</div></div></div><div style=\"height: 1px; width: 100%; background-color: #E5EAF2;margin-top: 15px\"/><div style=\"margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Appendicitis</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Clinical status</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Resolved</div></div></div><div style=\"height: 1px; width: 100%; background-color: #E5EAF2;margin-top: 15px\"/><div style=\"margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Upper respiratory tract infection</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Clinical status</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Resolved</div></div></div><div style=\"height: 1px; width: 100%; background-color: #E5EAF2;margin-top: 15px\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Epidermal burn of multiple sites</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Body site</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Shoulder region structure</div><div>Upper back structure</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Clinical status</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Resolved</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Comment</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Severe sunburn, upper shoulders and back</div></div></div><div style=\"margin-bottom: 30px;\"/><div style=\"margin-bottom: 30px;\"/><div style=\"margin: 55px 0 20px\"/><div style=\"font-size: 18px; font-weight: bold; margin-top: 15px\">Medication summary</div><div style=\"font-size: 15px; font-weight: bold; margin-top: 15px\">Medication use statement</div><div style=\"font-size: 15px; font-weight: bold; margin-top: 15px\">Dose amount</div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">undefined</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Mg</div></div></div><div style=\"margin-bottom: 30px;\"/><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Dose timing</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>BID</div></div></div><div style=\"margin-bottom: 30px;\"/><div style=\"margin-bottom: 30px;\"/><div style=\"margin: 55px 0 20px\"/><div style=\"font-size: 18px; font-weight: bold; margin-top: 15px\">Immunizations</div><div style=\"font-size: 15px; font-weight: bold; margin-top: 15px\">Vaccination administered event</div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Name</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe</div></div></div><div style=\"margin-top: 10px; display: flex; flex-wrap: wrap\"><div style=\"flex:40%\">Date of administration</div><div style=\"flex: 10%\"/><div style=\"flex: 50%\"><div>2024-10-05</div></div></div><div style=\"margin-bottom: 30px;\"/><div style=\"margin-bottom: 30px;\"/><div style=\"margin: 20px 0 20px\"/></div>"
+      },
+      "questionnaire": "https://smartforms.csiro.au/ig/Questionnaire/AUPatientSummary",
+      "_questionnaire": {
+        "extension": [ {
+          "url": "http://hl7.org/fhir/StructureDefinition/display",
+          "valueString": "AU Patient Summary Test Data"
+        } ]
+      },
+      "status": "in-progress",
+      "subject": {
+        "reference": "Patient/johnson-joyce",
+        "type": "Patient",
+        "display": " Joyce JOHNSON"
+      },
+      "authored": "2025-02-14T18:27:35+11:00",
+      "author": {
+        "reference": "Practitioner/bradley-jill",
+        "type": "Practitioner",
+        "display": "Jill Bradley"
+      },
+      "item": [ {
+        "linkId": "tab-container",
+        "text": "Patient Summary Test Data",
+        "item": [ {
+          "linkId": "problems",
+          "text": "Problems",
+          "item": [ {
+            "linkId": "problems-problemdiagnosissummary",
+            "text": "Problem/Diagnosis summary",
+            "item": [ {
+              "linkId": "problems-problemdiagnosissummary-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "11687002",
+                  "display": "Gestational diabetes mellitus"
+                }
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-status",
+              "text": "Clinical status",
+              "answer": [ {
+                "valueString": "Active"
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-comment",
+              "text": "Comment",
+              "answer": [ {
+                "valueString": "Recent diagnosis, referring to Endo & Dietitian"
+              } ]
+            } ]
+          }, {
+            "linkId": "problems-problemdiagnosissummary",
+            "text": "Problem/Diagnosis summary",
+            "item": [ {
+              "linkId": "problems-problemdiagnosissummary-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "271737000",
+                  "display": "Anaemia"
+                }
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-status",
+              "text": "Clinical status",
+              "answer": [ {
+                "valueString": "Active"
+              } ]
+            } ]
+          }, {
+            "linkId": "problems-problemdiagnosissummary",
+            "text": "Problem/Diagnosis summary",
+            "item": [ {
+              "linkId": "problems-problemdiagnosissummary-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "74400008",
+                  "display": "Appendicitis"
+                }
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-status",
+              "text": "Clinical status",
+              "answer": [ {
+                "valueString": "Resolved"
+              } ]
+            } ]
+          }, {
+            "linkId": "problems-problemdiagnosissummary",
+            "text": "Problem/Diagnosis summary",
+            "item": [ {
+              "linkId": "problems-problemdiagnosissummary-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "54150009",
+                  "display": "Upper respiratory tract infection"
+                }
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-status",
+              "text": "Clinical status",
+              "answer": [ {
+                "valueString": "Resolved"
+              } ]
+            } ]
+          }, {
+            "linkId": "problems-problemdiagnosissummary",
+            "text": "Problem/Diagnosis summary",
+            "item": [ {
+              "linkId": "problems-problemdiagnosissummary-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "77830003",
+                  "display": "Epidermal burn of multiple sites"
+                }
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-bodysite",
+              "text": "Body site",
+              "answer": [ {
+                "id": "problems-problemdiagnosissummary-bodysite-repeat-wWZCJ_ouZHvsslpkxhbK1",
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "16982005",
+                  "display": "Shoulder region structure"
+                }
+              }, {
+                "id": "problems-problemdiagnosissummary-bodysite-repeat-dJ_a7o9MRPJFdEBMHjMVl",
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "code": "35549004",
+                  "display": "Upper back structure"
+                }
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-status",
+              "text": "Clinical status",
+              "answer": [ {
+                "valueString": "Resolved"
+              } ]
+            }, {
+              "linkId": "problems-problemdiagnosissummary-comment",
+              "text": "Comment",
+              "answer": [ {
+                "valueString": "Severe sunburn, upper shoulders and back"
+              } ]
+            } ]
+          } ]
+        }, {
+          "linkId": "medicationsummary",
+          "text": "Medication summary",
+          "item": [ {
+            "linkId": "medicationsummary-medicationusestatement",
+            "text": "Medication use statement",
+            "item": [ {
+              "linkId": "medicationsummary-medicationusestatement-doseamount",
+              "text": "Dose amount",
+              "item": [ {
+                "linkId": "medicationsummary-medicationusestatement-doseamount-unit",
+                "answer": [ {
+                  "valueCoding": {
+                    "system": "http://unitsofmeasure.org",
+                    "code": "mg",
+                    "display": "mg"
+                  }
+                } ]
+              } ]
+            }, {
+              "linkId": "medicationsummary-medicationusestatement-dosetiming",
+              "text": "Dose timing",
+              "answer": [ {
+                "valueString": "BID"
+              } ]
+            } ]
+          } ]
+        }, {
+          "linkId": "immunizations",
+          "text": "Immunizations",
+          "item": [ {
+            "linkId": "immunizations-vaccinationadministeredevent",
+            "text": "Vaccination administered event",
+            "item": [ {
+              "linkId": "immunizations-vaccinationadministeredevent-name",
+              "text": "Name",
+              "answer": [ {
+                "valueCoding": {
+                  "system": "http://snomed.info/sct",
+                  "version": "http://snomed.info/sct/32506021000036107/version/20250131",
+                  "code": "1789171000168108",
+                  "display": "Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe"
+                }
+              } ]
+            }, {
+              "linkId": "immunizations-vaccinationadministeredevent-administrationDate",
+              "text": "Date of administration",
+              "answer": [ {
+                "valueDateTime": "2024-10-05"
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://proxy.smartforms.io/fhir/Condition/517",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "517",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2025-02-14T03:10:09.117+00:00",
+        "source": "#xTh3kH5wJlaqMS9j",
+        "profile": [ "http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition" ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "problem-list-item"
+        } ],
+        "text": "Problem"
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "11687002",
+          "display": "Gestational diabetes mellitus"
+        } ],
+        "text": "Gestational diabetes mellitus"
+      },
+      "subject": {
+        "reference": "Patient/johnson-joyce",
+        "type": "Patient",
+        "display": "Joyce JOHNSON"
+      },
+      "note": [ {
+        "text": "Recent diagnosis, referring to Endo & Dietitian"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://proxy.smartforms.io/fhir/Condition/518",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "518",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2025-02-14T03:10:09.117+00:00",
+        "source": "#xTh3kH5wJlaqMS9j",
+        "profile": [ "http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition" ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "problem-list-item"
+        } ],
+        "text": "Problem"
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "271737000",
+          "display": "Anaemia"
+        } ],
+        "text": "Anaemia"
+      },
+      "subject": {
+        "reference": "Patient/johnson-joyce",
+        "type": "Patient",
+        "display": "Joyce JOHNSON"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://proxy.smartforms.io/fhir/Condition/519",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "519",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2025-02-14T03:10:09.117+00:00",
+        "source": "#xTh3kH5wJlaqMS9j",
+        "profile": [ "http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition" ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "problem-list-item"
+        } ],
+        "text": "Problem"
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "74400008",
+          "display": "Appendicitis"
+        } ],
+        "text": "Appendicitis"
+      },
+      "subject": {
+        "reference": "Patient/johnson-joyce",
+        "type": "Patient",
+        "display": "Joyce JOHNSON"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://proxy.smartforms.io/fhir/Condition/520",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "520",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2025-02-14T03:10:09.117+00:00",
+        "source": "#xTh3kH5wJlaqMS9j",
+        "profile": [ "http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition" ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "problem-list-item"
+        } ],
+        "text": "Problem"
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "54150009",
+          "display": "Upper respiratory tract infection"
+        } ],
+        "text": "Upper respiratory tract infection"
+      },
+      "subject": {
+        "reference": "Patient/johnson-joyce",
+        "type": "Patient",
+        "display": "Joyce JOHNSON"
+      }
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://proxy.smartforms.io/fhir/Condition/521",
+    "resource": {
+      "resourceType": "Condition",
+      "id": "521",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2025-02-14T03:10:09.117+00:00",
+        "source": "#xTh3kH5wJlaqMS9j",
+        "profile": [ "http://hl7.org.au/fhir/core/StructureDefinition/au-core-condition" ]
+      },
+      "category": [ {
+        "coding": [ {
+          "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+          "code": "problem-list-item"
+        } ],
+        "text": "Problem"
+      } ],
+      "code": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "77830003",
+          "display": "Epidermal burn of multiple sites"
+        } ],
+        "text": "Epidermal burn of multiple sites"
+      },
+      "bodySite": [ {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "code": "16982005",
+          "display": "Shoulder region structure"
+        } ],
+        "text": "Shoulder region structure"
+      } ],
+      "subject": {
+        "reference": "Patient/johnson-joyce",
+        "type": "Patient",
+        "display": "Joyce JOHNSON"
+      },
+      "note": [ {
+        "text": "Severe sunburn, upper shoulders and back"
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://proxy.smartforms.io/fhir/MedicationStatement/522",
+    "resource": {
+      "resourceType": "MedicationStatement",
+      "id": "522",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2025-02-14T03:10:09.117+00:00",
+        "source": "#xTh3kH5wJlaqMS9j",
+        "profile": [ "http://hl7.org.au/fhir/StructureDefinition/au-medicationstatement" ]
+      },
+      "contained": [ {
+        "resourceType": "Medication",
+        "id": "medication",
+        "meta": {
+          "profile": [ "http://hl7.org.au/fhir/core/StructureDefinition/au-core-medication" ]
+        },
+        "code": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "109081006",
+            "display": "Metformin"
+          } ],
+          "text": "Metformin"
+        },
+        "form": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "385055001",
+            "display": "Tablet"
+          } ],
+          "text": "Tablet"
+        }
+      } ],
+      "status": "completed",
+      "medicationReference": {
+        "reference": "#medication"
+      },
+      "subject": {
+        "reference": "Patient/johnson-joyce",
+        "type": "Patient",
+        "display": "Joyce JOHNSON"
+      },
+      "dosage": [ {
+        "timing": {
+          "code": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation",
+              "code": "BID",
+              "display": "BID"
+            } ],
+            "text": "BID"
+          }
+        },
+        "route": {
+          "coding": [ {
+            "system": "http://snomed.info/sct",
+            "code": "26643006",
+            "display": "Oral route"
+          } ],
+          "text": "Oral route"
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://proxy.smartforms.io/fhir/Immunization/523",
+    "resource": {
+      "resourceType": "Immunization",
+      "id": "523",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2025-02-14T03:10:09.117+00:00",
+        "source": "#xTh3kH5wJlaqMS9j",
+        "profile": [ "http://hl7.org.au/fhir/core/StructureDefinition/au-core-immunization" ]
+      },
+      "status": "completed",
+      "vaccineCode": {
+        "coding": [ {
+          "system": "http://snomed.info/sct",
+          "version": "http://snomed.info/sct/32506021000036107/version/20250131",
+          "code": "1789171000168108",
+          "display": "Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe"
+        } ],
+        "text": "Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe"
+      },
+      "patient": {
+        "reference": "Patient/johnson-joyce",
+        "type": "Patient",
+        "display": "Joyce JOHNSON"
+      },
+      "occurrenceDateTime": "2024-10-05"
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://proxy.smartforms.io/fhir/Practitioner/burrows-ginger",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "burrows-ginger",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2025-02-03T02:09:09.141+00:00",
+        "source": "#p1tcGUw0ksrrZkUQ",
+        "profile": [ "http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner" ]
+      },
+      "identifier": [ {
+        "type": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "NPI",
+            "display": "National provider identifier"
+          } ],
+          "text": "HPI-I"
+        },
+        "system": "http://ns.electronichealth.net.au/id/hi/hpii/1.0",
+        "value": "8003618233385011"
+      } ],
+      "name": [ {
+        "family": "BURROWS",
+        "given": [ "Ginger" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "0270105673",
+        "use": "work"
+      }, {
+        "system": "email",
+        "value": "ginger.burrows@bungabbeemc.example.com.au"
+      } ],
+      "address": [ {
+        "line": [ "189 Bay Esp" ],
+        "city": "Bungabbee",
+        "state": "NSW",
+        "postalCode": "2480"
+      } ],
+      "gender": "female",
+      "qualification": [ {
+        "extension": [ {
+          "url": "http://hl7.org.au/fhir/StructureDefinition/ahpraprofession-details",
+          "extension": [ {
+            "url": "ahpraProfession",
+            "valueCodeableConcept": {
+              "text": "Medical Practitioner"
+            }
+          } ]
+        } ],
+        "identifier": [ {
+          "type": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+              "code": "AHPRA",
+              "display": "Australian Health Practitioner Regulation Agency Registration Number"
+            } ],
+            "text": "Ahpra Registration Number"
+          },
+          "system": "http://hl7.org.au/id/ahpra-registration-number",
+          "value": "HAC0000000043"
+        } ],
+        "code": {
+          "coding": [ {
+            "system": "http://terminology.hl7.org.au/CodeSystem/v2-0360",
+            "code": "AUAHPRAProfession",
+            "display": "AHPRA Profession"
+          } ]
+        }
+      } ]
+    },
+    "search": {
+      "mode": "match"
+    }
+  }, {
+    "fullUrl": "http://proxy.smartforms.io/fhir/Practitioner/bradley-jill",
+    "resource": {
+      "resourceType": "Practitioner",
+      "id": "bradley-jill",
+      "meta": {
+        "versionId": "1",
+        "lastUpdated": "2025-02-03T02:09:09.141+00:00",
+        "source": "#p1tcGUw0ksrrZkUQ",
+        "profile": [ "http://hl7.org.au/fhir/core/StructureDefinition/au-core-practitioner" ]
+      },
+      "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Practitioner</b><a name=\"bradley-jill\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Practitioner &quot;bradley-jill&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-core-practitioner.html\">AU Core Practitioner</a></p></div><p><b>active</b>: true</p><p><b>name</b>: Jill Bradley</p><p><b>telecom</b>: ph: 0491 570 006(MOBILE)</p><p><b>gender</b>: female</p></div>"
+      },
+      "active": true,
+      "name": [ {
+        "text": "Jill Bradley",
+        "family": "Bradley",
+        "given": [ "Jill" ]
+      } ],
+      "telecom": [ {
+        "system": "phone",
+        "value": "0491 570 006",
+        "use": "mobile"
+      } ],
+      "gender": "female"
+    },
+    "search": {
+      "mode": "match"
+    }
+  } ]
+}

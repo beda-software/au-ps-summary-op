@@ -7,4 +7,4 @@ services:
       - /app/zenproject/seeds.ndjson.gz
     volumes:
       - ./zenproject:/app/zenproject
-      - ./seeds:/app/resources
+      - ./resources/seeds:/app/resources
