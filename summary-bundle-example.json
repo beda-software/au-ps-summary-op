@@ -1,0 +1,2417 @@
+{
+  "resourceType": "Bundle",
+  "type": "document",
+  "timestamp": "2025-02-24T03:29:26.760Z",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"
+    ]
+  },
+  "identifier": {
+    "system": "urn:oid:2.16.724.4.8.10.200.10",
+    "value": "e729343a-3049-49e8-b9ea-e62247429b7d"
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Composition",
+        "id": "c38440e3-197e-4895-b39e-6db0d8b542eb",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-composition"
+          ]
+        },
+        "date": "2025-02-24T03:29:26.753Z",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "60591-5",
+              "display": "Patient summary Document"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-tc"
+        },
+        "author": [
+          {
+            "display": "Aidbox",
+            "type": "Device"
+          }
+        ],
+        "title": "Patient Summary as of Mon Feb 24 2025 03:29:26 GMT+0000 (Coordinated Universal Time)",
+        "event": [
+          {
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActClass",
+                    "code": "PCPR"
+                  }
+                ]
+              }
+            ],
+            "period": {
+              "end": "2025-02-24T03:29:26.753Z"
+            }
+          }
+        ],
+        "section": [
+          {
+            "title": "IPS Problems Section",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "11450-4",
+                  "display": "Problem list - Reported"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Nail wound of sole of foot</div></div>"
+            },
+            "entry": [
+              {
+                "reference": "Condition/condition-tc"
+              }
+            ]
+          },
+          {
+            "title": "IPS Allergies and Intolerances Section",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "48765-2",
+                  "display": "Allergies and adverse reactions Document"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>No known allergy</div></div>"
+            },
+            "entry": [
+              {
+                "reference": "AllergyIntolerance/ai-tc"
+              }
+            ]
+          },
+          {
+            "title": "Medication Summary section",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "10160-0",
+                  "display": "History of Medication use Narrative"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns='http://www.w3.org/1999/xhtml'>There is no information available about the subject's health problems or disabilities.</div>"
+            },
+            "entry": [
+              {
+                "reference": "MedicationStatement/medicationstatement-tc"
+              },
+              {
+                "reference": "MedicationRequest/medicationrequest-tc"
+              }
+            ]
+          },
+          {
+            "title": "Immunizations Section",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "11369-6",
+                  "display": "History of Immunization Narrative"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns='http://www.w3.org/1999/xhtml'>There is no information available about the subject's health problems or disabilities.</div>"
+            },
+            "entry": [
+              {
+                "reference": "Immunization/immunization-tc"
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>Generated Narrative</b></p>\n<div\n  style=\"\n    display: inline-block;\n    background-color: #d9e0e7;\n    padding: 6px;\n    margin: 4px;\n    border: 1px solid #8da1b4;\n    border-radius: 5px;\n    line-height: 60%;\n  \"\n>\n  <p style=\"margin-bottom: 0px\">Resource \"c38440e3-197e-4895-b39e-6db0d8b542eb\"</p>\n</div>\n<p><b>status</b>: final</p>\n<p>\n  <b>type</b>: Patient summary Document\n  <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">\n    (<a href=\"https://loinc.org/\">LOINC</a>#60591-5)\n  </span>\n</p>\n<p><b>date</b>: 2020-12-11 02:30:00+0100</p>\n<p><b>author</b>: Device Aidbox</p>\n<p><b>title</b>: Patient Summary as of Mon Feb 24 2025 03:29:26 GMT+0000 (Coordinated Universal Time)</p>\n<h3>Events</h3>\n<table class=\"grid\">\n  <tr>\n    <td>-</td>\n    <td><b>Code</b></td>\n    <td><b>Period</b></td>\n  </tr>\n  <tr>\n    <td>*</td>\n    <td>\n      care provision\n      <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">\n        (<a href=\"http://terminology.hl7.org/CodeSystem/v3-ActClass\">ActClass</a>#PCPR)</span>\n    </td>\n    <td>?? --&gt; 2025-02-24T03:29:26.753Z</td>\n  </tr>\n</table>\n</div>"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/Composition/c38440e3-197e-4895-b39e-6db0d8b542eb"
+    },
+    {
+      "resource": {
+        "address": [
+          {
+            "use": "home",
+            "city": "Blacktown",
+            "line": [
+              "29 Gadsby Street"
+            ],
+            "state": "NSW",
+            "country": "AU",
+            "postalCode": "2148"
+          }
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"
+          ],
+          "lastUpdated": "2025-02-24T03:15:11.644910Z",
+          "versionId": "146",
+          "extension": [
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:51.013667Z"
+            }
+          ]
+        },
+        "name": [
+          {
+            "use": "usual",
+            "text": "Wang Li",
+            "given": [
+              "Li"
+            ],
+            "family": "Wang",
+            "prefix": [
+              "Mr"
+            ]
+          }
+        ],
+        "birthDate": "1975-05-03",
+        "resourceType": "Patient",
+        "extension": [
+          {
+            "url": "http://hl7.org.au/fhir/StructureDefinition/indigenous-status",
+            "valueCoding": {
+              "code": "3",
+              "system": "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1",
+              "display": "Both Aboriginal and Torres Strait Islander origin"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/individual-pronouns",
+            "extension": [
+              {
+                "url": "value",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "LA29519-8",
+                      "system": "http://loinc.org",
+                      "display": "she/her/her/hers/herself"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/individual-genderIdentity",
+            "extension": [
+              {
+                "url": "value",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "446141000124107",
+                      "system": "http://snomed.info/sct",
+                      "display": "Identifies as female gender (finding)"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "text": "Cantonese",
+              "coding": [
+                {
+                  "code": "yue",
+                  "system": "urn:ietf:bcp:47"
+                }
+              ]
+            },
+            "preferred": true
+          }
+        ],
+        "id": "patient-tc",
+        "identifier": [
+          {
+            "type": {
+              "text": "DVA Number",
+              "coding": [
+                {
+                  "code": "DVAU",
+                  "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+                  "display": "DVA Number"
+                }
+              ]
+            },
+            "value": "QX144963",
+            "system": "http://ns.electronichealth.net.au/id/dva"
+          },
+          {
+            "type": {
+              "text": "IHI",
+              "coding": [
+                {
+                  "code": "NI",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                }
+              ]
+            },
+            "value": "8003608833357361",
+            "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+            "extension": [
+              {
+                "url": "http://hl7.org.au/fhir/StructureDefinition/ihi-status",
+                "valueCoding": {
+                  "code": "active",
+                  "system": "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1"
+                }
+              },
+              {
+                "url": "http://hl7.org.au/fhir/StructureDefinition/ihi-record-status",
+                "valueCoding": {
+                  "code": "verified",
+                  "system": "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1",
+                  "display": "verified"
+                }
+              }
+            ]
+          },
+          {
+            "type": {
+              "text": "Medicare Number",
+              "coding": [
+                {
+                  "code": "MC",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                }
+              ]
+            },
+            "value": "29533070322",
+            "system": "http://ns.electronichealth.net.au/id/medicare-number"
+          },
+          {
+            "type": {
+              "text": "Medical Record Number",
+              "coding": [
+                {
+                  "code": "MR",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "display": "Medical record number"
+                }
+              ]
+            },
+            "value": "2338189",
+            "system": "http://ns.electronichealth.net.au/id/hpio-scoped/medicalrecord/1.0/8003626566699734",
+            "assigner": {
+              "display": "Large Metropolitan Hospital"
+            }
+          }
+        ],
+        "telecom": [
+          {
+            "use": "home",
+            "value": "tc-1.2@amail.example.com",
+            "system": "email"
+          }
+        ],
+        "gender": "male",
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Li Wang </b> male, DoB: 1975-05-03 ( IHI/8003608833357361)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li>Medicare Number/29533070322</li><li>Medical Record Number/2338189</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail:</td><td colspan=\"3\">29 Gadsby Street Blacktown NSW 2148 AU (HOME)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Languages spoken\">Language:</td><td colspan=\"3\"><span title=\"Codes: {urn:ietf:bcp:47 yue}\">Cantonese</span> (preferred)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements.\"><a href=\"http://hl7.org/fhir/R4/extension-patient-birthplace.html\">Birth Place:</a></td><td colspan=\"3\"><ul><li>China</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"This extension applies to the Patient, RelatedPerson, and Practitioner resources and is used to represent a person's date of arrival in an Australian context (see [Australian Bureau of Statistics](https://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1200.0.55.007Main+Features12014,%20Version%201.5?OpenDocument) for further information). The date of arrival is when a person (born outside of Australia) first arrived in Australia, from another country, with the intention of living in Australia for one year or more. This date is recorded once for a person and is not subsequently updated with subsequent arrivals. This element is a part of Cultural and Linguistic Diversity (CALD) data set. It is an important indicator of cultural identity, and provides further information about a person's cultural values and practices which can be significant in determining service type, support required, and possible needs.\"><a href=\"https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-date-of-arrival.html\">Date of Arrival in Australia:</a></td><td colspan=\"3\"><ul><li>2015</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"This extension applies to the Patient, Person, and RelatedPerson resources and is used to indicate whether a person identifies as being of Aboriginal or Torres Strait Islander origin.\"><a href=\"https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-indigenous-status.html\">Australian Indigenous Status:</a></td><td colspan=\"3\"><ul><li>https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1 4: Neither Aboriginal nor Torres Strait Islander origin</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"This Patient requires an interpreter to communicate healthcare information to the practitioner.\"><a href=\"http://hl7.org/fhir/R4/extension-patient-interpreterrequired.html\">interpreterRequired:</a></td><td colspan=\"3\"><ul><li>true</li></ul></td></tr></table></div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/Patient/patient-tc"
+    },
+    {
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "encounter-diagnosis",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Encounter Diagnosis"
+              }
+            ]
+          }
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "resolved",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "display": "Resolved"
+            }
+          ]
+        },
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"
+          ],
+          "lastUpdated": "2025-02-24T03:19:17.916373Z",
+          "versionId": "219",
+          "extension": [
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:51.000834Z"
+            }
+          ]
+        },
+        "resourceType": "Condition",
+        "asserter": {
+          "reference": "Practitioner/practitioner-tc"
+        },
+        "note": [
+          {
+            "text": "Puncture wound to sole of left foot from stepping on a rusty nail.              Wound red and swollen, no calf muscle tenderness, no coughing nor chest pain              which excludes pulmonary embolism."
+          }
+        ],
+        "id": "condition-tc",
+        "recorder": {
+          "reference": "PractitionerRole/practitionerrole-tc"
+        },
+        "severity": {
+          "coding": [
+            {
+              "code": "24484000",
+              "system": "http://snomed.info/sct",
+              "display": "Severe"
+            }
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "283680004",
+              "system": "http://snomed.info/sct",
+              "display": "Nail wound of sole of foot"
+            }
+          ]
+        },
+        "onsetDateTime": "2017-03-30",
+        "abatementDateTime": "2015-02-14",
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "confirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-ver-status",
+              "display": "Confirmed"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-tc"
+        },
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Condition</b><a name=\"nailwound\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition &quot;nailwound&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-core-condition.html\">AU Core Condition</a></p></div><p><b>clinicalStatus</b>: Active <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-condition-clinical.html\">Condition Clinical Status Codes</a>#active)</span></p><p><b>verificationStatus</b>: Confirmed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-condition-ver-status.html\">ConditionVerificationStatus</a>#confirmed)</span></p><p><b>category</b>: Encounter Diagnosis <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-condition-category.html\">Condition Category Codes</a>#encounter-diagnosis)</span></p><p><b>code</b>: Nail wound of sole of foot <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#283680004)</span></p><p><b>subject</b>: <a href=\"Patient-wang-li.html\">Patient/wang-li</a> &quot; WANG&quot;</p><p><b>encounter</b>: <a href=\"Encounter-nailwound.html\">Encounter/nailwound</a></p><p><b>onset</b>: 2017-03-30</p><p><b>recorder</b>: <a href=\"PractitionerRole-bobrester-bob-gp.html\">PractitionerRole/bobrester-bob-gp</a></p><p><b>note</b>: Puncture wound to sole of left foot from stepping on a rusty nail.              Wound red and swollen, no calf muscle tenderness, no coughing nor chest pain              which excludes pulmonary embolism.</p></div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/Condition/condition-tc"
+    },
+    {
+      "resource": {
+        "patient": {
+          "reference": "Patient/patient-tc"
+        },
+        "category": [
+          "environment"
+        ],
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+              "display": "Active"
+            }
+          ]
+        },
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-allergyintolerance"
+          ],
+          "lastUpdated": "2025-02-24T03:16:17.788922Z",
+          "extension": [
+            {
+              "url": "http://fhir.aidbox.app/extension/createdat",
+              "valueInstant": "2024-06-23T19:02:30.770016Z"
+            },
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:50.999434Z"
+            }
+          ],
+          "versionId": "153"
+        },
+        "encounter": {
+          "reference": "Encounter/encounter-tc"
+        },
+        "type": "allergy",
+        "resourceType": "AllergyIntolerance",
+        "asserter": {
+          "identifier": {
+            "type": {
+              "text": "IHI",
+              "coding": [
+                {
+                  "code": "NI",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "display": "National unique individual identifier"
+                }
+              ]
+            },
+            "value": "8003608833357361",
+            "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0"
+          },
+          "reference": "Patient/patient-tc"
+        },
+        "note": [
+          {
+            "text": "noneknown note"
+          }
+        ],
+        "id": "ai-tc",
+        "recorder": {
+          "identifier": {
+            "type": {
+              "text": "HPI-I",
+              "coding": [
+                {
+                  "code": "NPI",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "display": "National provider identifier"
+                }
+              ]
+            },
+            "value": "8003614900041243",
+            "system": "http://ns.electronichealth.net.au/id/hi/hpii/1.0"
+          },
+          "reference": "PractitionerRole/practitionerrole-tc"
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "716186003",
+              "system": "http://snomed.info/sct",
+              "display": "No known allergy"
+            }
+          ]
+        },
+        "onsetDateTime": "2023-02-12",
+        "verificationStatus": {
+          "coding": [
+            {
+              "code": "unconfirmed",
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+              "display": "Unconfirmed"
+            }
+          ]
+        },
+        "reaction": [
+          {
+            "severity": "mild",
+            "substance": {
+              "text": "Egg",
+              "coding": [
+                {
+                  "code": "102263004",
+                  "system": "http://snomed.info/sct",
+                  "display": "Eggs (edible)"
+                }
+              ]
+            },
+            "manifestation": [
+              {
+                "coding": [
+                  {
+                    "code": "active",
+                    "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+                    "display": "Active"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: AllergyIntolerance</b><a name=\"noneknown\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource AllergyIntolerance &quot;noneknown&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-core-allergyintolerance.html\">AU Core AllergyIntolerance</a></p></div><p><b>clinicalStatus</b>: Active <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-allergyintolerance-clinical.html\">AllergyIntolerance Clinical Status Codes</a>#active)</span></p><p><b>verificationStatus</b>: Unconfirmed <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-allergyintolerance-verification.html\">AllergyIntolerance Verification Status</a>#unconfirmed)</span></p><p><b>code</b>: No known allergy <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#716186003; absent-unknown-uv-ips#no-known-allergies &quot;No known allergies&quot;)</span></p><p><b>patient</b>: <a href=\"Patient-wang-li.html\">Patient/wang-li</a> &quot; WANG&quot;</p><p><b>encounter</b>: <span>: GP Visit</span></p><p><b>recorder</b>: <a href=\"PractitionerRole-bobrester-bob-gp.html\">PractitionerRole/bobrester-bob-gp</a></p><p><b>asserter</b>: <a href=\"Patient-wang-li.html\">Patient/wang-li</a> &quot; WANG&quot;</p></div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/AllergyIntolerance/ai-tc"
+    },
+    {
+      "resource": {
+        "category": {
+          "coding": [
+            {
+              "code": "inpatient",
+              "system": "http://terminology.hl7.org/CodeSystem/medication-statement-category",
+              "display": "Inpatient"
+            }
+          ]
+        },
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationstatement"
+          ],
+          "lastUpdated": "2025-02-24T03:25:44.375371Z",
+          "extension": [
+            {
+              "url": "http://fhir.aidbox.app/extension/createdat",
+              "valueInstant": "2024-03-18T03:10:49.872370Z"
+            },
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:51.007354Z"
+            }
+          ],
+          "versionId": "251"
+        },
+        "dosage": [
+          {
+            "text": "40 mg/day",
+            "timing": {
+              "repeat": {
+                "period": 1,
+                "frequency": 1,
+                "periodUnit": "d"
+              }
+            },
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "code": "mg",
+                  "unit": "mg",
+                  "value": 40,
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            ]
+          }
+        ],
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "code": "38341003",
+                "system": "http://snomed.info/sct",
+                "display": "Hypertension"
+              }
+            ]
+          }
+        ],
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "code": "13528B",
+              "system": "http://pbs.gov.au/code/item",
+              "display": "simvastatin 10 mg tablet, 30"
+            },
+            {
+              "code": "21242011000036102",
+              "system": "http://snomed.info/sct",
+              "display": "simvastatin (medicinal product)"
+            }
+          ]
+        },
+        "statusReason": [
+          {
+            "coding": [
+              {
+                "code": "intolerance",
+                "system": "http://terminology.hl7.org/CodeSystem/medication-statement-status-reason",
+                "display": "Intolerance"
+              }
+            ]
+          }
+        ],
+        "resourceType": "MedicationStatement",
+        "note": [
+          {
+            "text": "simvastatin"
+          }
+        ],
+        "status": "active",
+        "id": "medicationstatement-tc",
+        "context": {
+          "reference": "Encounter/encounter-tc"
+        },
+        "dateAsserted": "2019-02-05",
+        "basedOn": [
+          {
+            "reference": "MedicationRequest/medicationrequest-tc"
+          }
+        ],
+        "informationSource": {
+          "reference": "PractitionerRole/practitionerrole-tc"
+        },
+        "subject": {
+          "reference": "Patient/patient-tc"
+        },
+        "effectivePeriod": {
+          "start": "2014"
+        },
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MedicationStatement</b><a name=\"simvastatin\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MedicationStatement &quot;simvastatin&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-core-medicationstatement.html\">AU Core MedicationStatement</a></p></div><p><b>status</b>: active</p><p><b>medication</b>: <a href=\"Medication-simvastatin.html\">Medication/simvastatin</a></p><p><b>subject</b>: <a href=\"Patient-wang-li.html\">Patient/wang-li</a> &quot; WANG&quot;</p><p><b>effective</b>: 2014 --&gt; (ongoing)</p><blockquote><p><b>dosage</b></p><p><b>text</b>: 40 mg/day</p><p><b>timing</b>: Once per 1 days</p><blockquote><p><b>doseAndRate</b></p></blockquote></blockquote></div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/MedicationStatement/medicationstatement-tc"
+    },
+    {
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "discharge",
+                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category"
+              }
+            ]
+          }
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medicationrequest"
+          ],
+          "lastUpdated": "2025-02-24T03:25:28.948693Z",
+          "extension": [
+            {
+              "url": "http://fhir.aidbox.app/extension/createdat",
+              "valueInstant": "2024-03-18T03:10:49.885712Z"
+            },
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:50.985658Z"
+            }
+          ],
+          "versionId": "250"
+        },
+        "substitution": {
+          "allowedBoolean": true
+        },
+        "encounter": {
+          "reference": "Encounter/encounter-tc"
+        },
+        "dispenseRequest": {
+          "quantity": {
+            "code": "TAB",
+            "unit": "Tab",
+            "value": 20,
+            "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"
+          },
+          "validityPeriod": {
+            "end": "2019-07-15",
+            "start": "2018-07-15"
+          },
+          "dispenseInterval": {
+            "code": "wk",
+            "unit": "week",
+            "value": 1,
+            "system": "http://unitsofmeasure.org"
+          },
+          "expectedSupplyDuration": {
+            "code": "d",
+            "unit": "days",
+            "value": 10,
+            "system": "http://unitsofmeasure.org"
+          },
+          "numberOfRepeatsAllowed": 2
+        },
+        "reasonCode": [
+          {
+            "text": "Pain management"
+          }
+        ],
+        "medicationCodeableConcept": {
+          "coding": [
+            {
+              "code": "926213011000036100",
+              "system": "http://snomed.info/sct",
+              "display": "Reaptan 10 mg/10 mg (perindopril arginine/amlodipine) tablet, 10"
+            },
+            {
+              "code": "13382H",
+              "system": "http://pbs.gov.au/code/item"
+            }
+          ]
+        },
+        "authoredOn": "2018-07-15",
+        "resourceType": "MedicationRequest",
+        "note": [
+          {
+            "text": "Patient requires an administration aid."
+          }
+        ],
+        "requester": {
+          "reference": "PractitionerRole/practitionerrole-tc"
+        },
+        "status": "active",
+        "id": "medicationrequest-tc",
+        "dosageInstruction": [
+          {
+            "text": "1-2 tablets every 4-6 hours as needed for pain",
+            "route": {
+              "coding": [
+                {
+                  "code": "26643006",
+                  "system": "http://snomed.info/sct",
+                  "display": "Oral route"
+                }
+              ]
+            },
+            "timing": {
+              "repeat": {
+                "period": 4,
+                "frequency": 1,
+                "periodMax": 6,
+                "periodUnit": "h",
+                "frequencyMax": 2
+              }
+            },
+            "asNeededBoolean": true,
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "code": "TAB",
+                  "unit": "TAB",
+                  "value": 1,
+                  "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"
+                }
+              }
+            ]
+          }
+        ],
+        "identifier": [
+          {
+            "type": {
+              "text": "Local Prescription Number",
+              "coding": [
+                {
+                  "code": "LPN",
+                  "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203"
+                }
+              ]
+            },
+            "value": "53720010",
+            "system": "http://ns.electronichealth.net.au/id/hpio-scoped/prescription/1.0/8003621566684455",
+            "assigner": {
+              "reference": "Organization/organization-medical-center-tc"
+            }
+          }
+        ],
+        "intent": "order",
+        "subject": {
+          "reference": "Patient/patient-tc"
+        },
+        "reasonReference": [
+          {
+            "reference": "Condition/condition-tc"
+          }
+        ],
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MedicationRequest</b><a name=\"reaptan\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MedicationRequest &quot;reaptan&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-core-medicationrequest.html\">AU Core MedicationRequest</a></p></div><p><b>identifier</b>: Local Prescription Number/53720010</p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>category</b>: Discharge <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-medicationrequest-category.html\">MedicationRequest Category Codes</a>#discharge)</span></p><p><b>medication</b>: Reaptan 10 mg/10 mg (perindopril arginine/amlodipine) tablet, 10 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#926213011000036100)</span></p><p><b>subject</b>: <a href=\"Patient-smith-emma.html\">Patient/smith-emma</a> &quot; SMITH&quot;</p><p><b>authoredOn</b>: 2018-07-15</p><p><b>requester</b>: <a href=\"PractitionerRole-surgeon-david-surgeon.html\">PractitionerRole/surgeon-david-surgeon</a></p><p><b>reasonCode</b>: Pain management <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ()</span></p><p><b>note</b>: Patient requires an administration aid.</p><blockquote><p><b>dosageInstruction</b></p><p><b>text</b>: 1-2 tablets every 4-6 hours as needed for pain</p><p><b>timing</b>: 1-1 per 4-6 hours</p><p><b>asNeeded</b>: true</p><p><b>route</b>: Oral route <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#26643006)</span></p><blockquote><p><b>doseAndRate</b></p></blockquote></blockquote><blockquote><p><b>dispenseRequest</b></p><h3>DispenseIntervals</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Unit</b></td><td><b>System</b></td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td>1</td><td>week</td><td><a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-v3-ucum.html\">Unified Code for Units of Measure (UCUM)</a></td><td>wk</td></tr></table><p><b>validityPeriod</b>: 2018-07-15 --&gt; 2019-07-15</p><p><b>numberOfRepeatsAllowed</b>: 2</p><p><b>quantity</b>: 20 Tab<span style=\"background: LightGoldenRodYellow\"> (Details: http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm code TAB = 'Tablet')</span></p><h3>ExpectedSupplyDurations</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Value</b></td><td><b>Unit</b></td><td><b>System</b></td><td><b>Code</b></td></tr><tr><td style=\"display: none\">*</td><td>10</td><td>days</td><td><a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-v3-ucum.html\">Unified Code for Units of Measure (UCUM)</a></td><td>d</td></tr></table></blockquote><h3>Substitutions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Allowed[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>true</td></tr></table></div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/MedicationRequest/medicationrequest-tc"
+    },
+    {
+      "resource": {
+        "patient": {
+          "identifier": {
+            "type": {
+              "text": "IHI",
+              "coding": [
+                {
+                  "code": "NI",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "display": "National unique individual identifier"
+                }
+              ]
+            },
+            "value": "8003608833357361",
+            "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0"
+          },
+          "reference": "Patient/patient-tc"
+        },
+        "protocolApplied": [
+          {
+            "series": "primary vaccination course 2-dose",
+            "doseNumberPositiveInt": 1,
+            "targetDisease": [
+              {
+                "text": "COVID-19",
+                "coding": [
+                  {
+                    "code": "840539006",
+                    "system": "http://snomed.info/sct",
+                    "display": "COVID-19"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"
+          ],
+          "lastUpdated": "2025-02-24T03:25:11.795678Z",
+          "extension": [
+            {
+              "url": "http://fhir.aidbox.app/extension/createdat",
+              "valueInstant": "2024-03-18T03:10:49.868023Z"
+            },
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:51.008555Z"
+            }
+          ],
+          "versionId": "249"
+        },
+        "site": {
+          "text": "Left upper arm",
+          "coding": [
+            {
+              "code": "368208006",
+              "system": "http://snomed.info/sct",
+              "display": "Left upper arm structure"
+            }
+          ]
+        },
+        "encounter": {
+          "reference": "Encounter/encounter-tc"
+        },
+        "vaccineCode": {
+          "text": "Pfizer Comirnaty",
+          "coding": [
+            {
+              "code": "COMIRN",
+              "system": "https://www.humanservices.gov.au/organisations/health-professionals/enablers/air-vaccine-code-formats"
+            },
+            {
+              "code": "1525011000168107",
+              "system": "http://snomed.info/sct",
+              "display": "Comirnaty"
+            }
+          ]
+        },
+        "reasonCode": [
+          {
+            "text": "COVID-19 Immunization",
+            "coding": [
+              {
+                "code": "840539006",
+                "system": "http://snomed.info/sct",
+                "display": "COVID-19"
+              }
+            ]
+          }
+        ],
+        "route": {
+          "text": "Intramuscular",
+          "coding": [
+            {
+              "code": "78421000",
+              "system": "http://snomed.info/sct",
+              "display": "Intramuscular route"
+            }
+          ]
+        },
+        "resourceType": "Immunization",
+        "recorded": "2021-06-17",
+        "note": [
+          {
+            "text": "Primary vaccination course 2-dose"
+          }
+        ],
+        "primarySource": true,
+        "status": "completed",
+        "id": "immunization-tc",
+        "lotNumber": "200000000P",
+        "manufacturer": {
+          "display": "Pfizer Australia Ltd"
+        },
+        "location": {
+          "reference": "Location/location-tc"
+        },
+        "occurrenceDateTime": "2021-06-17",
+        "performer": [
+          {
+            "actor": {
+              "identifier": {
+                "type": {
+                  "text": "HPI-I",
+                  "coding": [
+                    {
+                      "code": "NPI",
+                      "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                      "display": "National provider identifier"
+                    }
+                  ]
+                },
+                "value": "8003619900015717",
+                "system": "http://ns.electronichealth.net.au/id/hi/hpii/1.0"
+              },
+              "reference": "PractitionerRole/practitionerrole-tc"
+            },
+            "function": {
+              "text": "Administering Provider",
+              "coding": [
+                {
+                  "code": "AP",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0443",
+                  "display": "Administering Provider"
+                }
+              ]
+            }
+          }
+        ],
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Immunization</b><a name=\"covid-1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Immunization &quot;covid-1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-core-immunization.html\">AU Core Immunization</a></p></div><p><b>status</b>: completed</p><p><b>vaccineCode</b>: Pfizer Comirnaty <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (air-vaccine-code-formats#COMIRN; <a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#1525011000168107 &quot;Comirnaty&quot;)</span></p><p><b>patient</b>: <a href=\"Patient-bennelong-anne.html\">Patient/bennelong-anne</a> &quot; BENNELONG&quot;</p><p><b>encounter</b>: <a href=\"Encounter-covid-admin-1.html\">Encounter/covid-admin-1</a></p><p><b>occurrence</b>: 2021-06-17</p><p><b>recorded</b>: 2021-06-17</p><p><b>primarySource</b>: true</p><p><b>location</b>: <a href=\"Location-bobrester-medical-center.html\">Location/bobrester-medical-center</a> &quot;Tindal Building&quot;</p><p><b>manufacturer</b>: <span>: Pfizer Australia Ltd</span></p><p><b>lotNumber</b>: 200000000P</p><p><b>site</b>: Left upper arm <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#368208006 &quot;Left upper arm structure&quot;)</span></p><p><b>route</b>: Intramuscular <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#78421000 &quot;Intramuscular route&quot;)</span></p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td>Administering Provider <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-v2-0443.html\">providerRole</a>#AP)</span></td><td><a href=\"PractitionerRole-bobrester-bob-gp.html\">PractitionerRole/bobrester-bob-gp</a></td></tr></table><h3>ProtocolApplieds</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Series</b></td><td><b>TargetDisease</b></td><td><b>DoseNumber[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>primary vaccination course 2-dose</td><td>COVID-19 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#840539006)</span></td><td>1</td></tr></table></div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/Immunization/immunization-tc"
+    },
+    {
+      "resource": {
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-encounter"
+          ],
+          "lastUpdated": "2025-02-24T03:23:48.342960Z",
+          "extension": [
+            {
+              "url": "http://fhir.aidbox.app/extension/createdat",
+              "valueInstant": "2024-03-18T03:10:49.875578Z"
+            },
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:51.009893Z"
+            }
+          ],
+          "versionId": "246"
+        },
+        "serviceProvider": {
+          "reference": "Organization/organization-medical-center-tc"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "code": "283680004",
+                "system": "http://snomed.info/sct",
+                "display": "Nail wound of sole of foot"
+              }
+            ]
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "270427003",
+                "system": "http://snomed.info/sct",
+                "display": "Patient-initiated encounter"
+              }
+            ]
+          }
+        ],
+        "participant": [
+          {
+            "type": [
+              {
+                "coding": [
+                  {
+                    "code": "PPRF",
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                    "display": "primary performer"
+                  }
+                ]
+              }
+            ],
+            "individual": {
+              "reference": "PractitionerRole/practitionerrole-tc"
+            }
+          }
+        ],
+        "resourceType": "Encounter",
+        "serviceType": {
+          "coding": [
+            {
+              "code": "788007007",
+              "system": "http://snomed.info/sct",
+              "display": "General practice service"
+            }
+          ]
+        },
+        "status": "finished",
+        "id": "encounter-tc",
+        "class": {
+          "code": "AMB",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "display": "ambulatory"
+        },
+        "identifier": [
+          {
+            "use": "official",
+            "type": {
+              "text": "Medical Record Number",
+              "coding": [
+                {
+                  "code": "MR",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "display": "Medical Record Number"
+                }
+              ]
+            },
+            "value": "123456",
+            "period": {
+              "end": "2024-01-02",
+              "start": "2024-01-01"
+            },
+            "system": "http://hospital.smarthealthit.org",
+            "assigner": {
+              "display": "Smart Hospital"
+            }
+          }
+        ],
+        "hospitalization": {
+          "dischargeDisposition": {
+            "text": "Discharged to Home",
+            "coding": [
+              {
+                "code": "9",
+                "system": "https://healthterminologies.gov.au/fhir/CodeSystem/separation-mode-1",
+                "display": "Other/Home"
+              },
+              {
+                "code": "home",
+                "system": "http://terminology.hl7.org/CodeSystem/discharge-disposition",
+                "display": "Home"
+              }
+            ]
+          }
+        },
+        "period": {
+          "end": "2017-03-31T15:40:00+10:00",
+          "start": "2017-03-31T15:20:00+10:00"
+        },
+        "location": [
+          {
+            "location": {
+              "reference": "Location/location-tc"
+            }
+          }
+        ],
+        "subject": {
+          "reference": "Patient/patient-tc"
+        },
+        "reasonReference": [
+          {
+            "reference": "Condition/condition-tc"
+          }
+        ],
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Encounter</b><a name=\"nailwound\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Encounter &quot;nailwound&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-au-core-encounter.html\">AU Core Encounter</a></p></div><p><b>Encounter Description</b>: Patient presented with open injury to sole of left foot caused by stepping on rusty nail yesterday.              Wound red and swollen, no calf muscle tenderness, no coughing nor chest pain which excludes pulmonary embolism.              Patient has an existing allergy to adhesive tape, which manifests as urticaria.              Patient was given booster dose of anti tetanus and prescribed amoxicillin 500mg 3 times a day.              Wound was attended. Advised to present in 2 days to the usual GPs clinic for a change of dressings.</p><p><b>status</b>: finished</p><p><b>class</b>: ambulatory (Details: http://terminology.hl7.org/CodeSystem/v3-ActCode code AMB = 'ambulatory', stated as 'ambulatory')</p><p><b>type</b>: Patient-initiated encounter <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#270427003)</span></p><p><b>serviceType</b>: General practice service <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#788007007)</span></p><p><b>subject</b>: <a href=\"Patient-wang-li.html\">Patient/wang-li</a> &quot; WANG&quot;</p><h3>Participants</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Individual</b></td></tr><tr><td style=\"display: none\">*</td><td>primary performer <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-v3-ParticipationType.html\">ParticipationType</a>#PPRF)</span></td><td><a href=\"PractitionerRole-bobrester-bob-gp.html\">PractitionerRole/bobrester-bob-gp</a></td></tr></table><p><b>period</b>: 2017-03-31 15:20:00+1000 --&gt; 2017-03-31 15:40:00+1000</p><p><b>reasonCode</b>: Nail wound of sole of foot <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#283680004)</span></p><p><b>reasonReference</b>: <a href=\"Condition-nailwound.html\">Condition/nailwound</a></p></div>",
+          "status": "extensions"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/Encounter/encounter-tc"
+    },
+    {
+      "resource": {
+        "id": "relatedperson-tc",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-relatedperson"
+          ],
+          "lastUpdated": "2025-02-24T03:28:59.517308Z",
+          "versionId": "285",
+          "extension": [
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:51.002249Z"
+            }
+          ]
+        },
+        "name": [
+          {
+            "given": [
+              "Bob"
+            ],
+            "family": "Banks"
+          }
+        ],
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: RelatedPerson banks-mia-leanne-father</b></p><a name=\"banks-mia-leanne-father\"> </a><a name=\"hcbanks-mia-leanne-father\"> </a><a name=\"banks-mia-leanne-father-en-AU\"> </a><p><b>patient</b>: <a href=\"Patient-banks-mia-leanne.html\">Mia Leanne Banks  Female, DoB: 1983-08-25 ( IHI: Austalian Healthcare Identifier - Individual#8003608333647261)</a></p><p><b>relationship</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-RoleCode FTH}\">Father</span></p><p><b>name</b>: Bob Banks </p></div>",
+          "status": "generated"
+        },
+        "patient": {
+          "reference": "Patient/patient-tc"
+        },
+        "relationship": [
+          {
+            "text": "Father",
+            "coding": [
+              {
+                "code": "FTH",
+                "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
+              }
+            ]
+          }
+        ],
+        "resourceType": "RelatedPerson"
+      },
+      "fullUrl": "http://aidbox:8888/fhir/RelatedPerson/relatedperson-tc"
+    },
+    {
+      "resource": {
+        "description": "Physical",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "47039-3",
+                "system": "http://loinc.org",
+                "display": "Inpatient Admission history and physical note"
+              }
+            ]
+          }
+        ],
+        "date": "2013-07-01T23:11:33+10:00",
+        "meta": {
+          "lastUpdated": "2025-02-24T03:20:53.162301Z",
+          "versionId": "244",
+          "extension": [
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:51.004788Z"
+            }
+          ]
+        },
+        "content": [
+          {
+            "format": {
+              "code": "urn:ihe:pcc:handp:2008",
+              "system": "urn:oid:1.3.6.1.4.1.19376.1.2.3"
+            },
+            "attachment": {
+              "url": "http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32",
+              "title": "Physical",
+              "creation": "2005-12-24",
+              "language": "en-US",
+              "contentType": "text/plain"
+            }
+          }
+        ],
+        "type": {
+          "coding": [
+            {
+              "code": "History and Physical",
+              "system": "http://ihe.net/connectathon/classCodes",
+              "display": "History and Physical"
+            }
+          ]
+        },
+        "resourceType": "DocumentReference",
+        "author": [
+          {
+            "reference": "Practitioner/practitioner-tc"
+          }
+        ],
+        "masterIdentifier": {
+          "value": "urn:oid:129.6.58.92.88336",
+          "system": "urn:ietf:rfc:3986"
+        },
+        "status": "current",
+        "id": "documentreference-tc",
+        "context": {
+          "period": {
+            "end": "2004-12-23T08:01:00+10:00",
+            "start": "2004-12-23T08:00:00+10:00"
+          },
+          "practiceSetting": {
+            "coding": [
+              {
+                "code": "General Medicine",
+                "system": "http://ihe.net/connectathon/practiceSettingCodes",
+                "display": "General Medicine"
+              }
+            ]
+          }
+        },
+        "securityLabel": [
+          {
+            "coding": [
+              {
+                "code": "N",
+                "system": "http://terminology.hl7.org/CodeSystem/v3-Confidentiality",
+                "display": "normal"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "Patient/patient-tc"
+        },
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\n\t\t\t\t\t\t<a href=\"http://localhost:9556/svc/fhir/Binary/1e404af3-077f-4bee-b7a6-a9be97e1ce32\">Document: urn:oid:129.6.58.92.88336</a>undefined, created 24/12/2005\n\t\t\t\t\t</div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/DocumentReference/documentreference-tc"
+    },
+    {
+      "resource": {
+        "patient": {
+          "reference": "Patient/patient-tc"
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "59284-0",
+                "system": "http://loinc.org"
+              }
+            ]
+          }
+        ],
+        "provision": {
+          "period": {
+            "end": "2016-01-01",
+            "start": "1964-01-01"
+          }
+        },
+        "meta": {
+          "lastUpdated": "2025-02-24T03:20:12.623608Z",
+          "versionId": "241",
+          "extension": [
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:51.014991Z"
+            }
+          ]
+        },
+        "sourceAttachment": {
+          "title": "The terms of the consent in lawyer speak."
+        },
+        "organization": [
+          {
+            "reference": "Organization/organization-medical-center-tc"
+          }
+        ],
+        "resourceType": "Consent",
+        "scope": {
+          "coding": [
+            {
+              "code": "patient-privacy",
+              "system": "http://terminology.hl7.org/CodeSystem/consentscope"
+            }
+          ]
+        },
+        "dateTime": "2016-05-11",
+        "status": "active",
+        "id": "consent-tc",
+        "policyRule": {
+          "coding": [
+            {
+              "code": "OPTIN",
+              "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode"
+            }
+          ]
+        },
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<p>\n\tAuthorize Normal access for Treatment\n\t\t\t</p>\n\t\t\t<p>\n    Patient &quot;P. van de Heuvel&quot; wishes to have all of the PHI collected at the Good Health Psychiatric Hospital \n   available for normal treatment use.\n\t\t\t</p>\n\t\t</div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/Consent/consent-tc"
+    },
+    {
+      "resource": {
+        "addresses": [
+          {
+            "reference": "Condition/condition-tc"
+          }
+        ],
+        "meta": {
+          "lastUpdated": "2025-02-24T03:18:10.599481Z",
+          "versionId": "175",
+          "extension": [
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:50.995557Z"
+            }
+          ]
+        },
+        "goal": [
+          {
+            "reference": "#goal"
+          }
+        ],
+        "resourceType": "CarePlan",
+        "activity": [
+          {
+            "detail": {
+              "code": {
+                "coding": [
+                  {
+                    "code": "241541005",
+                    "system": "http://snomed.info/sct",
+                    "display": "High resolution computed tomography of lungs"
+                  }
+                ]
+              },
+              "kind": "ServiceRequest",
+              "status": "not-started",
+              "doNotPerform": false
+            }
+          }
+        ],
+        "contained": [
+          {
+            "id": "careteam",
+            "participant": [
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "code": "425268008",
+                        "system": "http://snomed.info/sct",
+                        "display": "Review of care plan"
+                      }
+                    ]
+                  }
+                ],
+                "member": {
+                  "reference": "Practitioner/practitioner-tc"
+                }
+              },
+              {
+                "role": [
+                  {
+                    "coding": [
+                      {
+                        "code": "278110001",
+                        "system": "http://snomed.info/sct",
+                        "display": "Radiographic imaging"
+                      }
+                    ]
+                  }
+                ],
+                "member": {
+                  "reference": "Practitioner/practitioner-tc"
+                }
+              }
+            ],
+            "resourceType": "CareTeam"
+          },
+          {
+            "id": "goal",
+            "subject": {
+              "reference": "Patient/patient-tc"
+            },
+            "description": {
+              "text": "Check whether further treatment of sepsis/pulmonary abcess is required"
+            },
+            "resourceType": "Goal",
+            "lifecycleStatus": "cancelled"
+          }
+        ],
+        "status": "completed",
+        "id": "careplan-tc",
+        "intent": "plan",
+        "period": {
+          "end": "2013-04-21",
+          "start": "2013-04-14"
+        },
+        "subject": {
+          "reference": "Patient/patient-tc"
+        },
+        "careTeam": [
+          {
+            "reference": "#careteam"
+          }
+        ],
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: f203</p><p><b>contained</b>: , </p><p><b>status</b>: completed</p><p><b>intent</b>: plan</p><p><b>subject</b>: <a>Roel</a></p><p><b>period</b>: 14/04/2013 --&gt; 21/04/2013</p><p><b>careTeam</b>: id: careteam</p><p><b>addresses</b>: <a>Roel's sepsis</a></p><p><b>goal</b>: id: goal; lifecycleStatus: cancelled; Check whether further treatment of sepsis/pulmonary abcess is required <span>(Details )</span></p><blockquote><p><b>activity</b></p><h3>Details</h3><table><tr><td>-</td><td><b>Kind</b></td><td><b>Code</b></td><td><b>Status</b></td><td><b>DoNotPerform</b></td></tr><tr><td>*</td><td>ServiceRequest</td><td>High resolution computed tomography of lungs <span>(Details : {SNOMED CT code '241541005' = 'High resolution CT of lungs', given as 'High resolution computed tomography of lungs'})</span></td><td>not-started</td><td>false</td></tr></table></blockquote></div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/CarePlan/careplan-tc"
+    },
+    {
+      "resource": {
+        "description": "This 26 yo male patient is brought into ER by ambulance after being involved in a motor vehicle accident",
+        "date": "2014-12-06T22:33:00+11:00",
+        "meta": {
+          "lastUpdated": "2025-02-24T03:18:46.252717Z",
+          "versionId": "197",
+          "extension": [
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:50.993137Z"
+            }
+          ]
+        },
+        "investigation": [
+          {
+            "code": {
+              "text": "Initial Examination"
+            },
+            "item": [
+              {
+                "display": "deep laceration of the scalp (left temporo-occipital)"
+              },
+              {
+                "display": "decreased level of consciousness"
+              },
+              {
+                "display": "disoriented to time and place"
+              },
+              {
+                "display": "restless"
+              }
+            ]
+          }
+        ],
+        "assessor": {
+          "reference": "Practitioner/practitioner-tc"
+        },
+        "encounter": {
+          "reference": "Encounter/encounter-tc"
+        },
+        "problem": [
+          {
+            "display": "MVA"
+          }
+        ],
+        "resourceType": "ClinicalImpression",
+        "summary": "provisional diagnoses of laceration of head and traumatic brain injury (TBI)",
+        "status": "completed",
+        "id": "clinicalimpression-tc",
+        "identifier": [
+          {
+            "value": "12345"
+          }
+        ],
+        "finding": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "code": "850.0",
+                  "system": "http://hl7.org/fhir/sid/icd-9"
+                }
+              ]
+            }
+          }
+        ],
+        "subject": {
+          "reference": "Patient/patient-tc"
+        },
+        "effectivePeriod": {
+          "end": "2014-12-06T22:33:00+11:00",
+          "start": "2014-12-06T20:00:00+11:00"
+        },
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>identifier</b>: 12345</p><p><b>status</b>: completed</p><p><b>description</b>: This 26 yo male patient is brought into ER by ambulance after being involved in a motor vehicle accident</p><p><b>subject</b>: <a>Patient/example</a></p><p><b>encounter</b>: <a>Encounter/example</a></p><p><b>effective</b>: 06/12/2014 8:00:00 PM --&gt; 06/12/2014 10:33:00 PM</p><p><b>date</b>: 06/12/2014 10:33:00 PM</p><p><b>assessor</b>: <a>Practitioner/example</a></p><p><b>problem</b>: MVA</p><h3>Investigations</h3><table><tr><td>-</td><td><b>Code</b></td><td><b>Item</b></td></tr><tr><td>*</td><td>Initial Examination <span>(Details )</span></td><td>deep laceration of the scalp (left temporo-occipital)</td></tr></table><p><b>summary</b>: provisional diagnoses of laceration of head and traumatic brain injury (TBI)</p><h3>Findings</h3><table><tr><td>-</td><td><b>ItemCodeableConcept</b></td></tr><tr><td>*</td><td>850.0 <span>(Details : {ICD-9 code '850.0' = '850.0)</span></td></tr></table></div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/ClinicalImpression/clinicalimpression-tc"
+    },
+    {
+      "resource": {
+        "id": "specimen-tc",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips"
+          ],
+          "lastUpdated": "2025-02-24T03:29:11.563940Z",
+          "versionId": "286",
+          "extension": [
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:51.003603Z"
+            }
+          ]
+        },
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Specimen specimen-example-1</b></p><a name=\"specimen-example-1\"> </a><a name=\"hcspecimen-example-1\"> </a><a name=\"specimen-example-1-en-US\"> </a><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 122575003}\">Urine specimen</span></p><p><b>subject</b>: <a href=\"Patient-66033.html\">Marie Lux-Brennard  Female, DoB: 1998-04-17 ( urn:oid:1.3.182.4.4#1998041799999)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Method</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://snomed.info/sct 73416001}\">Urine specimen collection, clean catch</span></td></tr></table></div>",
+          "status": "generated"
+        },
+        "type": {
+          "coding": [
+            {
+              "code": "122575003",
+              "system": "http://snomed.info/sct",
+              "display": "Urine specimen"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-tc"
+        },
+        "collection": {
+          "method": {
+            "coding": [
+              {
+                "code": "73416001",
+                "system": "http://snomed.info/sct",
+                "display": "Urine specimen collection, clean catch"
+              }
+            ]
+          }
+        },
+        "resourceType": "Specimen"
+      },
+      "fullUrl": "http://aidbox:8888/fhir/Specimen/specimen-tc"
+    },
+    {
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "LAB",
+                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "display": "Laboratory"
+              }
+            ]
+          }
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"
+          ],
+          "lastUpdated": "2025-02-24T03:20:36.912511Z",
+          "versionId": "243",
+          "extension": [
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:50.994375Z"
+            }
+          ]
+        },
+        "resourceType": "DiagnosticReport",
+        "effectiveDateTime": "2017-11-10",
+        "status": "final",
+        "id": "diagnosticreport-tc",
+        "code": {
+          "coding": [
+            {
+              "code": "11502-2",
+              "system": "http://loinc.org",
+              "display": "Laboratory report"
+            }
+          ]
+        },
+        "issued": "2017-11-10T08:20:00+01:00",
+        "subject": {
+          "reference": "Patient/patient-tc"
+        },
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport hemoglobin</b></p><a name=\"hemoglobin\"> </a><a name=\"hchemoglobin\"> </a><a name=\"hemoglobin-en-US\"> </a><h2><span title=\"Codes:{http://loinc.org 11502-2}\">Laboratory report</span> (<span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 LAB}\">Laboratory</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td>Alexander Heig  Male, DoB: 1957 ( http://trilliumbridge.eu/fhir/demos/eumfh/inject#39-07)</td></tr><tr><td>When For</td><td>2017-11-10</td></tr><tr><td>Reported</td><td>2017-11-10 08:20:00+0100</td></tr><tr><td>Performer</td><td> <a href=\"Organization-TII-Organization1.html\">Someplace General Hospital</a></td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td><td><b>Note</b></td><td><b>When For</b></td></tr><tr><td><a href=\"Observation-hemoglobin.html\"><span title=\"Codes:{http://loinc.org 17856-6}\">Hemoglobin A1c/Hemoglobin.total in Blood by HPLC</span></a></td><td>7.5 %<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code% = '%')</span></td><td>Final</td><td>Above stated goal of 7.0 %</td><td>2017-11-10 08:20:00+0100</td></tr></table></div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/DiagnosticReport/diagnosticreport-tc"
+    },
+    {
+      "resource": {
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/ImagingStudy-uv-ips"
+          ],
+          "lastUpdated": "2025-02-24T03:24:23.443258Z",
+          "versionId": "248",
+          "extension": [
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:50.996830Z"
+            }
+          ]
+        },
+        "series": [
+          {
+            "uid": "2.16.840.1.113883.2.9.999.2.12345",
+            "bodySite": {
+              "code": "80891009",
+              "system": "http://snomed.info/sct",
+              "display": "Heart"
+            },
+            "modality": {
+              "code": "NM",
+              "system": "http://dicom.nema.org/resources/ontology/DCM",
+              "display": "Nuclear Medicine"
+            }
+          }
+        ],
+        "reasonCode": [
+          {
+            "text": "Chest pain, hypertension, type II diabetes mellitus."
+          }
+        ],
+        "resourceType": "ImagingStudy",
+        "status": "available",
+        "id": "imagingstudy-tc",
+        "identifier": [
+          {
+            "value": "urn:oid:2.16.840.1.113883.2.9.999.1.12345",
+            "system": "urn:dicom:uid"
+          }
+        ],
+        "subject": {
+          "reference": "Patient/patient-tc"
+        },
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImagingStudy TII-ImagingStudy-5-1</b></p><a name=\"TII-ImagingStudy-5-1\"> </a><a name=\"hcTII-ImagingStudy-5-1\"> </a><a name=\"TII-ImagingStudy-5-1-en-US\"> </a><p><b>identifier</b>: <a href=\"http://terminology.hl7.org/6.2.0/NamingSystem-dui.html\" title=\"An OID issued under DICOM OID rules. DICOM OIDs are represented as plain OIDs, with a prefix of &quot;urn:oid:&quot;. See https://www.dicomstandard.org/\">DICOM Unique Id</a>/urn:oid:2.16.840.1.113883.2.9.999.1.12345</p><p><b>status</b>: Available</p><p><b>subject</b>: <a href=\"Patient-eumfh-39-07.html\">Alexander Heig  Male, DoB: 1957 ( http://trilliumbridge.eu/fhir/demos/eumfh/inject#39-07)</a></p><p><b>procedureCode</b>: <span title=\"Codes:{http://loinc.org 49569-7}\">SPECT Heart perfusion and wall motion at rest and W stress and W Tl-201 IV and W Tc-99m Sestamibi IV</span></p><p><b>reasonCode</b>: <span title=\"Codes:\">Chest pain, hypertension, type II diabetes mellitus.</span></p><h3>Series</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Uid</b></td><td><b>Modality</b></td><td><b>BodySite</b></td></tr><tr><td style=\"display: none\">*</td><td>2.16.840.1.113883.2.9.999.2.12345</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-dicom-dcim.html#dicom-dcim-NM\">DICOM NM</a>: Nuclear Medicine</td><td><a href=\"http://snomed.info/id/80891009\">SNOMED CT 80891009</a>: Heart</td></tr></table></div>",
+          "status": "generated"
+        },
+        "procedureCode": [
+          {
+            "coding": [
+              {
+                "code": "49569-7",
+                "system": "http://loinc.org",
+                "display": "SPECT Heart perfusion and wall motion at rest and W stress and W Tl-201 IV and W Tc-99m Sestamibi IV"
+              }
+            ]
+          }
+        ]
+      },
+      "fullUrl": "http://aidbox:8888/fhir/ImagingStudy/imagingstudy-tc"
+    },
+    {
+      "resource": {
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips"
+          ],
+          "lastUpdated": "2025-02-24T03:26:20.083120Z",
+          "versionId": "253",
+          "extension": [
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:51.005940Z"
+            }
+          ]
+        },
+        "valueQuantity": {
+          "code": "/d",
+          "unit": "wine glasses per day",
+          "value": 2,
+          "system": "http://unitsofmeasure.org"
+        },
+        "resourceType": "Observation",
+        "effectiveDateTime": "2019-07-15",
+        "status": "final",
+        "id": "lab-path",
+        "code": {
+          "coding": [
+            {
+              "code": "74013-4",
+              "system": "http://loinc.org",
+              "display": "Alcoholic drinks per day"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-tc"
+        },
+        "performer": [
+          {
+            "reference": "Patient/patient-tc"
+          }
+        ],
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation alcohol-use-example</b></p><a name=\"alcohol-use-example\"> </a><a name=\"hcalcohol-use-example\"> </a><a name=\"alcohol-use-example-en-US\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 74013-4}\">Alcoholic drinks per day</span></p><p><b>subject</b>: <a href=\"Patient-patient-example-female.html\">Martha DeLarosa  Female, DoB: 1992-05-01 ( urn:oid:2.16.840.1.113883.2.4.6.3#574687583)</a></p><p><b>effective</b>: 2019-07-15</p><p><b>performer</b>: <a href=\"Patient-eumfh-39-07.html\">Alexander Heig  Male, DoB: 1957 ( http://trilliumbridge.eu/fhir/demos/eumfh/inject#39-07)</a></p><p><b>value</b>: 2 wine glasses per day<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code/d = '/d')</span></p></div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/Observation/lab-path"
+    },
+    {
+      "resource": {
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips"
+          ],
+          "lastUpdated": "2025-02-24T03:26:38.634209Z",
+          "versionId": "259",
+          "extension": [
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:51.005940Z"
+            }
+          ]
+        },
+        "valueQuantity": {
+          "code": "/d",
+          "unit": "wine glasses per day",
+          "value": 2,
+          "system": "http://unitsofmeasure.org"
+        },
+        "resourceType": "Observation",
+        "effectiveDateTime": "2019-07-15",
+        "status": "final",
+        "id": "vital-signs-tc",
+        "code": {
+          "coding": [
+            {
+              "code": "74013-4",
+              "system": "http://loinc.org",
+              "display": "Alcoholic drinks per day"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-tc"
+        },
+        "performer": [
+          {
+            "reference": "Patient/patient-tc"
+          }
+        ],
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation alcohol-use-example</b></p><a name=\"alcohol-use-example\"> </a><a name=\"hcalcohol-use-example\"> </a><a name=\"alcohol-use-example-en-US\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 74013-4}\">Alcoholic drinks per day</span></p><p><b>subject</b>: <a href=\"Patient-patient-example-female.html\">Martha DeLarosa  Female, DoB: 1992-05-01 ( urn:oid:2.16.840.1.113883.2.4.6.3#574687583)</a></p><p><b>effective</b>: 2019-07-15</p><p><b>performer</b>: <a href=\"Patient-eumfh-39-07.html\">Alexander Heig  Male, DoB: 1957 ( http://trilliumbridge.eu/fhir/demos/eumfh/inject#39-07)</a></p><p><b>value</b>: 2 wine glasses per day<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code/d = '/d')</span></p></div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/Observation/vital-signs-tc"
+    },
+    {
+      "resource": {
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips"
+          ],
+          "lastUpdated": "2025-02-24T03:26:22.946592Z",
+          "versionId": "254",
+          "extension": [
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:51.005940Z"
+            }
+          ]
+        },
+        "valueQuantity": {
+          "code": "/d",
+          "unit": "wine glasses per day",
+          "value": 2,
+          "system": "http://unitsofmeasure.org"
+        },
+        "resourceType": "Observation",
+        "effectiveDateTime": "2019-07-15",
+        "status": "final",
+        "id": "pregnancy-add-tc",
+        "code": {
+          "coding": [
+            {
+              "code": "74013-4",
+              "system": "http://loinc.org",
+              "display": "Alcoholic drinks per day"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-tc"
+        },
+        "performer": [
+          {
+            "reference": "Patient/patient-tc"
+          }
+        ],
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation alcohol-use-example</b></p><a name=\"alcohol-use-example\"> </a><a name=\"hcalcohol-use-example\"> </a><a name=\"alcohol-use-example-en-US\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 74013-4}\">Alcoholic drinks per day</span></p><p><b>subject</b>: <a href=\"Patient-patient-example-female.html\">Martha DeLarosa  Female, DoB: 1992-05-01 ( urn:oid:2.16.840.1.113883.2.4.6.3#574687583)</a></p><p><b>effective</b>: 2019-07-15</p><p><b>performer</b>: <a href=\"Patient-eumfh-39-07.html\">Alexander Heig  Male, DoB: 1957 ( http://trilliumbridge.eu/fhir/demos/eumfh/inject#39-07)</a></p><p><b>value</b>: 2 wine glasses per day<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code/d = '/d')</span></p></div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/Observation/pregnancy-add-tc"
+    },
+    {
+      "resource": {
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips"
+          ],
+          "lastUpdated": "2025-02-24T03:26:15.566275Z",
+          "versionId": "252",
+          "extension": [
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:51.005940Z"
+            }
+          ]
+        },
+        "valueQuantity": {
+          "code": "/d",
+          "unit": "wine glasses per day",
+          "value": 2,
+          "system": "http://unitsofmeasure.org"
+        },
+        "resourceType": "Observation",
+        "effectiveDateTime": "2019-07-15",
+        "status": "final",
+        "id": "alcohol-use-tc",
+        "code": {
+          "coding": [
+            {
+              "code": "74013-4",
+              "system": "http://loinc.org",
+              "display": "Alcoholic drinks per day"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-tc"
+        },
+        "performer": [
+          {
+            "reference": "Patient/patient-tc"
+          }
+        ],
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation alcohol-use-example</b></p><a name=\"alcohol-use-example\"> </a><a name=\"hcalcohol-use-example\"> </a><a name=\"alcohol-use-example-en-US\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 74013-4}\">Alcoholic drinks per day</span></p><p><b>subject</b>: <a href=\"Patient-patient-example-female.html\">Martha DeLarosa  Female, DoB: 1992-05-01 ( urn:oid:2.16.840.1.113883.2.4.6.3#574687583)</a></p><p><b>effective</b>: 2019-07-15</p><p><b>performer</b>: <a href=\"Patient-eumfh-39-07.html\">Alexander Heig  Male, DoB: 1957 ( http://trilliumbridge.eu/fhir/demos/eumfh/inject#39-07)</a></p><p><b>value</b>: 2 wine glasses per day<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code/d = '/d')</span></p></div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/Observation/alcohol-use-tc"
+    },
+    {
+      "resource": {
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips"
+          ],
+          "lastUpdated": "2025-02-24T03:26:33.180963Z",
+          "versionId": "257",
+          "extension": [
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:51.005940Z"
+            }
+          ]
+        },
+        "valueQuantity": {
+          "code": "/d",
+          "unit": "wine glasses per day",
+          "value": 2,
+          "system": "http://unitsofmeasure.org"
+        },
+        "resourceType": "Observation",
+        "effectiveDateTime": "2019-07-15",
+        "status": "final",
+        "id": "results-radiology-tc",
+        "code": {
+          "coding": [
+            {
+              "code": "74013-4",
+              "system": "http://loinc.org",
+              "display": "Alcoholic drinks per day"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-tc"
+        },
+        "performer": [
+          {
+            "reference": "Patient/patient-tc"
+          }
+        ],
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation alcohol-use-example</b></p><a name=\"alcohol-use-example\"> </a><a name=\"hcalcohol-use-example\"> </a><a name=\"alcohol-use-example-en-US\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 74013-4}\">Alcoholic drinks per day</span></p><p><b>subject</b>: <a href=\"Patient-patient-example-female.html\">Martha DeLarosa  Female, DoB: 1992-05-01 ( urn:oid:2.16.840.1.113883.2.4.6.3#574687583)</a></p><p><b>effective</b>: 2019-07-15</p><p><b>performer</b>: <a href=\"Patient-eumfh-39-07.html\">Alexander Heig  Male, DoB: 1957 ( http://trilliumbridge.eu/fhir/demos/eumfh/inject#39-07)</a></p><p><b>value</b>: 2 wine glasses per day<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code/d = '/d')</span></p></div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/Observation/results-radiology-tc"
+    },
+    {
+      "resource": {
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips"
+          ],
+          "lastUpdated": "2025-02-24T03:26:35.850256Z",
+          "versionId": "258",
+          "extension": [
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:51.005940Z"
+            }
+          ]
+        },
+        "valueQuantity": {
+          "code": "/d",
+          "unit": "wine glasses per day",
+          "value": 2,
+          "system": "http://unitsofmeasure.org"
+        },
+        "resourceType": "Observation",
+        "effectiveDateTime": "2019-07-15",
+        "status": "final",
+        "id": "tobacco-use-tc",
+        "code": {
+          "coding": [
+            {
+              "code": "74013-4",
+              "system": "http://loinc.org",
+              "display": "Alcoholic drinks per day"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-tc"
+        },
+        "performer": [
+          {
+            "reference": "Patient/patient-tc"
+          }
+        ],
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation alcohol-use-example</b></p><a name=\"alcohol-use-example\"> </a><a name=\"hcalcohol-use-example\"> </a><a name=\"alcohol-use-example-en-US\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 74013-4}\">Alcoholic drinks per day</span></p><p><b>subject</b>: <a href=\"Patient-patient-example-female.html\">Martha DeLarosa  Female, DoB: 1992-05-01 ( urn:oid:2.16.840.1.113883.2.4.6.3#574687583)</a></p><p><b>effective</b>: 2019-07-15</p><p><b>performer</b>: <a href=\"Patient-eumfh-39-07.html\">Alexander Heig  Male, DoB: 1957 ( http://trilliumbridge.eu/fhir/demos/eumfh/inject#39-07)</a></p><p><b>value</b>: 2 wine glasses per day<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code/d = '/d')</span></p></div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/Observation/tobacco-use-tc"
+    },
+    {
+      "resource": {
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips"
+          ],
+          "lastUpdated": "2025-02-24T03:26:27.117445Z",
+          "versionId": "255",
+          "extension": [
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:51.005940Z"
+            }
+          ]
+        },
+        "valueQuantity": {
+          "code": "/d",
+          "unit": "wine glasses per day",
+          "value": 2,
+          "system": "http://unitsofmeasure.org"
+        },
+        "resourceType": "Observation",
+        "effectiveDateTime": "2019-07-15",
+        "status": "final",
+        "id": "pregnancy-outcome-tc",
+        "code": {
+          "coding": [
+            {
+              "code": "74013-4",
+              "system": "http://loinc.org",
+              "display": "Alcoholic drinks per day"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-tc"
+        },
+        "performer": [
+          {
+            "reference": "Patient/patient-tc"
+          }
+        ],
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation alcohol-use-example</b></p><a name=\"alcohol-use-example\"> </a><a name=\"hcalcohol-use-example\"> </a><a name=\"alcohol-use-example-en-US\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 74013-4}\">Alcoholic drinks per day</span></p><p><b>subject</b>: <a href=\"Patient-patient-example-female.html\">Martha DeLarosa  Female, DoB: 1992-05-01 ( urn:oid:2.16.840.1.113883.2.4.6.3#574687583)</a></p><p><b>effective</b>: 2019-07-15</p><p><b>performer</b>: <a href=\"Patient-eumfh-39-07.html\">Alexander Heig  Male, DoB: 1957 ( http://trilliumbridge.eu/fhir/demos/eumfh/inject#39-07)</a></p><p><b>value</b>: 2 wine glasses per day<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code/d = '/d')</span></p></div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/Observation/pregnancy-outcome-tc"
+    },
+    {
+      "resource": {
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips"
+          ],
+          "lastUpdated": "2025-02-24T03:26:30.870066Z",
+          "versionId": "256",
+          "extension": [
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:51.005940Z"
+            }
+          ]
+        },
+        "valueQuantity": {
+          "code": "/d",
+          "unit": "wine glasses per day",
+          "value": 2,
+          "system": "http://unitsofmeasure.org"
+        },
+        "resourceType": "Observation",
+        "effectiveDateTime": "2019-07-15",
+        "status": "final",
+        "id": "pregnancy-status-tc",
+        "code": {
+          "coding": [
+            {
+              "code": "74013-4",
+              "system": "http://loinc.org",
+              "display": "Alcoholic drinks per day"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-tc"
+        },
+        "performer": [
+          {
+            "reference": "Patient/patient-tc"
+          }
+        ],
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation alcohol-use-example</b></p><a name=\"alcohol-use-example\"> </a><a name=\"hcalcohol-use-example\"> </a><a name=\"alcohol-use-example-en-US\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 74013-4}\">Alcoholic drinks per day</span></p><p><b>subject</b>: <a href=\"Patient-patient-example-female.html\">Martha DeLarosa  Female, DoB: 1992-05-01 ( urn:oid:2.16.840.1.113883.2.4.6.3#574687583)</a></p><p><b>effective</b>: 2019-07-15</p><p><b>performer</b>: <a href=\"Patient-eumfh-39-07.html\">Alexander Heig  Male, DoB: 1957 ( http://trilliumbridge.eu/fhir/demos/eumfh/inject#39-07)</a></p><p><b>value</b>: 2 wine glasses per day<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code/d = '/d')</span></p></div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/Observation/pregnancy-status-tc"
+    },
+    {
+      "resource": {
+        "category": [
+          {
+            "text": "Subject Contact",
+            "coding": [
+              {
+                "code": "contact",
+                "system": "http://terminology.hl7.org/CodeSystem/flag-category",
+                "display": "Subject Contact"
+              }
+            ]
+          }
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips"
+          ],
+          "lastUpdated": "2025-02-24T03:24:06.849316Z",
+          "versionId": "247",
+          "extension": [
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:51.012492Z"
+            }
+          ]
+        },
+        "resourceType": "Flag",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/flag-priority",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "code": "PH",
+                  "system": "http://hl7.org/fhir/flag-priority-code",
+                  "display": "High priority"
+                }
+              ]
+            }
+          }
+        ],
+        "status": "active",
+        "language": "en-US",
+        "id": "flag-tc",
+        "code": {
+          "text": "Patient Immunocompromised",
+          "coding": [
+            {
+              "code": "370388006",
+              "system": "http://snomed.info/sct",
+              "display": "Patient immunocompromised (finding)"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-tc"
+        },
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en-US\" lang=\"en-US\"><p class=\"res-header-id\"><b>Generated Narrative: Flag 546482</b></p><a name=\"546482\"> </a><a name=\"hc546482\"> </a><a name=\"546482-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en-US</p></div><p><b>Flag Priority</b>: <span title=\"Codes:{http://hl7.org/fhir/flag-priority-code PH}\">High priority</span></p><p><b>status</b>: Active</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/flag-category contact}\">Subject Contact</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 370388006}\">Patient Immunocompromised</span></p><p><b>subject</b>: <a href=\"Patient-66033.html\">Marie Lux-Brennard  Female, DoB: 1998-04-17 ( urn:oid:1.3.182.4.4#1998041799999)</a></p></div>",
+          "status": "extensions"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/Flag/flag-tc"
+    },
+    {
+      "resource": {
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-procedure"
+          ],
+          "lastUpdated": "2025-02-24T03:28:46.952195Z",
+          "versionId": "284",
+          "extension": [
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:50.988648Z"
+            }
+          ]
+        },
+        "resourceType": "Procedure",
+        "status": "completed",
+        "id": "procedure-tc",
+        "performedDateTime": "2012-08-05",
+        "code": {
+          "text": "Haemodialysis",
+          "coding": [
+            {
+              "code": "302497006",
+              "system": "http://snomed.info/sct",
+              "display": "Haemodialysis"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/patient-tc"
+        },
+        "performer": [
+          {
+            "actor": {
+              "reference": "PractitionerRole/practitionerrole-tc"
+            }
+          }
+        ],
+        "reasonReference": [
+          {
+            "reference": "Condition/condition-tc"
+          }
+        ],
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Procedure dialysis</b></p><a name=\"dialysis\"> </a><a name=\"hcdialysis\"> </a><a name=\"dialysis-en-AU\"> </a><p><b>status</b>: Completed</p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 302497006}\">Haemodialysis</span></p><p><b>subject</b>: <a href=\"Patient-ronny-irvine.html\">Ronny Lawrence Irvine  Male, DoB:  ( DVA Number: QX827261)</a></p><p><b>performed</b>: 2012-08-05</p><h3>Performers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Actor</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"PractitionerRole-nephrologist-darleen-mackay.html\">PractitionerRole Nephrologist</a></td></tr></table><p><b>reasonReference</b>: <a href=\"Condition-ckd.html\">Chronic Kidney Disease</a></p></div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/Procedure/procedure-tc"
+    },
+    {
+      "resource": {
+        "address": [
+          {
+            "use": "home",
+            "city": "Blacktown",
+            "line": [
+              "29 Gadsby Street"
+            ],
+            "state": "NSW",
+            "country": "AU",
+            "postalCode": "2148"
+          }
+        ],
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"
+          ],
+          "lastUpdated": "2025-02-24T03:15:11.644910Z",
+          "versionId": "146",
+          "extension": [
+            {
+              "url": "ex:createdAt",
+              "valueInstant": "2025-02-23T22:14:51.013667Z"
+            }
+          ]
+        },
+        "name": [
+          {
+            "use": "usual",
+            "text": "Wang Li",
+            "given": [
+              "Li"
+            ],
+            "family": "Wang",
+            "prefix": [
+              "Mr"
+            ]
+          }
+        ],
+        "birthDate": "1975-05-03",
+        "resourceType": "Patient",
+        "extension": [
+          {
+            "url": "http://hl7.org.au/fhir/StructureDefinition/indigenous-status",
+            "valueCoding": {
+              "code": "3",
+              "system": "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1",
+              "display": "Both Aboriginal and Torres Strait Islander origin"
+            }
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/individual-pronouns",
+            "extension": [
+              {
+                "url": "value",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "LA29519-8",
+                      "system": "http://loinc.org",
+                      "display": "she/her/her/hers/herself"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/individual-genderIdentity",
+            "extension": [
+              {
+                "url": "value",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "code": "446141000124107",
+                      "system": "http://snomed.info/sct",
+                      "display": "Identifies as female gender (finding)"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "communication": [
+          {
+            "language": {
+              "text": "Cantonese",
+              "coding": [
+                {
+                  "code": "yue",
+                  "system": "urn:ietf:bcp:47"
+                }
+              ]
+            },
+            "preferred": true
+          }
+        ],
+        "id": "patient-tc",
+        "identifier": [
+          {
+            "type": {
+              "text": "DVA Number",
+              "coding": [
+                {
+                  "code": "DVAU",
+                  "system": "http://terminology.hl7.org.au/CodeSystem/v2-0203",
+                  "display": "DVA Number"
+                }
+              ]
+            },
+            "value": "QX144963",
+            "system": "http://ns.electronichealth.net.au/id/dva"
+          },
+          {
+            "type": {
+              "text": "IHI",
+              "coding": [
+                {
+                  "code": "NI",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                }
+              ]
+            },
+            "value": "8003608833357361",
+            "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+            "extension": [
+              {
+                "url": "http://hl7.org.au/fhir/StructureDefinition/ihi-status",
+                "valueCoding": {
+                  "code": "active",
+                  "system": "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1"
+                }
+              },
+              {
+                "url": "http://hl7.org.au/fhir/StructureDefinition/ihi-record-status",
+                "valueCoding": {
+                  "code": "verified",
+                  "system": "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1",
+                  "display": "verified"
+                }
+              }
+            ]
+          },
+          {
+            "type": {
+              "text": "Medicare Number",
+              "coding": [
+                {
+                  "code": "MC",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                }
+              ]
+            },
+            "value": "29533070322",
+            "system": "http://ns.electronichealth.net.au/id/medicare-number"
+          },
+          {
+            "type": {
+              "text": "Medical Record Number",
+              "coding": [
+                {
+                  "code": "MR",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "display": "Medical record number"
+                }
+              ]
+            },
+            "value": "2338189",
+            "system": "http://ns.electronichealth.net.au/id/hpio-scoped/medicalrecord/1.0/8003626566699734",
+            "assigner": {
+              "display": "Large Metropolitan Hospital"
+            }
+          }
+        ],
+        "telecom": [
+          {
+            "use": "home",
+            "value": "tc-1.2@amail.example.com",
+            "system": "email"
+          }
+        ],
+        "gender": "male",
+        "text": {
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Li Wang </b> male, DoB: 1975-05-03 ( IHI/8003608833357361)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Other Ids (see the one above)\">Other Ids:</td><td colspan=\"3\"><ul><li>Medicare Number/29533070322</li><li>Medical Record Number/2338189</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail:</td><td colspan=\"3\">29 Gadsby Street Blacktown NSW 2148 AU (HOME)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Languages spoken\">Language:</td><td colspan=\"3\"><span title=\"Codes: {urn:ietf:bcp:47 yue}\">Cantonese</span> (preferred)</td></tr><tr><td style=\"background-color: #f3f5da\" title=\"The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements.\"><a href=\"http://hl7.org/fhir/R4/extension-patient-birthplace.html\">Birth Place:</a></td><td colspan=\"3\"><ul><li>China</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"This extension applies to the Patient, RelatedPerson, and Practitioner resources and is used to represent a person's date of arrival in an Australian context (see [Australian Bureau of Statistics](https://www.abs.gov.au/AUSSTATS/abs@.nsf/Lookup/1200.0.55.007Main+Features12014,%20Version%201.5?OpenDocument) for further information). The date of arrival is when a person (born outside of Australia) first arrived in Australia, from another country, with the intention of living in Australia for one year or more. This date is recorded once for a person and is not subsequently updated with subsequent arrivals. This element is a part of Cultural and Linguistic Diversity (CALD) data set. It is an important indicator of cultural identity, and provides further information about a person's cultural values and practices which can be significant in determining service type, support required, and possible needs.\"><a href=\"https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-date-of-arrival.html\">Date of Arrival in Australia:</a></td><td colspan=\"3\"><ul><li>2015</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"This extension applies to the Patient, Person, and RelatedPerson resources and is used to indicate whether a person identifies as being of Aboriginal or Torres Strait Islander origin.\"><a href=\"https://build.fhir.org/ig/hl7au/au-fhir-base//StructureDefinition-indigenous-status.html\">Australian Indigenous Status:</a></td><td colspan=\"3\"><ul><li>https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1 4: Neither Aboriginal nor Torres Strait Islander origin</li></ul></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"This Patient requires an interpreter to communicate healthcare information to the practitioner.\"><a href=\"http://hl7.org/fhir/R4/extension-patient-interpreterrequired.html\">interpreterRequired:</a></td><td colspan=\"3\"><ul><li>true</li></ul></td></tr></table></div>",
+          "status": "generated"
+        }
+      },
+      "fullUrl": "http://aidbox:8888/fhir/Patient/patient-tc"
+    }
+  ]
+}
