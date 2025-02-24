@@ -17,7 +17,8 @@ const generateSummary = async ({ http, appConfig }: Request, patient: Patient) =
     assert(patient.id, "Patient Id is required");
     const patientId = patient.id;
     const { sections, bundleData }: any = await generateSections(http, patientId, appConfig.aidbox.url);
-    const composition = createComposition(sections, patientId);
+    const compositionUUID = randomUUID();
+    const composition = createComposition(sections, patientId, compositionUUID);
     const refResources = await getResourcesFromRefs(http, bundleData);
 
     return {
@@ -31,7 +32,7 @@ const generateSummary = async ({ http, appConfig }: Request, patient: Patient) =
       entry: [
         {
           resource: composition,
-          fullUrl: `${appConfig.aidbox.url}/fhir/Composition/${composition.id}`,
+          fullUrl: `urn:uuid:${compositionUUID}`,
         },
         {
           resource: patient,

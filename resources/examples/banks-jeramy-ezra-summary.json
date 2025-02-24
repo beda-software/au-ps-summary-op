@@ -1,7 +1,7 @@
 {
   "resourceType": "Bundle",
   "type": "document",
-  "timestamp": "2025-02-24T12:49:48.673Z",
+  "timestamp": "2025-02-24T14:04:40.009Z",
   "meta": {
     "profile": [
       "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"
@@ -9,19 +9,18 @@
   },
   "identifier": {
     "system": "urn:oid:2.16.724.4.8.10.200.10",
-    "value": "9bfc2268-4a69-4d59-bb83-a5edd6c7a282"
+    "value": "32e3c946-0e30-4aed-ab5c-82448bcb4a79"
   },
   "entry": [
     {
       "resource": {
         "resourceType": "Composition",
-        "id": "6be5fdd1-1304-4858-bbb0-7250d092e1e1",
         "meta": {
           "profile": [
             "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-composition"
           ]
         },
-        "date": "2025-02-24T12:49:48.667Z",
+        "date": "2025-02-24T14:04:40.004Z",
         "status": "final",
         "type": {
           "coding": [
@@ -41,7 +40,7 @@
             "type": "Device"
           }
         ],
-        "title": "Patient Summary as of Mon Feb 24 2025 12:49:48 GMT+0000 (Coordinated Universal Time)",
+        "title": "Patient Summary as of Mon Feb 24 2025 14:04:40 GMT+0000 (Coordinated Universal Time)",
         "event": [
           {
             "code": [
@@ -55,7 +54,7 @@
               }
             ],
             "period": {
-              "end": "2025-02-24T12:49:48.667Z"
+              "end": "2025-02-24T14:04:40.004Z"
             }
           }
         ],
@@ -77,19 +76,19 @@
             },
             "entry": [
               {
-                "reference": "Condition/627a"
+                "reference": "http://aidbox:8888/fhir/Condition/627a"
               },
               {
-                "reference": "Condition/628a"
+                "reference": "http://aidbox:8888/fhir/Condition/628a"
               },
               {
-                "reference": "Condition/624a"
+                "reference": "http://aidbox:8888/fhir/Condition/624a"
               },
               {
-                "reference": "Condition/625a"
+                "reference": "http://aidbox:8888/fhir/Condition/625a"
               },
               {
-                "reference": "Condition/626a"
+                "reference": "http://aidbox:8888/fhir/Condition/626a"
               }
             ]
           },
@@ -110,7 +109,7 @@
             },
             "entry": [
               {
-                "reference": "AllergyIntolerance/666a"
+                "reference": "http://aidbox:8888/fhir/AllergyIntolerance/666a"
               }
             ]
           },
@@ -131,25 +130,25 @@
             },
             "entry": [
               {
-                "reference": "MedicationRequest/641a"
+                "reference": "http://aidbox:8888/fhir/MedicationRequest/641a"
               },
               {
-                "reference": "MedicationRequest/644a"
+                "reference": "http://aidbox:8888/fhir/MedicationRequest/644a"
               },
               {
-                "reference": "MedicationRequest/646a"
+                "reference": "http://aidbox:8888/fhir/MedicationRequest/646a"
               },
               {
-                "reference": "MedicationRequest/642a"
+                "reference": "http://aidbox:8888/fhir/MedicationRequest/642a"
               },
               {
-                "reference": "MedicationRequest/643a"
+                "reference": "http://aidbox:8888/fhir/MedicationRequest/643a"
               },
               {
-                "reference": "MedicationRequest/647a"
+                "reference": "http://aidbox:8888/fhir/MedicationRequest/647a"
               },
               {
-                "reference": "MedicationRequest/645a"
+                "reference": "http://aidbox:8888/fhir/MedicationRequest/645a"
               }
             ]
           },
@@ -170,23 +169,23 @@
             },
             "entry": [
               {
-                "reference": "Immunization/637a"
+                "reference": "http://aidbox:8888/fhir/Immunization/637a"
               },
               {
-                "reference": "Immunization/638a"
+                "reference": "http://aidbox:8888/fhir/Immunization/638a"
               },
               {
-                "reference": "Immunization/639a"
+                "reference": "http://aidbox:8888/fhir/Immunization/639a"
               }
             ]
           }
         ],
         "text": {
           "status": "generated",
-          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>Generated Narrative</b></p>\n<div\n  style=\"\n    display: inline-block;\n    background-color: #d9e0e7;\n    padding: 6px;\n    margin: 4px;\n    border: 1px solid #8da1b4;\n    border-radius: 5px;\n    line-height: 60%;\n  \"\n>\n  <p style=\"margin-bottom: 0px\">Resource \"6be5fdd1-1304-4858-bbb0-7250d092e1e1\"</p>\n</div>\n<p><b>status</b>: final</p>\n<p>\n  <b>type</b>: Patient summary Document\n  <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">\n    (<a href=\"https://loinc.org/\">LOINC</a>#60591-5)\n  </span>\n</p>\n<p><b>date</b>: 2020-12-11 02:30:00+0100</p>\n<p><b>author</b>: Device Aidbox</p>\n<p><b>title</b>: Patient Summary as of Mon Feb 24 2025 12:49:48 GMT+0000 (Coordinated Universal Time)</p>\n<h3>Events</h3>\n<table class=\"grid\">\n  <tr>\n    <td>-</td>\n    <td><b>Code</b></td>\n    <td><b>Period</b></td>\n  </tr>\n  <tr>\n    <td>*</td>\n    <td>\n      care provision\n      <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">\n        (<a href=\"http://terminology.hl7.org/CodeSystem/v3-ActClass\">ActClass</a>#PCPR)</span>\n    </td>\n    <td>?? --&gt; 2025-02-24T12:49:48.667Z</td>\n  </tr>\n</table>\n</div>"
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>Generated Narrative</b></p>\n<div\n  style=\"\n    display: inline-block;\n    background-color: #d9e0e7;\n    padding: 6px;\n    margin: 4px;\n    border: 1px solid #8da1b4;\n    border-radius: 5px;\n    line-height: 60%;\n  \"\n>\n  <p style=\"margin-bottom: 0px\">Resource \"b7c9ceef-af06-49b0-950e-6984ab89a242\"</p>\n</div>\n<p><b>status</b>: final</p>\n<p>\n  <b>type</b>: Patient summary Document\n  <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">\n    (<a href=\"https://loinc.org/\">LOINC</a>#60591-5)\n  </span>\n</p>\n<p><b>date</b>: 2020-12-11 02:30:00+0100</p>\n<p><b>author</b>: Device Aidbox</p>\n<p><b>title</b>: Patient Summary as of Mon Feb 24 2025 14:04:40 GMT+0000 (Coordinated Universal Time)</p>\n<h3>Events</h3>\n<table class=\"grid\">\n  <tr>\n    <td>-</td>\n    <td><b>Code</b></td>\n    <td><b>Period</b></td>\n  </tr>\n  <tr>\n    <td>*</td>\n    <td>\n      care provision\n      <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">\n        (<a href=\"http://terminology.hl7.org/CodeSystem/v3-ActClass\">ActClass</a>#PCPR)</span>\n    </td>\n    <td>?? --&gt; 2025-02-24T14:04:40.004Z</td>\n  </tr>\n</table>\n</div>"
         }
       },
-      "fullUrl": "http://aidbox:8888/fhir/Composition/6be5fdd1-1304-4858-bbb0-7250d092e1e1"
+      "fullUrl": "urn:uuid:b7c9ceef-af06-49b0-950e-6984ab89a242"
     },
     {
       "resource": {

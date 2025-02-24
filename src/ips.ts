@@ -22,7 +22,6 @@ const buildReferenceByUrl = (aidboxUrl: string, resourceType: string, id: string
 }
 
 const addEntry = (patientData: PatientData, aidboxUrl: string) => {
-  console.log('addEntry', aidboxUrl)
   if (patientData.length === 0) return {};
   return {
     entry: patientData.map((resource) => ({
@@ -413,7 +412,6 @@ export const generateSections = async (http: HttpClient, patientId: string, aidb
   const resources = await fetchSummaryResources(http, patientId);
   const {patientData, profileData} = await filterResourcesByProfiles(http, resources);
   const sections = sectionNames.reduce((acc: any, item) => {
-    console.log('generateSections', aidboxUrl)
     const section = sectionToGenerateFuncMap[item](patientData, http, aidboxUrl);
 
     if (section) {
@@ -494,12 +492,11 @@ export const getResourcesFromRefs = async (
   }, []);
 };
 
-export const createComposition = (sections: any, patientId: string) => {
+export const createComposition = (sections: any, patientId: string, compositionUUID: string) => {
   const now = new Date();
 
   const composition = {
     resourceType: "Composition",
-    id: randomUUID(),
     meta: {
       profile: ["http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-composition"],
     },
@@ -547,7 +544,7 @@ export const createComposition = (sections: any, patientId: string) => {
   return {
     ...composition,
     text: generateCompositionNarrative({
-      id: composition.id,
+      id: compositionUUID,
       status: composition.status,
       title: composition.title,
       eventDate: composition.event[0].period.end,
