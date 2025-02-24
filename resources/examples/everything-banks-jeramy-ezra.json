@@ -328,6 +328,7 @@
   }, {
     "fullUrl": "http://proxy.smartforms.io/fhir/Immunization/637a",
     "resource": {
+      "occurrenceDateTime": "2021-06-17",
       "resourceType": "Immunization",
       "id": "637a",
       "meta": {
@@ -358,6 +359,7 @@
   }, {
     "fullUrl": "http://proxy.smartforms.io/fhir/Immunization/638a",
     "resource": {
+      "occurrenceDateTime": "2021-06-17",
       "resourceType": "Immunization",
       "id": "638a",
       "meta": {
@@ -388,6 +390,7 @@
   }, {
     "fullUrl": "http://proxy.smartforms.io/fhir/Immunization/639a",
     "resource": {
+      "occurrenceDateTime": "2021-06-17",
       "resourceType": "Immunization",
       "id": "639a",
       "meta": {
@@ -861,6 +864,7 @@
         "source": "https://smartforms.csiro.au#ZHR6QBJmwYMNvSzU"
       },
       "text": {
+        "div": "",
         "status": "generated"
       },
       "questionnaire": "https://smartforms.csiro.au/ig/Questionnaire/AUPatientSummary",
