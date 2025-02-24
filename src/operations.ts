@@ -16,7 +16,7 @@ const generateSummary = async ({ http, appConfig }: Request, patient: Patient) =
   try {
     assert(patient.id, "Patient Id is required");
     const patientId = patient.id;
-    const { sections, bundleData }: any = await generateSections(http, patientId);
+    const { sections, bundleData }: any = await generateSections(http, patientId, appConfig.aidbox.url);
     const composition = createComposition(sections, patientId);
     const refResources = await getResourcesFromRefs(http, bundleData);
 

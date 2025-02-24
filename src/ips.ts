@@ -17,24 +17,30 @@ const buildReference = (resourceType: string, id: string) => {
   return `${resourceType}/${id}`;
 }
 
-const addEntry = (patientData: PatientData) => {
+const buildReferenceByUrl = (aidboxUrl: string, resourceType: string, id: string) => {
+  return `${aidboxUrl}/fhir/${resourceType}/${id}`
+}
+
+const addEntry = (patientData: PatientData, aidboxUrl: string) => {
+  console.log('addEntry', aidboxUrl)
   if (patientData.length === 0) return {};
   return {
     entry: patientData.map((resource) => ({
-      reference: buildReference(resource.resource.resourceType, resource.resource.id!),
+      reference: buildReferenceByUrl(aidboxUrl, resource.resource.resourceType, resource.resource.id!),
     })),
   };
 };
 
 const buildSection = (
   sectionData: { title: string; code: any; text: { status: string; div: string } },
-  entry: PatientData
+  entry: PatientData,
+  aidboxUrl: string
 ) => {
   if (entry.length === 0) return null;
 
   return {
     ...sectionData,
-    ...addEntry(entry),
+    ...addEntry(entry, aidboxUrl),
   };
 };
 
@@ -159,7 +165,8 @@ const getSectionResources = (
 };
 
 // ----- Required sections -----
-const generateProblemListSection = (patientData: PatientData) => {
+const generateProblemListSection = (patientData: PatientData, _http: HttpClient, aidboxUrl: string) => {
+  console.log('generateProblemListSection', aidboxUrl)
   const validConditions = getSectionResources(patientData, sectionProfiles.ProblemList);
 
   const section = {
@@ -174,13 +181,13 @@ const generateProblemListSection = (patientData: PatientData) => {
       ],
     },
     text: generateSimpleNarrative(validConditions as SimpleNarrativeEntry),
-    ...addEntry(validConditions),
+    ...addEntry(validConditions, aidboxUrl),
   };
 
   return section;
 };
 
-const generateAllergyIntoleranceSection = (patientData: PatientData) => {
+const generateAllergyIntoleranceSection = (patientData: PatientData, _http: HttpClient, aidboxUrl: string) => {
   const validAllergies = getSectionResources(
     patientData,
     sectionProfiles.AllergyIntolerance
@@ -198,13 +205,13 @@ const generateAllergyIntoleranceSection = (patientData: PatientData) => {
       ],
     },
     text: generateSimpleNarrative(validAllergies as SimpleNarrativeEntry),
-    ...addEntry(validAllergies),
+    ...addEntry(validAllergies, aidboxUrl),
   };
 
   return section;
 };
 
-const generateMedicationSummarySection = (patientData: PatientData) => {
+const generateMedicationSummarySection = (patientData: PatientData, _http: HttpClient, aidboxUrl: string) => {
   const validMedications = getSectionResources(
     patientData,
     sectionProfiles.MedicationSummary
@@ -222,14 +229,14 @@ const generateMedicationSummarySection = (patientData: PatientData) => {
       ],
     },
     text: generateSimpleNarrative(validMedications as SimpleNarrativeEntry),
-    ...addEntry(validMedications),
+    ...addEntry(validMedications, aidboxUrl),
   };
 
   return section;
 };
 
 // ----- Recommended sections -----
-const generateImmunizationsSection = (patientData: PatientData) => {
+const generateImmunizationsSection = (patientData: PatientData, _http: HttpClient, aidboxUrl: string) => {
   const validImmunizations = getSectionResources(
     patientData,
     sectionProfiles.Immunizations
@@ -249,7 +256,7 @@ const generateImmunizationsSection = (patientData: PatientData) => {
     text: generateSimpleNarrative(validImmunizations as SimpleNarrativeEntry),
   };
 
-  return buildSection(section, validImmunizations);
+  return buildSection(section, validImmunizations, aidboxUrl);
 };
 
 
@@ -372,7 +379,6 @@ const filterResourcesByProfiles = async (http: HttpClient, patientData: PatientD
   for (const resource of patientData) {
     let verifiedOnce = false;
     const resourceType = resource.resource.resourceType;
-    console.log('resourceType', resourceType)
 
     for (const sectionName of sectionNames) {
       const sectionProfileEntries = Object.entries(sectionProfiles[sectionName]);
@@ -382,7 +388,6 @@ const filterResourcesByProfiles = async (http: HttpClient, patientData: PatientD
           for (const profile of profiles as Array<string>) {
             const result = await validateByAidbox(http, resource.resource, resourceType, profile);
             const validationResult = (result.response.data as Record<string, any>)["id"] as string;
-            console.log('validationResult', validationResult)
             if (validationResult === "allok") {
               verifiedOnce = true;
 
@@ -404,11 +409,12 @@ const filterResourcesByProfiles = async (http: HttpClient, patientData: PatientD
   return { patientData: newPatientData, profileData: profileData };
 };
 
-export const generateSections = async (http: HttpClient, patientId: string) => {
+export const generateSections = async (http: HttpClient, patientId: string, aidboxUrl: string) => {
   const resources = await fetchSummaryResources(http, patientId);
   const {patientData, profileData} = await filterResourcesByProfiles(http, resources);
   const sections = sectionNames.reduce((acc: any, item) => {
-    const section = sectionToGenerateFuncMap[item](patientData, http);
+    console.log('generateSections', aidboxUrl)
+    const section = sectionToGenerateFuncMap[item](patientData, http, aidboxUrl);
 
     if (section) {
       acc.push(section);
