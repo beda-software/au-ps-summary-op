@@ -1,4 +1,4 @@
-# Implementation of IPS FHIR IG on Aidbox FHIR platform
+# Implementation of $summary operation for the AU PS IG
 
 This repository contains pre-configured Aidbox instance and implementation of `$summary` operation defined by IPS.
 
@@ -25,7 +25,7 @@ Add the license (`AIDBOX_LICENSE`) int the .env file.
 ## STEP 2: Run aidbox and node-app in Docker
 
 ```shell
-docker compose up --build
+make run
 ```
 
 ## Step 3: Open and log in into Aidbox instance
@@ -38,28 +38,9 @@ And log in witn username: `admin` and password: `password`
 
 In the Aidbox admin window, navigate to the APIs section and choose REST Console.
 
-The [$summary](https://build.fhir.org/ig/HL7/fhir-ips/OperationDefinition-summary.html) operation requires either the logical ID (`Patient.id`) or a business identifier (`Patient.identifier`) of the patient.
-You can use the following request to view all available patients:
-
 ```
-GET /fhir/Patient?_elements=id,identifier
+GET /fhir/Patient/patient-tc/$summary
 ```
-
-To request the IPS "document" _Bundle_ for a specific patient using the REST Console, you can use the following request:
-
-```
-GET /fhir/Patient/[id]/$summary
-```
-
-Replace [id] with the logical ID of the patient you want to retrieve the IPS document for.
-
-For example:
-
-```
-GET /fhir/Patient/2b90dd2b-2dab-4c75-9bb9-a355e07401e8/$summary
-```
-
-Or you can use request with `identifier` search parameter:
 
 ```
 GET /fhir/Patient/$summary?identifier=<patient-identifier>
