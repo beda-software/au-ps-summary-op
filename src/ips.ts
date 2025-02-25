@@ -13,6 +13,24 @@ import { DomainResource } from "@aidbox/sdk-r4/types/index.js";
 import Fastify from "fastify";
 import { ClinicalImpressionStatus } from "@aidbox/sdk-r4/types/hl7-fhir-r4-core/ClinicalImpression.js";
 
+export const createDevice = () => {
+  return {
+		"resourceType": "Device",
+    "meta": {
+      "profile": [
+        "http://hl7.org/fhir/StructureDefinition/Device"
+      ]
+    },
+		"manufacturer": "CSIRO",
+		"deviceName": [
+			{
+				"name": "AU Patient Summary generator (Aidbox)",
+				"type": "Device"
+			}
+		]
+  }
+}
+
 const buildReference = (resourceType: string, id: string) => {
   return `${resourceType}/${id}`;
 }
@@ -522,7 +540,7 @@ export const getResourcesFromRefs = async (
   }, []);
 };
 
-export const createComposition = (sections: any, patientId: string, compositionUUID: string, aidboxUrl: string) => {
+export const createComposition = (sections: any, patientId: string, compositionUUID: string, aidboxUrl: string, deviceUUID: string) => {
   const now = new Date();
 
   const composition = {
@@ -546,8 +564,7 @@ export const createComposition = (sections: any, patientId: string, compositionU
     },
     author: [
       {
-        display: "Aidbox",
-        type: "Device",
+        reference: `urn:uuid:${deviceUUID}`
       },
     ],
     title: `Patient Summary as of ${now.toString()}`,

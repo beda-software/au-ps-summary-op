@@ -7,6 +7,7 @@ import {
   createComposition,
   addFullUrl,
   getResourcesFromRefs,
+  createDevice,
 } from "./ips.js";
 import { Patient } from "@aidbox/sdk-r4/types";
 
@@ -17,8 +18,10 @@ const generateSummary = async ({ http, appConfig }: Request, patient: Patient) =
     assert(patient.id, "Patient Id is required");
     const patientId = patient.id;
     const { sections, bundleData }: any = await generateSections(http, patientId, appConfig.aidbox.url);
+    const deviceUUID = randomUUID();
     const compositionUUID = randomUUID();
-    const composition = createComposition(sections, patientId, compositionUUID, appConfig.aidbox.url);
+    const composition = createComposition(sections, patientId, compositionUUID,
+                                          appConfig.aidbox.url, deviceUUID);
     const refResources = await getResourcesFromRefs(http, bundleData);
 
     return {
@@ -31,14 +34,18 @@ const generateSummary = async ({ http, appConfig }: Request, patient: Patient) =
       identifier: { system: "urn:oid:2.16.724.4.8.10.200.10", value: randomUUID() },
       entry: [
         {
-          resource: composition,
           fullUrl: `urn:uuid:${compositionUUID}`,
+          resource: composition,
         },
         {
-          resource: patient,
           fullUrl: `${appConfig.aidbox.url}/fhir/Patient/${patient.id}`,
+          resource: patient,
         },
         ...addFullUrl([...bundleData, ...refResources], appConfig.aidbox.url),
+        {
+          fullUrl: `urn:uuid:${deviceUUID}`,
+          resource: createDevice(),
+        },
       ],
     };
   } catch (error: any) {
