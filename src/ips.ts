@@ -63,6 +63,12 @@ const sectionProfiles: SectionProfiles = {
   Immunizations: {
     Immunization: ["http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"],
   },
+  HistoryOfPregnancy: {
+    Observation: [
+      "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips",
+      "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips"
+    ]
+  },
   Encounters: {
     Encounter: ["http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-encounter"]
   },
@@ -257,6 +263,29 @@ const generateImmunizationsSection = (patientData: PatientData, _http: HttpClien
   return buildSection(section, validImmunizations, aidboxUrl);
 };
 
+const generateHistoryOfPregnancySection = (patientData: PatientData, _http: HttpClient, aidboxUrl: string) => {
+  const validObservations = getSectionResources(
+    patientData,
+    sectionProfiles.HistoryOfPregnancy
+  );
+
+  const section = {
+    title: "History of pregnancy",
+    code: {
+      coding: [
+        {
+          system: "http://loinc.org",
+          code: "10162-6",
+          display: "History of pregnancies Narrative",
+        },
+      ],
+    },
+    text: generateSimpleNarrative(validObservations as SimpleNarrativeEntry),
+  };
+
+  return buildSection(section, validObservations, aidboxUrl);
+};
+
 
 // ----- Optional sections -----
 
@@ -265,6 +294,7 @@ const sectionNames: Array<SectionName> = [
   "AllergyIntolerance",
   "MedicationSummary",
   "Immunizations",
+  "HistoryOfPregnancy",
   "Encounters",
   "RelatedPersons",
   "DocumentReferences",
@@ -293,6 +323,7 @@ const sectionToGenerateFuncMap: SectionToGenerateFuncMap = {
   AllergyIntolerance: generateAllergyIntoleranceSection,
   MedicationSummary: generateMedicationSummarySection,
   Immunizations: generateImmunizationsSection,
+  HistoryOfPregnancy: generateHistoryOfPregnancySection,
   Encounters: () => {},
   RelatedPersons: () => {},
   DocumentReferences: () => {},

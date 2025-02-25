@@ -98,6 +98,7 @@ export type SectionName =
   | "AllergyIntolerance"
   | "MedicationSummary"
   | "Immunizations"
+  | "HistoryOfPregnancy"
   | "Encounters"
   | "RelatedPersons"
   | "DocumentReferences"
