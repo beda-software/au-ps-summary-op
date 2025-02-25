@@ -18,7 +18,7 @@ const generateSummary = async ({ http, appConfig }: Request, patient: Patient) =
     const patientId = patient.id;
     const { sections, bundleData }: any = await generateSections(http, patientId, appConfig.aidbox.url);
     const compositionUUID = randomUUID();
-    const composition = createComposition(sections, patientId, compositionUUID);
+    const composition = createComposition(sections, patientId, compositionUUID, appConfig.aidbox.url);
     const refResources = await getResourcesFromRefs(http, bundleData);
 
     return {

@@ -491,7 +491,7 @@ export const getResourcesFromRefs = async (
   }, []);
 };
 
-export const createComposition = (sections: any, patientId: string, compositionUUID: string) => {
+export const createComposition = (sections: any, patientId: string, compositionUUID: string, aidboxUrl: string) => {
   const now = new Date();
 
   const composition = {
@@ -511,7 +511,7 @@ export const createComposition = (sections: any, patientId: string, compositionU
       ],
     },
     subject: {
-      reference: `Patient/${patientId}`,
+      reference: buildReferenceByUrl(aidboxUrl, 'Patient', patientId),
     },
     author: [
       {
