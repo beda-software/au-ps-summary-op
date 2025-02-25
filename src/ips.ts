@@ -165,11 +165,10 @@ const getSectionResources = (
 
 // ----- Required sections -----
 const generateProblemListSection = (patientData: PatientData, _http: HttpClient, aidboxUrl: string) => {
-  console.log('generateProblemListSection', aidboxUrl)
   const validConditions = getSectionResources(patientData, sectionProfiles.ProblemList);
 
   const section = {
-    title: "IPS Problems Section",
+    title: "Problems",
     code: {
       coding: [
         {
@@ -193,7 +192,7 @@ const generateAllergyIntoleranceSection = (patientData: PatientData, _http: Http
   );
 
   const section = {
-    title: "IPS Allergies and Intolerances Section",
+    title: "Allergies and Intolerances",
     code: {
       coding: [
         {
@@ -217,7 +216,7 @@ const generateMedicationSummarySection = (patientData: PatientData, _http: HttpC
   );
 
   const section = {
-    title: "Medication Summary section",
+    title: "Medication Summary",
     code: {
       coding: [
         {
@@ -242,7 +241,7 @@ const generateImmunizationsSection = (patientData: PatientData, _http: HttpClien
   );
 
   const section = {
-    title: "Immunizations Section",
+    title: "Immunizations",
     code: {
       coding: [
         {
