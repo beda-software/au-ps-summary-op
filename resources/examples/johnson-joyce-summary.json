@@ -1,804 +1,804 @@
 {
- "resourceType": "Bundle",
- "type": "document",
- "timestamp": "2025-02-25T11:37:31.406Z",
- "meta": {
-  "profile": [
-   "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"
-  ]
- },
- "identifier": {
-  "system": "urn:oid:2.16.724.4.8.10.200.10",
-  "value": "7faf63c9-a794-4d01-8758-aba8d07aaa0d"
- },
- "entry": [
-  {
-   "fullUrl": "urn:uuid:1809c98e-0a5a-4abc-97ec-18dd2ea38df4",
-   "resource": {
-    "date": "2025-02-25T11:37:31.400Z",
-    "meta": {
-     "profile": [
-      "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-composition"
-     ]
-    },
-    "section": [
-     {
-      "title": "Problems",
-      "code": {
-       "coding": [
-        {
-         "system": "http://loinc.org",
-         "code": "11450-4",
-         "display": "Problem list - Reported"
-        }
-       ]
-      },
-      "text": {
-       "status": "generated",
-       "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Gestational diabetes mellitus</div><div>Anaemia</div><div>Appendicitis</div><div>Upper respiratory tract infection</div><div>Epidermal burn of multiple sites</div></div>"
-      },
-      "entry": [
-       {
-        "reference": "http://aidbox:8888/fhir/Condition/517"
-       },
-       {
-        "reference": "http://aidbox:8888/fhir/Condition/518"
-       },
-       {
-        "reference": "http://aidbox:8888/fhir/Condition/519"
-       },
-       {
-        "reference": "http://aidbox:8888/fhir/Condition/520"
-       },
-       {
-        "reference": "http://aidbox:8888/fhir/Condition/521"
-       }
-      ]
-     },
-     {
-      "title": "Allergies and Intolerances",
-      "code": {
-       "coding": [
-        {
-         "system": "http://loinc.org",
-         "code": "48765-2",
-         "display": "Allergies and adverse reactions Document"
-        }
-       ]
-      },
-      "text": {
-       "status": "generated",
-       "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>No known allergy</div></div>"
-      },
-      "entry": [
-       {
-        "reference": "http://aidbox:8888/fhir/AllergyIntolerance/446"
-       }
-      ]
-     },
-     {
-      "title": "Medication Summary",
-      "code": {
-       "coding": [
-        {
-         "system": "http://loinc.org",
-         "code": "10160-0",
-         "display": "History of Medication use Narrative"
-        }
-       ]
-      },
-      "text": {
-       "status": "generated",
-       "div": "<div xmlns='http://www.w3.org/1999/xhtml'>There is no information available about the subject's health problems or disabilities.</div>"
-      },
-      "entry": [
-       {
-        "reference": "http://aidbox:8888/fhir/MedicationStatement/522"
-       }
-      ]
-     },
-     {
-      "title": "Immunizations",
-      "code": {
-       "coding": [
-        {
-         "system": "http://loinc.org",
-         "code": "11369-6",
-         "display": "History of Immunization Narrative"
-        }
-       ]
-      },
-      "text": {
-       "status": "generated",
-       "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe</div></div>"
-      },
-      "entry": [
-       {
-        "reference": "http://aidbox:8888/fhir/Immunization/523"
-       }
-      ]
-     },
-     {
-      "title": "History of pregnancy",
-      "code": {
-       "coding": [
-        {
-         "system": "http://loinc.org",
-         "code": "10162-6",
-         "display": "History of pregnancies Narrative"
-        }
-       ]
-      },
-      "text": {
-       "status": "generated",
-       "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Pregnancy status</div></div>"
-      },
-      "entry": [
-       {
-        "reference": "http://aidbox:8888/fhir/Observation/joyce-pregnancy-status"
-       }
-      ]
-     }
-    ],
-    "type": {
-     "coding": [
-      {
-       "system": "http://loinc.org",
-       "code": "60591-5",
-       "display": "Patient summary Document"
-      }
-     ]
-    },
-    "resourceType": "Composition",
-    "title": "Patient Summary as of Tue Feb 25 2025 11:37:31 GMT+0000 (Coordinated Universal Time)",
-    "author": [
-     {
-      "reference": "urn:uuid:d9d3c763-8a0b-43a3-8236-d79f3bd3fe1d"
-     }
-    ],
-    "event": [
-     {
-      "code": [
-       {
-        "coding": [
-         {
-          "system": "http://terminology.hl7.org/CodeSystem/v3-ActClass",
-          "code": "PCPR"
-         }
-        ]
-       }
-      ],
-      "period": {
-       "end": "2025-02-25T11:37:31.400Z"
-      }
-     }
-    ],
-    "status": "final",
-    "subject": {
-     "reference": "http://aidbox:8888/fhir/Patient/johnson-joyce"
-    },
-    "text": {
-     "status": "generated",
-     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>Generated Narrative</b></p>\n<div\n  style=\"\n    display: inline-block;\n    background-color: #d9e0e7;\n    padding: 6px;\n    margin: 4px;\n    border: 1px solid #8da1b4;\n    border-radius: 5px;\n    line-height: 60%;\n  \"\n>\n  <p style=\"margin-bottom: 0px\">Resource \"1809c98e-0a5a-4abc-97ec-18dd2ea38df4\"</p>\n</div>\n<p><b>status</b>: final</p>\n<p>\n  <b>type</b>: Patient summary Document\n  <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">\n    (<a href=\"https://loinc.org/\">LOINC</a>#60591-5)\n  </span>\n</p>\n<p><b>date</b>: 2020-12-11 02:30:00+0100</p>\n<p><b>author</b>: Device Aidbox</p>\n<p><b>title</b>: Patient Summary as of Tue Feb 25 2025 11:37:31 GMT+0000 (Coordinated Universal Time)</p>\n<h3>Events</h3>\n<table class=\"grid\">\n  <tr>\n    <td>-</td>\n    <td><b>Code</b></td>\n    <td><b>Period</b></td>\n  </tr>\n  <tr>\n    <td>*</td>\n    <td>\n      care provision\n      <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">\n        (<a href=\"http://terminology.hl7.org/CodeSystem/v3-ActClass\">ActClass</a>#PCPR)</span>\n    </td>\n    <td>?? --&gt; 2025-02-25T11:37:31.400Z</td>\n  </tr>\n</table>\n</div>"
-    }
-   }
-  },
-  {
-   "fullUrl": "http://aidbox:8888/fhir/Patient/johnson-joyce",
-   "resource": {
-    "address": [
-     {
-      "city": "Palmvale",
-      "line": [
-       "139 River Lane"
-      ],
-      "state": "NSW",
-      "country": "AU",
-      "postalCode": "2484"
-     }
-    ],
-    "meta": {
-     "source": "#p1tcGUw0ksrrZkUQ",
-     "profile": [
-      "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"
-     ],
-     "versionId": "752",
-     "lastUpdated": "2025-02-24T12:37:39.601270Z",
-     "extension": [
-      {
-       "url": "ex:createdAt",
-       "valueInstant": "2025-02-24T10:55:04.918183Z"
-      }
-     ]
-    },
-    "name": [
-     {
-      "use": "official",
-      "given": [
-       "Joyce"
-      ],
-      "family": "JOHNSON"
-     }
-    ],
-    "birthDate": "1985-02-06",
-    "resourceType": "Patient",
-    "extension": [
-     {
-      "url": "http://hl7.org.au/fhir/StructureDefinition/indigenous-status",
-      "valueCoding": {
-       "code": "4",
-       "system": "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1",
-       "display": "Neither Aboriginal nor Torres Strait Islander origin"
-      }
-     }
-    ],
-    "id": "johnson-joyce",
-    "identifier": [
-     {
-      "type": {
-       "text": "IHI",
-       "coding": [
-        {
-         "code": "NI",
-         "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-        }
-       ]
-      },
-      "value": "8003608500314679",
-      "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
-      "extension": [
-       {
-        "url": "http://hl7.org.au/fhir/StructureDefinition/ihi-status",
-        "valueCoding": {
-         "code": "active",
-         "system": "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1"
-        }
-       },
-       {
-        "url": "http://hl7.org.au/fhir/StructureDefinition/ihi-record-status",
-        "valueCoding": {
-         "code": "verified",
-         "system": "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1",
-         "display": "verified"
-        }
-       }
-      ]
-     },
-     {
-      "type": {
-       "text": "Medicare Number",
-       "coding": [
-        {
-         "code": "MC",
-         "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
-        }
-       ]
-      },
-      "value": "29545401611",
-      "system": "http://ns.electronichealth.net.au/id/medicare-number"
-     }
-    ],
-    "telecom": [
-     {
-      "use": "home",
-      "value": "0270108012",
-      "system": "phone"
-     },
-     {
-      "use": "mobile",
-      "value": "0491571804",
-      "system": "phone"
-     },
-     {
-      "use": "work",
-      "value": "0270109558",
-      "system": "phone"
-     }
-    ],
-    "gender": "female"
-   }
-  },
-  {
-   "resource": {
-    "id": "517",
-    "code": {
-     "text": "Gestational diabetes mellitus",
-     "coding": [
-      {
-       "code": "11687002",
-       "system": "http://snomed.info/sct",
-       "display": "Gestational diabetes mellitus"
-      }
-     ]
-    },
-    "meta": {
-     "source": "#xTh3kH5wJlaqMS9j",
-     "profile": [
-      "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"
-     ],
-     "versionId": "756",
-     "lastUpdated": "2025-02-24T12:37:39.687056Z",
-     "extension": [
-      {
-       "url": "ex:createdAt",
-       "valueInstant": "2025-02-24T10:55:09.152763Z"
-      }
-     ]
-    },
-    "note": [
-     {
-      "text": "Recent diagnosis, referring to Endo & Dietitian"
-     }
-    ],
-    "subject": {
-     "type": "Patient",
-     "display": "Joyce JOHNSON",
-     "reference": "Patient/johnson-joyce"
-    },
-    "category": [
-     {
-      "text": "Problem",
-      "coding": [
-       {
-        "code": "problem-list-item",
-        "system": "http://terminology.hl7.org/CodeSystem/condition-category"
-       }
-      ]
-     }
-    ],
-    "resourceType": "Condition"
-   },
-   "fullUrl": "http://aidbox:8888/fhir/Condition/517"
-  },
-  {
-   "resource": {
-    "id": "518",
-    "code": {
-     "text": "Anaemia",
-     "coding": [
-      {
-       "code": "271737000",
-       "system": "http://snomed.info/sct",
-       "display": "Anaemia"
-      }
-     ]
-    },
-    "meta": {
-     "source": "#xTh3kH5wJlaqMS9j",
-     "profile": [
-      "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"
-     ],
-     "versionId": "757",
-     "lastUpdated": "2025-02-24T12:37:39.698904Z",
-     "extension": [
-      {
-       "url": "ex:createdAt",
-       "valueInstant": "2025-02-24T10:55:09.171437Z"
-      }
-     ]
-    },
-    "subject": {
-     "type": "Patient",
-     "display": "Joyce JOHNSON",
-     "reference": "Patient/johnson-joyce"
-    },
-    "category": [
-     {
-      "text": "Problem",
-      "coding": [
-       {
-        "code": "problem-list-item",
-        "system": "http://terminology.hl7.org/CodeSystem/condition-category"
-       }
-      ]
-     }
-    ],
-    "resourceType": "Condition"
-   },
-   "fullUrl": "http://aidbox:8888/fhir/Condition/518"
-  },
-  {
-   "resource": {
-    "id": "519",
-    "code": {
-     "text": "Appendicitis",
-     "coding": [
-      {
-       "code": "74400008",
-       "system": "http://snomed.info/sct",
-       "display": "Appendicitis"
-      }
-     ]
-    },
-    "meta": {
-     "source": "#xTh3kH5wJlaqMS9j",
-     "profile": [
-      "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"
-     ],
-     "versionId": "758",
-     "lastUpdated": "2025-02-24T12:37:39.717354Z",
-     "extension": [
-      {
-       "url": "ex:createdAt",
-       "valueInstant": "2025-02-24T10:55:09.180935Z"
-      }
-     ]
-    },
-    "subject": {
-     "type": "Patient",
-     "display": "Joyce JOHNSON",
-     "reference": "Patient/johnson-joyce"
-    },
-    "category": [
-     {
-      "text": "Problem",
-      "coding": [
-       {
-        "code": "problem-list-item",
-        "system": "http://terminology.hl7.org/CodeSystem/condition-category"
-       }
-      ]
-     }
-    ],
-    "resourceType": "Condition"
-   },
-   "fullUrl": "http://aidbox:8888/fhir/Condition/519"
-  },
-  {
-   "resource": {
-    "id": "520",
-    "code": {
-     "text": "Upper respiratory tract infection",
-     "coding": [
-      {
-       "code": "54150009",
-       "system": "http://snomed.info/sct",
-       "display": "Upper respiratory tract infection"
-      }
-     ]
-    },
-    "meta": {
-     "source": "#xTh3kH5wJlaqMS9j",
-     "profile": [
-      "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"
-     ],
-     "versionId": "759",
-     "lastUpdated": "2025-02-24T12:37:39.728666Z",
-     "extension": [
-      {
-       "url": "ex:createdAt",
-       "valueInstant": "2025-02-24T10:55:09.190202Z"
-      }
-     ]
-    },
-    "subject": {
-     "type": "Patient",
-     "display": "Joyce JOHNSON",
-     "reference": "Patient/johnson-joyce"
-    },
-    "category": [
-     {
-      "text": "Problem",
-      "coding": [
-       {
-        "code": "problem-list-item",
-        "system": "http://terminology.hl7.org/CodeSystem/condition-category"
-       }
-      ]
-     }
-    ],
-    "resourceType": "Condition"
-   },
-   "fullUrl": "http://aidbox:8888/fhir/Condition/520"
-  },
-  {
-   "resource": {
-    "id": "521",
-    "code": {
-     "text": "Epidermal burn of multiple sites",
-     "coding": [
-      {
-       "code": "77830003",
-       "system": "http://snomed.info/sct",
-       "display": "Epidermal burn of multiple sites"
-      }
-     ]
-    },
-    "meta": {
-     "source": "#xTh3kH5wJlaqMS9j",
-     "profile": [
-      "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"
-     ],
-     "versionId": "760",
-     "lastUpdated": "2025-02-24T12:37:39.740478Z",
-     "extension": [
-      {
-       "url": "ex:createdAt",
-       "valueInstant": "2025-02-24T10:55:09.200149Z"
-      }
-     ]
-    },
-    "note": [
-     {
-      "text": "Severe sunburn, upper shoulders and back"
-     }
-    ],
-    "subject": {
-     "type": "Patient",
-     "display": "Joyce JOHNSON",
-     "reference": "Patient/johnson-joyce"
-    },
-    "bodySite": [
-     {
-      "text": "Shoulder region structure",
-      "coding": [
-       {
-        "code": "16982005",
-        "system": "http://snomed.info/sct",
-        "display": "Shoulder region structure"
-       }
-      ]
-     }
-    ],
-    "category": [
-     {
-      "text": "Problem",
-      "coding": [
-       {
-        "code": "problem-list-item",
-        "system": "http://terminology.hl7.org/CodeSystem/condition-category"
-       }
-      ]
-     }
-    ],
-    "resourceType": "Condition"
-   },
-   "fullUrl": "http://aidbox:8888/fhir/Condition/521"
-  },
-  {
-   "resource": {
-    "id": "446",
-    "code": {
-     "text": "No known allergy",
-     "coding": [
-      {
-       "code": "716186003",
-       "system": "http://snomed.info/sct",
-       "display": "No known allergy"
-      }
-     ]
-    },
-    "meta": {
-     "source": "#Rzm7iVMr2BOG25Dw",
-     "profile": [
-      "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-allergyintolerance"
-     ],
-     "versionId": "754",
-     "lastUpdated": "2025-02-24T12:37:39.644716Z",
-     "extension": [
-      {
-       "url": "ex:createdAt",
-       "valueInstant": "2025-02-24T10:55:08.006886Z"
-      }
-     ]
-    },
-    "patient": {
-     "type": "Patient",
-     "display": "Joyce JOHNSON",
-     "reference": "Patient/johnson-joyce"
-    },
-    "resourceType": "AllergyIntolerance",
-    "clinicalStatus": {
-     "coding": [
-      {
-       "code": "active",
-       "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
-      }
-     ]
-    }
-   },
-   "fullUrl": "http://aidbox:8888/fhir/AllergyIntolerance/446"
-  },
-  {
-   "resource": {
-    "meta": {
-     "source": "#xTh3kH5wJlaqMS9j",
-     "profile": [
-      "http://hl7.org.au/fhir/StructureDefinition/au-medicationstatement"
-     ],
-     "versionId": "761",
-     "lastUpdated": "2025-02-24T12:37:39.752589Z",
-     "extension": [
-      {
-       "url": "ex:createdAt",
-       "valueInstant": "2025-02-24T10:55:11.165782Z"
-      }
-     ]
-    },
-    "dosage": [
-     {
-      "route": {
-       "text": "Oral route",
-       "coding": [
-        {
-         "code": "26643006",
-         "system": "http://snomed.info/sct",
-         "display": "Oral route"
-        }
-       ]
-      },
-      "timing": {
-       "code": {
-        "text": "BID",
-        "coding": [
-         {
-          "code": "BID",
-          "system": "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation",
-          "display": "BID"
-         }
-        ]
-       }
-      }
-     }
-    ],
-    "resourceType": "MedicationStatement",
-    "contained": [
-     {
-      "id": "medication",
-      "code": {
-       "text": "Metformin",
-       "coding": [
-        {
-         "code": "109081006",
-         "system": "http://snomed.info/sct",
-         "display": "Metformin"
-        }
-       ]
-      },
-      "form": {
-       "text": "Tablet",
-       "coding": [
-        {
-         "code": "385055001",
-         "system": "http://snomed.info/sct",
-         "display": "Tablet"
-        }
-       ]
-      },
-      "meta": {
-       "profile": [
-        "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medication"
-       ]
-      },
-      "resourceType": "Medication"
-     }
-    ],
-    "status": "completed",
-    "id": "522",
-    "medicationReference": {
-     "reference": "#medication"
-    },
-    "subject": {
-     "type": "Patient",
-     "display": "Joyce JOHNSON",
-     "reference": "Patient/johnson-joyce"
-    }
-   },
-   "fullUrl": "http://aidbox:8888/fhir/MedicationStatement/522"
-  },
-  {
-   "resource": {
-    "id": "523",
-    "meta": {
-     "source": "#xTh3kH5wJlaqMS9j",
-     "profile": [
-      "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"
-     ],
-     "versionId": "762",
-     "lastUpdated": "2025-02-24T12:37:39.765439Z",
-     "extension": [
-      {
-       "url": "ex:createdAt",
-       "valueInstant": "2025-02-24T10:55:12.899889Z"
-      }
-     ]
-    },
-    "status": "completed",
-    "patient": {
-     "type": "Patient",
-     "display": "Joyce JOHNSON",
-     "reference": "Patient/johnson-joyce"
-    },
-    "occurrenceDateTime": "2024-10-05",
-    "vaccineCode": {
-     "text": "Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe",
-     "coding": [
-      {
-       "code": "1789171000168108",
-       "system": "http://snomed.info/sct",
-       "display": "Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe",
-       "version": "http://snomed.info/sct/32506021000036107/version/20250131"
-      }
-     ]
-    },
-    "resourceType": "Immunization"
-   },
-   "fullUrl": "http://aidbox:8888/fhir/Immunization/523"
-  },
-  {
-   "resource": {
-    "category": [
-     {
-      "coding": [
-       {
-        "code": "social-history",
-        "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-        "display": "Social History"
-       }
-      ]
-     }
-    ],
-    "meta": {
-     "versionId": "1388",
-     "lastUpdated": "2025-02-25T11:10:36.400884Z",
-     "extension": [
-      {
-       "url": "ex:createdAt",
-       "valueInstant": "2025-02-25T11:10:36.400884Z"
-      }
-     ]
-    },
-    "resourceType": "Observation",
-    "effectiveDateTime": "2022-06-06T09:30:10+10:00",
-    "status": "final",
-    "id": "joyce-pregnancy-status",
-    "code": {
-     "coding": [
-      {
-       "code": "82810-3",
-       "system": "http://loinc.org",
-       "display": "Pregnancy status"
-      }
-     ]
-    },
-    "valueCodeableConcept": {
-     "text": "Pregnant",
-     "coding": [
-      {
-       "code": "77386006",
-       "system": "http://snomed.info/sct",
-       "display": "Pregnant"
-      },
-      {
-       "code": "LA15173-0",
-       "system": "http://loinc.org",
-       "display": "Pregnant"
-      }
-     ]
-    },
-    "subject": {
-     "reference": "Patient/johnson-joyce"
-    }
-   },
-   "fullUrl": "http://aidbox:8888/fhir/Observation/joyce-pregnancy-status"
-  },
-  {
-   "fullUrl": "urn:uuid:d9d3c763-8a0b-43a3-8236-d79f3bd3fe1d",
-   "resource": {
-    "resourceType": "Device",
-    "meta": {
-     "profile": [
-      "http://hl7.org/fhir/StructureDefinition/Device"
-     ]
-    },
-    "manufacturer": "CSIRO",
-    "deviceName": [
-     {
-      "name": "AU Patient Summary generator (Aidbox)",
-      "type": "Device"
-     }
+  "resourceType": "Bundle",
+  "type": "document",
+  "timestamp": "2025-02-26T11:37:44.855Z",
+  "meta": {
+    "profile": [
+      "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"
     ]
-   }
-  }
- ]
+  },
+  "identifier": {
+    "system": "urn:oid:2.16.724.4.8.10.200.10",
+    "value": "68b2b383-d529-42a5-a5b0-e39889f5b371"
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:579e15f1-c0a9-439e-a01c-7db5baf0120c",
+      "resource": {
+        "resourceType": "Composition",
+        "meta": {
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-composition"
+          ]
+        },
+        "date": "2025-02-26T11:37:44.841Z",
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "60591-5",
+              "display": "Patient summary Document"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "http://aidbox:8080/fhir/Patient/johnson-joyce"
+        },
+        "author": [
+          {
+            "reference": "urn:uuid:12014dff-8015-454d-ad9f-e73220daaa54"
+          }
+        ],
+        "title": "Patient Summary as of Wed Feb 26 2025 11:37:44 GMT+0000 (Coordinated Universal Time)",
+        "event": [
+          {
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActClass",
+                    "code": "PCPR"
+                  }
+                ]
+              }
+            ],
+            "period": {
+              "end": "2025-02-26T11:37:44.841Z"
+            }
+          }
+        ],
+        "section": [
+          {
+            "title": "Problems",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "11450-4",
+                  "display": "Problem list - Reported"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Gestational diabetes mellitus</div><div>Anaemia</div><div>Appendicitis</div><div>Upper respiratory tract infection</div><div>Epidermal burn of multiple sites</div></div>"
+            },
+            "entry": [
+              {
+                "reference": "http://aidbox:8080/fhir/Condition/517"
+              },
+              {
+                "reference": "http://aidbox:8080/fhir/Condition/518"
+              },
+              {
+                "reference": "http://aidbox:8080/fhir/Condition/519"
+              },
+              {
+                "reference": "http://aidbox:8080/fhir/Condition/520"
+              },
+              {
+                "reference": "http://aidbox:8080/fhir/Condition/521"
+              }
+            ]
+          },
+          {
+            "title": "Allergies and Intolerances",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "48765-2",
+                  "display": "Allergies and adverse reactions Document"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>No known allergy</div></div>"
+            },
+            "entry": [
+              {
+                "reference": "http://aidbox:8080/fhir/AllergyIntolerance/446"
+              }
+            ]
+          },
+          {
+            "title": "Medication Summary",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "10160-0",
+                  "display": "History of Medication use Narrative"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns='http://www.w3.org/1999/xhtml'>There is no information available about the subject's health problems or disabilities.</div>"
+            },
+            "entry": [
+              {
+                "reference": "http://aidbox:8080/fhir/MedicationStatement/522"
+              }
+            ]
+          },
+          {
+            "title": "Immunizations",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "11369-6",
+                  "display": "History of Immunization Narrative"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe</div></div>"
+            },
+            "entry": [
+              {
+                "reference": "http://aidbox:8080/fhir/Immunization/523"
+              }
+            ]
+          },
+          {
+            "title": "History of pregnancy",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "10162-6",
+                  "display": "History of pregnancies Narrative"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><div>Pregnancy status</div></div>"
+            },
+            "entry": [
+              {
+                "reference": "http://aidbox:8080/fhir/Observation/joyce-pregnancy-status"
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n<p><b>Generated Narrative</b></p>\n<div\n  style=\"\n    display: inline-block;\n    background-color: #d9e0e7;\n    padding: 6px;\n    margin: 4px;\n    border: 1px solid #8da1b4;\n    border-radius: 5px;\n    line-height: 60%;\n  \"\n>\n  <p style=\"margin-bottom: 0px\">Resource \"579e15f1-c0a9-439e-a01c-7db5baf0120c\"</p>\n</div>\n<p><b>status</b>: final</p>\n<p>\n  <b>type</b>: Patient summary Document\n  <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">\n    (<a href=\"https://loinc.org/\">LOINC</a>#60591-5)\n  </span>\n</p>\n<p><b>date</b>: 2020-12-11 02:30:00+0100</p>\n<p><b>author</b>: Device Aidbox</p>\n<p><b>title</b>: Patient Summary as of Wed Feb 26 2025 11:37:44 GMT+0000 (Coordinated Universal Time)</p>\n<h3>Events</h3>\n<table class=\"grid\">\n  <tr>\n    <td>-</td>\n    <td><b>Code</b></td>\n    <td><b>Period</b></td>\n  </tr>\n  <tr>\n    <td>*</td>\n    <td>\n      care provision\n      <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\">\n        (<a href=\"http://terminology.hl7.org/CodeSystem/v3-ActClass\">ActClass</a>#PCPR)</span>\n    </td>\n    <td>?? --&gt; 2025-02-26T11:37:44.841Z</td>\n  </tr>\n</table>\n</div>"
+        }
+      }
+    },
+    {
+      "fullUrl": "http://aidbox:8080/fhir/Patient/johnson-joyce",
+      "resource": {
+        "address": [
+          {
+            "city": "Palmvale",
+            "line": [
+              "139 River Lane"
+            ],
+            "state": "NSW",
+            "country": "AU",
+            "postalCode": "2484"
+          }
+        ],
+        "meta": {
+          "source": "#p1tcGUw0ksrrZkUQ",
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-patient"
+          ],
+          "versionId": "3750",
+          "lastUpdated": "2025-02-24T14:26:30.645763Z",
+          "extension": [
+            {
+              "url": "http://fhir.aidbox.app/extension/createdat",
+              "valueInstant": "2024-03-20T10:11:11.223296Z"
+            }
+          ]
+        },
+        "name": [
+          {
+            "use": "official",
+            "given": [
+              "Joyce"
+            ],
+            "family": "JOHNSON"
+          }
+        ],
+        "birthDate": "1985-02-06",
+        "resourceType": "Patient",
+        "extension": [
+          {
+            "url": "http://hl7.org.au/fhir/StructureDefinition/indigenous-status",
+            "valueCoding": {
+              "code": "4",
+              "system": "https://healthterminologies.gov.au/fhir/CodeSystem/australian-indigenous-status-1",
+              "display": "Neither Aboriginal nor Torres Strait Islander origin"
+            }
+          }
+        ],
+        "id": "johnson-joyce",
+        "identifier": [
+          {
+            "type": {
+              "text": "IHI",
+              "coding": [
+                {
+                  "code": "NI",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                }
+              ]
+            },
+            "value": "8003608500314679",
+            "system": "http://ns.electronichealth.net.au/id/hi/ihi/1.0",
+            "extension": [
+              {
+                "url": "http://hl7.org.au/fhir/StructureDefinition/ihi-status",
+                "valueCoding": {
+                  "code": "active",
+                  "system": "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-status-1"
+                }
+              },
+              {
+                "url": "http://hl7.org.au/fhir/StructureDefinition/ihi-record-status",
+                "valueCoding": {
+                  "code": "verified",
+                  "system": "https://healthterminologies.gov.au/fhir/CodeSystem/ihi-record-status-1",
+                  "display": "verified"
+                }
+              }
+            ]
+          },
+          {
+            "type": {
+              "text": "Medicare Number",
+              "coding": [
+                {
+                  "code": "MC",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                }
+              ]
+            },
+            "value": "29545401611",
+            "system": "http://ns.electronichealth.net.au/id/medicare-number"
+          }
+        ],
+        "telecom": [
+          {
+            "use": "home",
+            "value": "0270108012",
+            "system": "phone"
+          },
+          {
+            "use": "mobile",
+            "value": "0491571804",
+            "system": "phone"
+          },
+          {
+            "use": "work",
+            "value": "0270109558",
+            "system": "phone"
+          }
+        ],
+        "gender": "female"
+      }
+    },
+    {
+      "resource": {
+        "id": "517",
+        "code": {
+          "text": "Gestational diabetes mellitus",
+          "coding": [
+            {
+              "code": "11687002",
+              "system": "http://snomed.info/sct",
+              "display": "Gestational diabetes mellitus"
+            }
+          ]
+        },
+        "meta": {
+          "source": "#xTh3kH5wJlaqMS9j",
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"
+          ],
+          "versionId": "3754",
+          "lastUpdated": "2025-02-24T14:26:50.664269Z",
+          "extension": [
+            {
+              "url": "http://fhir.aidbox.app/extension/createdat",
+              "valueInstant": "2025-02-24T14:26:50.664269Z"
+            }
+          ]
+        },
+        "note": [
+          {
+            "text": "Recent diagnosis, referring to Endo & Dietitian"
+          }
+        ],
+        "subject": {
+          "type": "Patient",
+          "display": "Joyce JOHNSON",
+          "reference": "Patient/johnson-joyce"
+        },
+        "category": [
+          {
+            "text": "Problem",
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+            ]
+          }
+        ],
+        "resourceType": "Condition"
+      },
+      "fullUrl": "http://aidbox:8080/fhir/Condition/517"
+    },
+    {
+      "resource": {
+        "id": "518",
+        "code": {
+          "text": "Anaemia",
+          "coding": [
+            {
+              "code": "271737000",
+              "system": "http://snomed.info/sct",
+              "display": "Anaemia"
+            }
+          ]
+        },
+        "meta": {
+          "source": "#xTh3kH5wJlaqMS9j",
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"
+          ],
+          "versionId": "3755",
+          "lastUpdated": "2025-02-24T14:26:54.124238Z",
+          "extension": [
+            {
+              "url": "http://fhir.aidbox.app/extension/createdat",
+              "valueInstant": "2025-02-24T14:26:54.124238Z"
+            }
+          ]
+        },
+        "subject": {
+          "type": "Patient",
+          "display": "Joyce JOHNSON",
+          "reference": "Patient/johnson-joyce"
+        },
+        "category": [
+          {
+            "text": "Problem",
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+            ]
+          }
+        ],
+        "resourceType": "Condition"
+      },
+      "fullUrl": "http://aidbox:8080/fhir/Condition/518"
+    },
+    {
+      "resource": {
+        "id": "519",
+        "code": {
+          "text": "Appendicitis",
+          "coding": [
+            {
+              "code": "74400008",
+              "system": "http://snomed.info/sct",
+              "display": "Appendicitis"
+            }
+          ]
+        },
+        "meta": {
+          "source": "#xTh3kH5wJlaqMS9j",
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"
+          ],
+          "versionId": "3756",
+          "lastUpdated": "2025-02-24T14:26:56.688827Z",
+          "extension": [
+            {
+              "url": "http://fhir.aidbox.app/extension/createdat",
+              "valueInstant": "2025-02-24T14:26:56.688827Z"
+            }
+          ]
+        },
+        "subject": {
+          "type": "Patient",
+          "display": "Joyce JOHNSON",
+          "reference": "Patient/johnson-joyce"
+        },
+        "category": [
+          {
+            "text": "Problem",
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+            ]
+          }
+        ],
+        "resourceType": "Condition"
+      },
+      "fullUrl": "http://aidbox:8080/fhir/Condition/519"
+    },
+    {
+      "resource": {
+        "id": "520",
+        "code": {
+          "text": "Upper respiratory tract infection",
+          "coding": [
+            {
+              "code": "54150009",
+              "system": "http://snomed.info/sct",
+              "display": "Upper respiratory tract infection"
+            }
+          ]
+        },
+        "meta": {
+          "source": "#xTh3kH5wJlaqMS9j",
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"
+          ],
+          "versionId": "3757",
+          "lastUpdated": "2025-02-24T14:26:59.089216Z",
+          "extension": [
+            {
+              "url": "http://fhir.aidbox.app/extension/createdat",
+              "valueInstant": "2025-02-24T14:26:59.089216Z"
+            }
+          ]
+        },
+        "subject": {
+          "type": "Patient",
+          "display": "Joyce JOHNSON",
+          "reference": "Patient/johnson-joyce"
+        },
+        "category": [
+          {
+            "text": "Problem",
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+            ]
+          }
+        ],
+        "resourceType": "Condition"
+      },
+      "fullUrl": "http://aidbox:8080/fhir/Condition/520"
+    },
+    {
+      "resource": {
+        "id": "521",
+        "code": {
+          "text": "Epidermal burn of multiple sites",
+          "coding": [
+            {
+              "code": "77830003",
+              "system": "http://snomed.info/sct",
+              "display": "Epidermal burn of multiple sites"
+            }
+          ]
+        },
+        "meta": {
+          "source": "#xTh3kH5wJlaqMS9j",
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-condition"
+          ],
+          "versionId": "3758",
+          "lastUpdated": "2025-02-24T14:27:01.965384Z",
+          "extension": [
+            {
+              "url": "http://fhir.aidbox.app/extension/createdat",
+              "valueInstant": "2025-02-24T14:27:01.965384Z"
+            }
+          ]
+        },
+        "note": [
+          {
+            "text": "Severe sunburn, upper shoulders and back"
+          }
+        ],
+        "subject": {
+          "type": "Patient",
+          "display": "Joyce JOHNSON",
+          "reference": "Patient/johnson-joyce"
+        },
+        "bodySite": [
+          {
+            "text": "Shoulder region structure",
+            "coding": [
+              {
+                "code": "16982005",
+                "system": "http://snomed.info/sct",
+                "display": "Shoulder region structure"
+              }
+            ]
+          }
+        ],
+        "category": [
+          {
+            "text": "Problem",
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category"
+              }
+            ]
+          }
+        ],
+        "resourceType": "Condition"
+      },
+      "fullUrl": "http://aidbox:8080/fhir/Condition/521"
+    },
+    {
+      "resource": {
+        "id": "446",
+        "code": {
+          "text": "No known allergy",
+          "coding": [
+            {
+              "code": "716186003",
+              "system": "http://snomed.info/sct",
+              "display": "No known allergy"
+            }
+          ]
+        },
+        "meta": {
+          "source": "#Rzm7iVMr2BOG25Dw",
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-allergyintolerance"
+          ],
+          "versionId": "3752",
+          "lastUpdated": "2025-02-24T14:26:40.812643Z",
+          "extension": [
+            {
+              "url": "http://fhir.aidbox.app/extension/createdat",
+              "valueInstant": "2025-02-24T14:26:40.812643Z"
+            }
+          ]
+        },
+        "patient": {
+          "type": "Patient",
+          "display": "Joyce JOHNSON",
+          "reference": "Patient/johnson-joyce"
+        },
+        "resourceType": "AllergyIntolerance",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
+            }
+          ]
+        }
+      },
+      "fullUrl": "http://aidbox:8080/fhir/AllergyIntolerance/446"
+    },
+    {
+      "resource": {
+        "meta": {
+          "source": "#xTh3kH5wJlaqMS9j",
+          "profile": [
+            "http://hl7.org.au/fhir/StructureDefinition/au-medicationstatement"
+          ],
+          "versionId": "3759",
+          "lastUpdated": "2025-02-24T14:27:05.271674Z",
+          "extension": [
+            {
+              "url": "http://fhir.aidbox.app/extension/createdat",
+              "valueInstant": "2025-02-24T14:27:05.271674Z"
+            }
+          ]
+        },
+        "dosage": [
+          {
+            "route": {
+              "text": "Oral route",
+              "coding": [
+                {
+                  "code": "26643006",
+                  "system": "http://snomed.info/sct",
+                  "display": "Oral route"
+                }
+              ]
+            },
+            "timing": {
+              "code": {
+                "text": "BID",
+                "coding": [
+                  {
+                    "code": "BID",
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-GTSAbbreviation",
+                    "display": "BID"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "resourceType": "MedicationStatement",
+        "contained": [
+          {
+            "id": "medication",
+            "code": {
+              "text": "Metformin",
+              "coding": [
+                {
+                  "code": "109081006",
+                  "system": "http://snomed.info/sct",
+                  "display": "Metformin"
+                }
+              ]
+            },
+            "form": {
+              "text": "Tablet",
+              "coding": [
+                {
+                  "code": "385055001",
+                  "system": "http://snomed.info/sct",
+                  "display": "Tablet"
+                }
+              ]
+            },
+            "meta": {
+              "profile": [
+                "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-medication"
+              ]
+            },
+            "resourceType": "Medication"
+          }
+        ],
+        "status": "completed",
+        "id": "522",
+        "medicationReference": {
+          "reference": "#medication"
+        },
+        "subject": {
+          "type": "Patient",
+          "display": "Joyce JOHNSON",
+          "reference": "Patient/johnson-joyce"
+        }
+      },
+      "fullUrl": "http://aidbox:8080/fhir/MedicationStatement/522"
+    },
+    {
+      "resource": {
+        "id": "523",
+        "meta": {
+          "source": "#xTh3kH5wJlaqMS9j",
+          "profile": [
+            "http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-immunization"
+          ],
+          "versionId": "3760",
+          "lastUpdated": "2025-02-24T14:27:08.365720Z",
+          "extension": [
+            {
+              "url": "http://fhir.aidbox.app/extension/createdat",
+              "valueInstant": "2025-02-24T14:27:08.365720Z"
+            }
+          ]
+        },
+        "status": "completed",
+        "patient": {
+          "type": "Patient",
+          "display": "Joyce JOHNSON",
+          "reference": "Patient/johnson-joyce"
+        },
+        "occurrenceDateTime": "2024-10-05",
+        "vaccineCode": {
+          "text": "Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe",
+          "coding": [
+            {
+              "code": "1789171000168108",
+              "system": "http://snomed.info/sct",
+              "display": "Diphtheria + tetanus + pertussis 5 component adolescent/adult vaccine injection, 0.5 mL syringe",
+              "version": "http://snomed.info/sct/32506021000036107/version/20250131"
+            }
+          ]
+        },
+        "resourceType": "Immunization"
+      },
+      "fullUrl": "http://aidbox:8080/fhir/Immunization/523"
+    },
+    {
+      "resource": {
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "social-history",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "display": "Social History"
+              }
+            ]
+          }
+        ],
+        "meta": {
+          "versionId": "4023",
+          "lastUpdated": "2025-02-25T11:47:18.192130Z",
+          "extension": [
+            {
+              "url": "http://fhir.aidbox.app/extension/createdat",
+              "valueInstant": "2025-02-25T11:47:18.192130Z"
+            }
+          ]
+        },
+        "resourceType": "Observation",
+        "effectiveDateTime": "2022-06-06T09:30:10+10:00",
+        "status": "final",
+        "id": "joyce-pregnancy-status",
+        "code": {
+          "coding": [
+            {
+              "code": "82810-3",
+              "system": "http://loinc.org",
+              "display": "Pregnancy status"
+            }
+          ]
+        },
+        "valueCodeableConcept": {
+          "text": "Pregnant",
+          "coding": [
+            {
+              "code": "77386006",
+              "system": "http://snomed.info/sct",
+              "display": "Pregnant"
+            },
+            {
+              "code": "LA15173-0",
+              "system": "http://loinc.org",
+              "display": "Pregnant"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/johnson-joyce"
+        }
+      },
+      "fullUrl": "http://aidbox:8080/fhir/Observation/joyce-pregnancy-status"
+    },
+    {
+      "fullUrl": "urn:uuid:12014dff-8015-454d-ad9f-e73220daaa54",
+      "resource": {
+        "resourceType": "Device",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/Device"
+          ]
+        },
+        "manufacturer": "CSIRO",
+        "deviceName": [
+          {
+            "name": "AU Patient Summary generator (Aidbox)",
+            "type": "manufacturer-name"
+          }
+        ]
+      }
+    }
+  ]
 }
