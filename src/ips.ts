@@ -25,7 +25,7 @@ export const createDevice = () => {
 		"deviceName": [
 			{
 				"name": "AU Patient Summary generator (Aidbox)",
-				"type": "Device"
+				"type": "manufacturer-name"
 			}
 		]
   }
@@ -187,6 +187,21 @@ const getSectionResources = (
   }, []);
 };
 
+const addEmptyReason = (entries: any[]) => {
+  return entries.length === 0 ? {
+    emptyReason: {
+      coding: [
+        {
+          system: "http://terminology.hl7.org/CodeSystem/list-empty-reason",
+          code: "unavailable",
+          display: "Unavailable"
+        }
+      ],
+      text: "No information available"
+    }
+  } : {}
+}
+
 // ----- Required sections -----
 const generateProblemListSection = (patientData: PatientData, _http: HttpClient, aidboxUrl: string) => {
   const validConditions = getSectionResources(patientData, sectionProfiles.ProblemList);
@@ -204,7 +219,8 @@ const generateProblemListSection = (patientData: PatientData, _http: HttpClient,
     },
     text: generateSimpleNarrative(validConditions as SimpleNarrativeEntry),
     ...addEntry(validConditions, aidboxUrl),
-  };
+    ...addEmptyReason(validConditions)
+  }
 
   return section;
 };
@@ -228,6 +244,7 @@ const generateAllergyIntoleranceSection = (patientData: PatientData, _http: Http
     },
     text: generateSimpleNarrative(validAllergies as SimpleNarrativeEntry),
     ...addEntry(validAllergies, aidboxUrl),
+    ...addEmptyReason(validAllergies)
   };
 
   return section;
@@ -252,6 +269,7 @@ const generateMedicationSummarySection = (patientData: PatientData, _http: HttpC
     },
     text: generateSimpleNarrative(validMedications as SimpleNarrativeEntry),
     ...addEntry(validMedications, aidboxUrl),
+    ...addEmptyReason(validMedications)
   };
 
   return section;
