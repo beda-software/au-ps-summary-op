@@ -7,3 +7,4 @@ pgdata
 .idea
 .DS_STORE
 zenproject/seeds.ndjson.gz
+zenproject/zen-packages/
