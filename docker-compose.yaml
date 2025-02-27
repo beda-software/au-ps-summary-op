@@ -18,7 +18,7 @@ services:
   aidbox:
     image: healthsamurai/aidboxone:edge
     pull_policy: always
-    depends_on: ["aidbox-db", "build-seeds"]
+    depends_on: ["aidbox-db"]
     ports:
       - "${AIDBOX_PORT}:${AIDBOX_PORT}"
     env_file:
@@ -26,15 +26,19 @@ services:
     volumes:
       - ./zenproject:/zenproject
 
-  build-seeds:
-    image: bedasoftware/fhirsnake:latest
-    command:
-      - export
-      - --output
-      - /app/zenproject/seeds.ndjson.gz
+  seed:
+    image: ghcr.io/beda-software/fhir_seeder:2097655dada8044ed942a3167d26f136456660a7
+    env_file:
+      - .env
     volumes:
-      - ./zenproject:/app/zenproject
-      - ./resources/seeds:/app/resources
+      - ./resources/seeds:/app/data
+    command:
+      - seed
+      - "--server=${AIDBOX_BASE_URL}"
+      - "--source=/app/data"
+      - "--type=seeds"
+      - "--username=${AIDBOX_CLIENT_ID}"
+      - "--password=${AIDBOX_CLIENT_SECRET}"
 
   node-app:
     hostname: node-app
