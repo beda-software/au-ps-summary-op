@@ -2,14 +2,13 @@ FROM node:20-slim
 
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update -y
-RUN apt-get install -y rsync
+RUN apt-get update -y && apt-get install -y rsync
 RUN npm install -g pnpm
 # RUN corepack enable
 
 WORKDIR /usr/src/app-cache
 
-COPY package.json .
+COPY package.json pnpm.lock ./
 RUN pnpm install
 
 WORKDIR /usr/src/app
