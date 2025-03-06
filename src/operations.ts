@@ -8,6 +8,7 @@ import {
   addFullUrl,
   getResourcesFromRefs,
   createDevice,
+  fetchSummaryResources,
 } from "./ips.js";
 import { Patient } from "@aidbox/sdk-r4/types";
 
@@ -17,7 +18,11 @@ const generateSummary = async ({ http, appConfig }: Request, patient: Patient) =
   try {
     assert(patient.id, "Patient Id is required");
     const patientId = patient.id;
-    const { sections, bundleData }: any = await generateSections(http, patientId, appConfig.aidbox.url);
+    const resources = await fetchSummaryResources(http, patientId);
+
+    
+
+    const { sections, bundleData } = await generateSections(http, patientId, appConfig.aidbox.url);
     const deviceUUID = randomUUID();
     const compositionUUID = randomUUID();
     const composition = createComposition(sections, patientId, compositionUUID,
