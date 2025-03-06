@@ -13,11 +13,18 @@ services:
       POSTGRES_USER: "${PGUSER}"
       POSTGRES_PASSWORD: "${PGPASSWORD}"
       POSTGRES_DB: "${PGDATABASE}"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
 
   aidbox:
     image: healthsamurai/aidboxone:edge
     pull_policy: always
-    depends_on: ["aidbox-db"]
+    depends_on:
+      aidbox-db:
+        condition: service_healthy
     ports:
       - "${AIDBOX_PORT}:${AIDBOX_PORT}"
     env_file:
