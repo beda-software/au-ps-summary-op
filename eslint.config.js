@@ -11,4 +11,9 @@ export default tseslint.config(
     extends: [importPlugin.flatConfigs.recommended, importPlugin.flatConfigs.typescript],
     files: ['**/*.{ts,tsx}', '**/*.d.ts'],
   },
+  {
+    rules: {
+      'sort/object-properties': 'off',
+    },
+  },
 );
