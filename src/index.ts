@@ -2,9 +2,9 @@ import { Client as AidboxClient } from '@aidbox/sdk-r4';
 import Fastify from 'fastify';
 import fastifyHealthcheck from 'fastify-healthcheck';
 import { getConfig } from './config';
-import { Config, Client, Request, Operations, HttpClient } from './types';
 import { dispatch } from './dispatch';
 import * as operations from './operations';
+import { Client, Config, HttpClient, Operations, Request } from './types';
 
 const fastify = Fastify({ logger: true });
 

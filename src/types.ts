@@ -6,13 +6,13 @@ import { Consent } from '@aidbox/sdk-r4/types/hl7-fhir-r4-core/Consent';
 import { DeviceUseStatement } from '@aidbox/sdk-r4/types/hl7-fhir-r4-core/DeviceUseStatement';
 import { DiagnosticReport } from '@aidbox/sdk-r4/types/hl7-fhir-r4-core/DiagnosticReport';
 import { Flag } from '@aidbox/sdk-r4/types/hl7-fhir-r4-core/Flag';
+import { ImagingStudy } from '@aidbox/sdk-r4/types/hl7-fhir-r4-core/ImagingStudy';
 import { Immunization } from '@aidbox/sdk-r4/types/hl7-fhir-r4-core/Immunization';
 import { Medication } from '@aidbox/sdk-r4/types/hl7-fhir-r4-core/Medication';
 import { MedicationRequest } from '@aidbox/sdk-r4/types/hl7-fhir-r4-core/MedicationRequest';
 import { MedicationStatement } from '@aidbox/sdk-r4/types/hl7-fhir-r4-core/MedicationStatement';
 import { Observation } from '@aidbox/sdk-r4/types/hl7-fhir-r4-core/Observation';
 import { Procedure } from '@aidbox/sdk-r4/types/hl7-fhir-r4-core/Procedure';
-import { ImagingStudy } from '@aidbox/sdk-r4/types/hl7-fhir-r4-core/ImagingStudy';
 import { FastifyReply, FastifyRequest } from 'fastify';
 type BasicAuthorization = {
   method: 'basic';
@@ -67,6 +67,7 @@ export type AppResourceOperation = {
 
 export type Operations = Record<string, Operation>;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export type Operation<T extends Request = any, U = any> = AppResourceOperation & {
   handlerFn: (request: Request, reply: FastifyReply) => Promise<any>;
 };

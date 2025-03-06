@@ -14,6 +14,7 @@ export default tseslint.config(
   {
     rules: {
       'sort/object-properties': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
     },
   },
 );

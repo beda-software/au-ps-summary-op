@@ -1,26 +1,33 @@
-import { randomUUID } from 'node:crypto';
-import assert from 'node:assert';
+import { Bundle, Patient } from '@aidbox/sdk-r4/types';
+import { isSuccess } from '@beda.software/remote-data';
 import { FastifyReply } from 'fastify';
-import { Request } from './types';
+import assert from 'node:assert';
+import { randomUUID } from 'node:crypto';
 import {
-  generateSections,
-  createComposition,
   addFullUrl,
-  getResourcesFromRefs,
+  createComposition,
   createDevice,
   fetchSummaryResources,
+  generateSections,
+  getResourcesFromRefs,
 } from './ips';
-import { Patient, Bundle } from '@aidbox/sdk-r4/types';
+import { summurizeResources } from './services';
+import { Request } from './types';
 
 const getError = (error: any) => (error.response ? error.response : error);
 
-const generateSummary = async ({ http, appConfig }: Request, patient: Patient): Promise<Bundle> => {
+const generateSummary = async ({ appConfig, http }: Request, patient: Patient): Promise<Bundle> => {
   try {
     assert(patient.id, 'Patient Id is required');
     const patientId = patient.id;
     const resources = await fetchSummaryResources(http, patientId);
+    const response = await summurizeResources(resources.map(({ resource }) => resource));
 
-    const { sections, bundleData } = await generateSections(http, resources, appConfig.aidbox.url);
+    if (isSuccess(response)) {
+      console.log(JSON.stringify(response.data, undefined, 2));
+    }
+
+    const { bundleData, sections } = await generateSections(http, resources, appConfig.aidbox.url);
     const deviceUUID = randomUUID();
     const compositionUUID = randomUUID();
     const composition = createComposition(sections, patientId, compositionUUID, appConfig.aidbox.url, deviceUUID);
