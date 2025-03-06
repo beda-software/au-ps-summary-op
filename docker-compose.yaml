@@ -1,4 +1,3 @@
-version: "3.7"
 volumes:
   ips_pgdata:
     name: ips_pgdata
@@ -53,3 +52,8 @@ services:
       - .env
     volumes:
       - ./:/usr/src/app
+  scriber:
+    image: registry.beda.software/emr/ai-scribe:latest
+    environment:
+      - OPENAI_API_KEY
+      - FHIR_SERVER_URL=http://aidbox:8888
