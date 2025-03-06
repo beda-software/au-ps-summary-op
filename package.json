@@ -12,7 +12,8 @@
     "dev": "NODE_ENV=development nodemon",
     "start": "nodemon",
     "ci:test": "echo \"Error: no test specified\" ",
-    "build": "pnpm run clean && tsc -b --force"
+    "build": "pnpm run clean && tsc -b --force",
+    "prepare": "husky"
   },
   "author": "",
   "license": "ISC",
@@ -29,6 +30,8 @@
     "@types/node": "^18.17.5",
     "eslint": "^9.21.0",
     "eslint-plugin-import": "^2.31.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
     "nodemon": "^3.0.1",
     "prettier": "^3.5.3",
     "ts-node": "^10.9.1",
