@@ -1,7 +1,7 @@
-import { randomUUID } from "node:crypto";
-import assert from "node:assert";
-import { FastifyReply } from "fastify";
-import { Request } from "./types";
+import { randomUUID } from 'node:crypto';
+import assert from 'node:assert';
+import { FastifyReply } from 'fastify';
+import { Request } from './types';
 import {
   generateSections,
   createComposition,
@@ -9,34 +9,31 @@ import {
   getResourcesFromRefs,
   createDevice,
   fetchSummaryResources,
-} from "./ips.js";
-import { Patient } from "@aidbox/sdk-r4/types";
+} from './ips';
+import { Patient, Bundle } from '@aidbox/sdk-r4/types';
 
 const getError = (error: any) => (error.response ? error.response : error);
 
-const generateSummary = async ({ http, appConfig }: Request, patient: Patient) => {
+const generateSummary = async ({ http, appConfig }: Request, patient: Patient): Promise<Bundle> => {
   try {
-    assert(patient.id, "Patient Id is required");
+    assert(patient.id, 'Patient Id is required');
     const patientId = patient.id;
     const resources = await fetchSummaryResources(http, patientId);
 
-    
-
-    const { sections, bundleData } = await generateSections(http, patientId, appConfig.aidbox.url);
+    const { sections, bundleData } = await generateSections(http, resources, appConfig.aidbox.url);
     const deviceUUID = randomUUID();
     const compositionUUID = randomUUID();
-    const composition = createComposition(sections, patientId, compositionUUID,
-                                          appConfig.aidbox.url, deviceUUID);
+    const composition = createComposition(sections, patientId, compositionUUID, appConfig.aidbox.url, deviceUUID);
     const refResources = await getResourcesFromRefs(http, bundleData);
 
     return {
-      resourceType: "Bundle",
-      type: "document",
+      resourceType: 'Bundle',
+      type: 'document',
       timestamp: new Date().toISOString(),
       meta: {
-        profile: ["http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"],
+        profile: ['http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle'],
       },
-      identifier: { system: "urn:oid:2.16.724.4.8.10.200.10", value: randomUUID() },
+      identifier: { system: 'urn:oid:2.16.724.4.8.10.200.10', value: randomUUID() },
       entry: [
         {
           fullUrl: `urn:uuid:${compositionUUID}`,
@@ -60,15 +57,15 @@ const generateSummary = async ({ http, appConfig }: Request, patient: Patient) =
 };
 
 export const patientSummary = {
-  method: "GET",
-  fhirCode: "summary",
-  fhirUrl: "http://hl7.org/fhir/uv/ips/OperationDefinition/summary",
-  fhirResource: ["Patient"],
-  path: ["fhir", "Patient", { name: "id" }, "$summary"],
+  method: 'GET',
+  fhirCode: 'summary',
+  fhirUrl: 'http://hl7.org/fhir/uv/ips/OperationDefinition/summary',
+  fhirResource: ['Patient'],
+  path: ['fhir', 'Patient', { name: 'id' }, '$summary'],
   handlerFn: async (req: Request, reply: FastifyReply) => {
     try {
-      const patientId: string = req.body?.request?.["route-params"].id;
-      const patient = await req.aidboxClient.resource.get("Patient", patientId);
+      const patientId: string = req.body?.request?.['route-params'].id;
+      const patient = await req.aidboxClient.resource.get('Patient', patientId);
       const summary = await generateSummary(req, patient);
       return reply.send(summary);
     } catch (error: any) {
@@ -79,32 +76,30 @@ export const patientSummary = {
 };
 
 export const patientSummarySearch = {
-  method: "GET",
-  fhirCode: "summary",
-  fhirUrl: "http://hl7.org/fhir/uv/ips/OperationDefinition/summary",
-  fhirResource: ["Patient"],
-  path: ["fhir", "Patient", "$summary"],
+  method: 'GET',
+  fhirCode: 'summary',
+  fhirUrl: 'http://hl7.org/fhir/uv/ips/OperationDefinition/summary',
+  fhirResource: ['Patient'],
+  path: ['fhir', 'Patient', '$summary'],
   handlerFn: async (req: Request, reply: FastifyReply) => {
     try {
       const patientIdentifier = req.body?.request?.params?.identifier;
 
       if (!patientIdentifier) {
         return reply.code(400).send({
-          resourceType: "OperationOutcome",
+          resourceType: 'OperationOutcome',
           text: "Search parameter 'identifier' is required",
         });
       }
 
-      const data = await req.aidboxClient.resource
-        .list("Patient")
-        .where("identifier", patientIdentifier);
+      const data = await req.aidboxClient.resource.list('Patient').where('identifier', patientIdentifier);
 
       if (!data.entry || data.total == 0) {
         return reply.code(404).send({
-          resourceType: "OperationOutcome",
-          id: "NotFound",
+          resourceType: 'OperationOutcome',
+          id: 'NotFound',
           text: {
-            status: "generated",
+            status: 'generated',
             div: `Resource Patient?identifier=${patientIdentifier} not found`,
           },
         });

@@ -28,7 +28,9 @@
   "devDependencies": {
     "@eslint/js": "^9.21.0",
     "@types/node": "^18.17.5",
+    "@typescript-eslint/parser": "^8.26.0",
     "eslint": "^9.21.0",
+    "eslint-import-resolver-typescript": "^3.8.3",
     "eslint-plugin-import": "^2.31.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.3",
