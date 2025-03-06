@@ -49,6 +49,7 @@ export interface Config {
     callbackUrl: string;
     secret: string;
     id: string;
+    scriberUrl?: string;
   };
   aidbox: {
     url: string;
@@ -66,12 +67,14 @@ export type AppResourceOperation = {
 
 export type Operations = Record<string, Operation>;
 
-export type Operation<T extends Request = any, U = any> = AppResourceOperation & {
+export type Operation<
+  T extends Request = any,
+  U = any,
+> = AppResourceOperation & {
   handlerFn: (request: Request, reply: FastifyReply) => Promise<any>;
 };
 
-export type PatientData = Array<{
-  resource:
+export type PatientDataResource =
   | Condition
   | AllergyIntolerance
   | Medication
@@ -85,12 +88,17 @@ export type PatientData = Array<{
   | CarePlan
   | Consent
   | ImagingStudy
-  | Flag
-  ;
-}>;
+  | Flag;
+
+export type PatientData = Array<{ resource: PatientDataResource }>;
 
 export type SimpleNarrativeEntry = Array<{
-  resource: Condition | AllergyIntolerance | Medication | Immunization | Observation;
+  resource:
+    | Condition
+    | AllergyIntolerance
+    | Medication
+    | Immunization
+    | Observation;
 }>;
 
 export type SectionName =
