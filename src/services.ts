@@ -19,7 +19,8 @@ export async function summurizeResources(resources: PatientRelatedResource[]) {
 export async function aiSummurizeResource(resource: PatientRelatedResource) {
   const config = getConfig();
   if (config.app.aiScriberUrl) {
-    return await serviceFetch<SummurizeResourceResult>(config.app.aiScriberUrl, {
+    const url = new URL('summarize_resource', config.app.aiScriberUrl);
+    return await serviceFetch<SummurizeResourceResult>(url, {
       body: JSON.stringify(resource),
       method: 'POST',
     });
