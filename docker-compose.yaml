@@ -1,4 +1,3 @@
-version: "3.7"
 volumes:
   ips_pgdata:
     name: ips_pgdata
