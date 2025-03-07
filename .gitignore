@@ -8,3 +8,5 @@ pgdata
 .DS_STORE
 zenproject/seeds.ndjson.gz
 zenproject/zen-packages/
+.clj-kondo
+.lsp

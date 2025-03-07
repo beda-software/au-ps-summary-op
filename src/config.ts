@@ -1,6 +1,6 @@
 import path from "node:path";
 import dotenv from "dotenv";
-import { object, safeParse, string, transform, url, ValiError } from "valibot";
+import { object, optional, safeParse, string, transform, url, ValiError } from "valibot";
 
 import { Config } from "./types";
 
@@ -23,6 +23,7 @@ const envSchema = object({
   APP_URL: string([url()]),
   APP_CALLBACK_URL: string(),
   APP_ID: string(),
+  AI_SCRIBER_URL: optional(string())
 });
 
 const prettifyError = (issues: ValiError["issues"]) => {
@@ -48,6 +49,7 @@ export const getConfig = (): Config => {
         callbackUrl: result.APP_CALLBACK_URL,
         secret: result.APP_SECRET,
         id: result.APP_ID,
+        scriberUrl: result.AI_SCRIBER_URL,
       },
       aidbox: {
         url: result.AIDBOX_BASE_URL,

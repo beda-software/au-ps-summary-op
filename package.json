@@ -18,6 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "@aidbox/sdk-r4": "^1.0.12",
+    "@beda.software/remote-data": "^1.1.3",
     "dotenv": "^16.3.1",
     "fastify": "^4.21.0",
     "fastify-healthcheck": "^4.4.0",
@@ -31,5 +32,5 @@
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6"
   },
-  "packageManager": "pnpm@9.1.0+sha512.67f5879916a9293e5cf059c23853d571beaf4f753c707f40cb22bed5fb1578c6aad3b6c4107ccb3ba0b35be003eb621a16471ac836c87beb53f9d54bb4612724"
+  "packageManager": "pnpm@10.5.2+sha512.da9dc28cd3ff40d0592188235ab25d3202add8a207afbedc682220e4a0029ffbff4562102b9e6e46b4e3f9e8bd53e6d05de48544b0c57d4b0179e22c76d1199b"
 }

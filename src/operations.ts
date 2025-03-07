@@ -8,20 +8,55 @@ import {
   addFullUrl,
   getResourcesFromRefs,
   createDevice,
+  fetchSummaryResources,
 } from "./ips.js";
 import { Patient } from "@aidbox/sdk-r4/types";
+import { generateTotalSummary, summurizeResources } from "./services.js";
+import { isSuccess } from "@beda.software/remote-data";
 
 const getError = (error: any) => (error.response ? error.response : error);
 
-const generateSummary = async ({ http, appConfig }: Request, patient: Patient) => {
+const generateSummary = async (
+  { http, appConfig }: Request,
+  patient: Patient
+) => {
   try {
     assert(patient.id, "Patient Id is required");
     const patientId = patient.id;
-    const { sections, bundleData }: any = await generateSections(http, patientId, appConfig.aidbox.url);
+    let resources = await fetchSummaryResources(http, patientId);
+    let totalSummary: string | undefined;
+    if (appConfig.app.scriberUrl) {
+      const summurizeResponse = await summurizeResources(
+        appConfig.app.scriberUrl,
+        resources
+      );
+
+      if (isSuccess(summurizeResponse)) {
+        resources = summurizeResponse.data;
+        const totalSummaryResponse = await generateTotalSummary(
+          appConfig.app.scriberUrl,
+          resources
+        );
+        if (isSuccess(totalSummaryResponse)) {
+          totalSummary = totalSummaryResponse.data.summary;
+        }
+      }
+    }
+    const { sections, bundleData }: any = await generateSections(
+      http,
+      appConfig,
+      resources
+    );
     const deviceUUID = randomUUID();
     const compositionUUID = randomUUID();
-    const composition = createComposition(sections, patientId, compositionUUID,
-                                          appConfig.aidbox.url, deviceUUID);
+    const composition = createComposition(
+      sections,
+      patientId,
+      compositionUUID,
+      appConfig.aidbox.url,
+      deviceUUID,
+      totalSummary
+    );
     const refResources = await getResourcesFromRefs(http, bundleData);
 
     return {
@@ -31,7 +66,10 @@ const generateSummary = async ({ http, appConfig }: Request, patient: Patient) =
       meta: {
         profile: ["http://hl7.org.au/fhir/ps/StructureDefinition/au-ps-bundle"],
       },
-      identifier: { system: "urn:oid:2.16.724.4.8.10.200.10", value: randomUUID() },
+      identifier: {
+        system: "urn:oid:2.16.724.4.8.10.200.10",
+        value: randomUUID(),
+      },
       entry: [
         {
           fullUrl: `urn:uuid:${compositionUUID}`,
