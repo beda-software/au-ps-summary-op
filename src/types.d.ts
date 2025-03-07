@@ -90,7 +90,7 @@ export type PatientDataResource =
   | ImagingStudy
   | Flag;
 
-export type PatientData = Array<{ resource: PatientDataResource }>;
+export type PatientData = Array<{ resource: PatientDataResource, summary?: string }>;
 
 export type SimpleNarrativeEntry = Array<{
   resource:
@@ -168,7 +168,7 @@ export type IpsProfile =
   | "http://hl7.org/fhir/StructureDefinition/vitalsigns"
   | "http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips";
 export type SectionToGenerateFuncMap = {
-  [K in SectionName]?: any;
+  [K in SectionName]?: (data: PatientData, client: HttpClient, config: Config) => Promise<any>;
 };
 
 export type BundleEntry = Array<{

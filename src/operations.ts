@@ -8,8 +8,11 @@ import {
   addFullUrl,
   getResourcesFromRefs,
   createDevice,
+  fetchSummaryResources,
 } from "./ips.js";
 import { Patient } from "@aidbox/sdk-r4/types";
+import { summurizeResources } from "./services.js";
+import { isSuccess } from "@beda.software/remote-data";
 
 const getError = (error: any) => (error.response ? error.response : error);
 
@@ -17,7 +20,16 @@ const generateSummary = async ({ http, appConfig }: Request, patient: Patient) =
   try {
     assert(patient.id, "Patient Id is required");
     const patientId = patient.id;
-    const { sections, bundleData }: any = await generateSections(http, patientId, appConfig.aidbox.url);
+    let resources = await fetchSummaryResources(http, patientId);
+    if (appConfig.app.scriberUrl) {
+      const summurizeResponse = await summurizeResources(appConfig.app.scriberUrl, resources)
+
+      if (isSuccess(summurizeResponse)) {
+        resources = summurizeResponse.data
+      }
+    }
+    // console.log('RESOURCES', JSON.stringify(resources))
+    const { sections, bundleData }: any = await generateSections(http, appConfig, resources);
     const deviceUUID = randomUUID();
     const compositionUUID = randomUUID();
     const composition = createComposition(sections, patientId, compositionUUID,

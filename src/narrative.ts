@@ -66,7 +66,14 @@ export const generateCompositionNarrative = ({
     .replace("{{compositionEventDate}}", eventDate),
 });
 
-export const generateSimpleNarrative = (resources: SimpleNarrativeEntry) => {
+export const generateSimpleNarrative = (resources: SimpleNarrativeEntry, preparedSummary?: string) => {
+  if (preparedSummary) {
+    return {
+      status: "generated",
+      div: preparedSummary
+    }
+  }
+
   const info = resources.reduce((acc: string[], { resource }) => {
     const display =
       resource.resourceType === "Immunization"
