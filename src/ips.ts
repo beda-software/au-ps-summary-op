@@ -13,11 +13,12 @@ import {
   SectionToGenerateFuncMap,
   SimpleNarrativeEntry,
 } from "./types";
-import { DomainResource } from "@aidbox/sdk-r4/types/index.js";
+import { DomainResource, Narrative } from "@aidbox/sdk-r4/types/index.js";
 import Fastify from "fastify";
 import { ClinicalImpressionStatus } from "@aidbox/sdk-r4/types/hl7-fhir-r4-core/ClinicalImpression.js";
-import { generateTotalSummary, summurizeResources } from "./services.js";
+import { generateTotalSummary } from "./services.js";
 import { isSuccess } from "@beda.software/remote-data";
+import { CompositionSection } from "@aidbox/sdk-r4/types/hl7-fhir-r4-core/Composition.js";
 
 export const createDevice = () => {
   return {
@@ -267,22 +268,7 @@ const generateProblemListSection = async (
     sectionProfiles.ProblemList
   );
 
-  // console.log("validConditions", JSON.stringify(validConditions));
-
-  let sectionSummary: string | undefined;
-  if (config.app.scriberUrl) {
-    const totalSummaryResponse = await generateTotalSummary(
-      config.app.scriberUrl,
-      validConditions
-    );
-    console.log("totalSummaryResponse", JSON.stringify(totalSummaryResponse));
-    if (isSuccess(totalSummaryResponse)) {
-      sectionSummary = totalSummaryResponse.data.summary;
-    }
-  }
-
-
-  const section = {
+  const sectionData: Partial<CompositionSection> = {
     title: "Problems",
     code: {
       coding: [
@@ -293,13 +279,9 @@ const generateProblemListSection = async (
         },
       ],
     },
-    text: generateSimpleNarrative(
-      validConditions as SimpleNarrativeEntry,
-      sectionSummary
-    ),
-    ...addEntry(validConditions, config.aidbox.url),
-    ...addEmptyReason(validConditions),
   };
+
+  const section = await prepareSection(validConditions, sectionData, config);
 
   return section;
 };
@@ -314,7 +296,7 @@ const generateAllergyIntoleranceSection = async (
     sectionProfiles.AllergyIntolerance
   );
 
-  const section = {
+  const sectionData: Partial<CompositionSection> = {
     title: "Allergies and Intolerances",
     code: {
       coding: [
@@ -325,10 +307,9 @@ const generateAllergyIntoleranceSection = async (
         },
       ],
     },
-    text: generateSimpleNarrative(validAllergies as SimpleNarrativeEntry),
-    ...addEntry(validAllergies, config.aidbox.url),
-    ...addEmptyReason(validAllergies),
   };
+
+  const section = prepareSection(validAllergies, sectionData, config);
 
   return section;
 };
@@ -343,7 +324,7 @@ const generateMedicationSummarySection = async (
     sectionProfiles.MedicationSummary
   );
 
-  const section = {
+  const sectionData: Partial<CompositionSection> = {
     title: "Medication Summary",
     code: {
       coding: [
@@ -354,10 +335,9 @@ const generateMedicationSummarySection = async (
         },
       ],
     },
-    text: generateSimpleNarrative(validMedications as SimpleNarrativeEntry),
-    ...addEntry(validMedications, config.aidbox.url),
-    ...addEmptyReason(validMedications),
   };
+
+  const section = prepareSection(validMedications, sectionData, config);
 
   return section;
 };
@@ -373,7 +353,7 @@ const generateImmunizationsSection = async (
     sectionProfiles.Immunizations
   );
 
-  const section = {
+  const sectionData: Partial<CompositionSection> = {
     title: "Immunizations",
     code: {
       coding: [
@@ -384,10 +364,11 @@ const generateImmunizationsSection = async (
         },
       ],
     },
-    text: generateSimpleNarrative(validImmunizations as SimpleNarrativeEntry),
   };
 
-  return buildSection(section, validImmunizations, config.aidbox.url);
+  const section = prepareSection(validImmunizations, sectionData, config);
+
+  return section;
 };
 
 const generateHistoryOfPregnancySection = async (
@@ -400,7 +381,7 @@ const generateHistoryOfPregnancySection = async (
     sectionProfiles.HistoryOfPregnancy
   );
 
-  const section = {
+  const sectionData: Partial<CompositionSection> = {
     title: "History of pregnancy",
     code: {
       coding: [
@@ -411,10 +392,11 @@ const generateHistoryOfPregnancySection = async (
         },
       ],
     },
-    text: generateSimpleNarrative(validObservations as SimpleNarrativeEntry),
   };
 
-  return buildSection(section, validObservations, config.aidbox.url);
+  const section = prepareSection(validObservations, sectionData, config);
+
+  return section;
 };
 
 // ----- Optional sections -----
@@ -453,6 +435,34 @@ const emptyHandler = async (
   client: HttpClient,
   config: Config
 ) => {};
+
+const prepareSection = async (
+  relevantPatientData: PatientData,
+  sectionData: Partial<CompositionSection>,
+  config: Config
+): Promise<CompositionSection> => {
+  let sectionSummary: string | undefined;
+  if (config.app.scriberUrl) {
+    const totalSummaryResponse = await generateTotalSummary(
+      config.app.scriberUrl,
+      relevantPatientData
+    );
+
+    if (isSuccess(totalSummaryResponse)) {
+      sectionSummary = totalSummaryResponse.data.summary;
+    }
+  }
+
+  return {
+    text: generateSimpleNarrative(
+      relevantPatientData as SimpleNarrativeEntry,
+      sectionSummary
+    ),
+    ...addEntry(relevantPatientData, config.aidbox.url),
+    ...addEmptyReason(relevantPatientData),
+    ...sectionData,
+  };
+};
 
 const sectionToGenerateFuncMap: SectionToGenerateFuncMap = {
   ProblemList: generateProblemListSection,
@@ -598,14 +608,13 @@ export const generateSections = async (
   resources: PatientData
 ) => {
   const { patientData } = await filterResourcesByProfiles(http, resources);
-  // console.log('patientData', JSON.stringify(patientData))
 
   const sections = [];
   for (const item of sectionNames) {
     const sectionHandler = sectionToGenerateFuncMap[item];
     if (sectionHandler) {
       const section = await sectionHandler(patientData, http, config);
-      if (section !== undefined) {
+      if (section) {
         sections.push(section);
       }
     }
@@ -701,7 +710,8 @@ export const createComposition = (
   patientId: string,
   compositionUUID: string,
   aidboxUrl: string,
-  deviceUUID: string
+  deviceUUID: string,
+  preparedSummary?: string
 ) => {
   const now = new Date();
 
@@ -752,13 +762,19 @@ export const createComposition = (
     section: sections,
   };
 
+  const preparedNarrative: Narrative | undefined = preparedSummary
+    ? { status: "generated", div: preparedSummary }
+    : undefined;
+
   return {
     ...composition,
-    text: generateCompositionNarrative({
-      id: compositionUUID,
-      status: composition.status,
-      title: composition.title,
-      eventDate: composition.event[0].period.end,
-    }),
+    text: preparedNarrative
+      ? preparedNarrative
+      : generateCompositionNarrative({
+          id: compositionUUID,
+          status: composition.status,
+          title: composition.title,
+          eventDate: composition.event[0].period.end,
+        }),
   };
 };

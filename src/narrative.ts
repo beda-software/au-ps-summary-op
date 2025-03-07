@@ -1,3 +1,4 @@
+import { Narrative } from "@aidbox/sdk-r4/types";
 import { SimpleNarrativeEntry } from "./types";
 
 const compositionNarrativeTemplate = `<div xmlns="http://www.w3.org/1999/xhtml">
@@ -66,7 +67,7 @@ export const generateCompositionNarrative = ({
     .replace("{{compositionEventDate}}", eventDate),
 });
 
-export const generateSimpleNarrative = (resources: SimpleNarrativeEntry, preparedSummary?: string) => {
+export const generateSimpleNarrative = (resources: SimpleNarrativeEntry, preparedSummary?: string): Narrative => {
   if (preparedSummary) {
     return {
       status: "generated",
