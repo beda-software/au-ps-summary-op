@@ -16,3 +16,16 @@ export function filterSummaryByKeys(
   }
   return filteredSummary;
 }
+
+export function formatSummary(summary: StructuredSummary) {
+    let formattedSummary = ''
+    for (const [key, value] of Object.entries(summary)) {
+        if (formattedSummary.length > 0) {
+            formattedSummary = formattedSummary.concat('\n', `${key}: ${value}`)
+        } else {
+            formattedSummary = `${key}: ${value}`
+        }
+    }
+
+    return formattedSummary
+}

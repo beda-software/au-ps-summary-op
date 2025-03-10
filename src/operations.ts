@@ -11,8 +11,13 @@ import {
   fetchSummaryResources,
 } from "./ips.js";
 import { Patient } from "@aidbox/sdk-r4/types";
-import { generateTotalSummary, summurizeResources } from "./services.js";
+import {
+  generateTotalSummary,
+  StructuredSummary,
+  summurizeResources,
+} from "./services.js";
 import { isSuccess } from "@beda.software/remote-data";
+import { formatSummary } from "./utils.js";
 
 const getError = (error: any) => (error.response ? error.response : error);
 
@@ -38,7 +43,10 @@ const generateSummary = async (
           resources
         );
         if (isSuccess(totalSummaryResponse)) {
-          totalSummary = totalSummaryResponse.data.summary;
+          const parsedData: StructuredSummary = JSON.parse(
+            totalSummaryResponse.data.summary
+          );
+          totalSummary = formatSummary(parsedData);
         }
       }
     }
