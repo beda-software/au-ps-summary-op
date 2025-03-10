@@ -613,14 +613,14 @@ export const generateSections = async (
   for (const item of sectionNames) {
     const sectionHandler = sectionToGenerateFuncMap[item];
     if (sectionHandler) {
-      const section = await sectionHandler(patientData, http, config);
+      const section = sectionHandler(patientData, http, config);
       if (section) {
         sections.push(section);
       }
     }
   }
 
-  return { sections, bundleData: patientData };
+  return { sections: await Promise.all(sections), bundleData: patientData };
 };
 
 const getRefs = (data: Array<{ reference: string }>) =>
