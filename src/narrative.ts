@@ -1,3 +1,4 @@
+import { Narrative } from "@aidbox/sdk-r4/types";
 import { SimpleNarrativeEntry } from "./types";
 
 const compositionNarrativeTemplate = `<div xmlns="http://www.w3.org/1999/xhtml">
@@ -45,7 +46,7 @@ const compositionNarrativeTemplate = `<div xmlns="http://www.w3.org/1999/xhtml">
 </div>`;
 
 const simpleNarrativeTemplate = `<div xmlns=\"http://www.w3.org/1999/xhtml\">{{info}}</div>`;
-const simpleNoInfoNarrativeTemplate = `<div xmlns='http://www.w3.org/1999/xhtml'>There is no information available about the subject's health problems or disabilities.</div>`;
+const simpleNoInfoNarrativeTemplate = "There is no information available about the subject's health problems or disabilities";
 
 export const generateCompositionNarrative = ({
   id,
@@ -66,7 +67,14 @@ export const generateCompositionNarrative = ({
     .replace("{{compositionEventDate}}", eventDate),
 });
 
-export const generateSimpleNarrative = (resources: SimpleNarrativeEntry) => {
+export const generateSimpleNarrative = (resources: SimpleNarrativeEntry, preparedSummary?: string): Narrative => {
+  if (preparedSummary) {
+    return {
+      status: "generated",
+      div: preparedSummary
+    }
+  }
+
   const info = resources.reduce((acc: string[], { resource }) => {
     const display =
       resource.resourceType === "Immunization"

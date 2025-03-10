@@ -1,11 +1,9 @@
-version: "3.7"
 volumes:
   ips_pgdata:
     name: ips_pgdata
 services:
   aidbox-db:
     image: healthsamurai/aidboxdb:16.1
-    pull_policy: always
     ports:
       - "${PGHOSTPORT}:5432"
     volumes:
@@ -17,7 +15,6 @@ services:
 
   aidbox:
     image: healthsamurai/aidboxone:edge
-    pull_policy: always
     depends_on: ["aidbox-db"]
     ports:
       - "${AIDBOX_PORT}:${AIDBOX_PORT}"
@@ -25,21 +22,29 @@ services:
       - .env
     volumes:
       - ./zenproject:/zenproject
+    healthcheck:
+      test: curl --fail http://localhost:8888/health || exit 1
+      interval: 5s
+      timeout: 30s
+      retries: 50
 
   seed:
     image: ghcr.io/beda-software/fhir_seeder:2097655dada8044ed942a3167d26f136456660a7
     env_file:
       - .env
     volumes:
-      - ./resources/seeds:/app/data
+      - ./resources/examples/everything-banks-jeramy-ezra.json:/app/data/everything-banks-jeramy-ezra.json
     command:
       - seed
-      - "--server=${AIDBOX_BASE_URL}"
-      - "--source=/app/data"
-      - "--type=seeds"
+      - "--server=${AIDBOX_BASE_URL}/fhir"
+      - "--source=/app/data/everything-banks-jeramy-ezra.json"
+      - "--type=bundle"
+      - "--attempts=10"
       - "--username=${AIDBOX_CLIENT_ID}"
       - "--password=${AIDBOX_CLIENT_SECRET}"
-
+    depends_on:
+      aidbox:
+        condition: service_healthy
   node-app:
     hostname: node-app
     build:
@@ -53,3 +58,14 @@ services:
       - .env
     volumes:
       - ./:/usr/src/app
+    depends_on:
+      aidbox:
+        condition: service_healthy
+  scriber:
+    image: registry.beda.software/emr/ai-scribe:latest
+    environment:
+      - OPENAI_API_KEY
+      - FHIR_SERVER_URL=http://aidbox:8888
+    depends_on:
+      aidbox:
+        condition: service_healthy
