@@ -16,9 +16,10 @@ import {
 import { DomainResource, Narrative } from "@aidbox/sdk-r4/types/index.js";
 import Fastify from "fastify";
 import { ClinicalImpressionStatus } from "@aidbox/sdk-r4/types/hl7-fhir-r4-core/ClinicalImpression.js";
-import { generateTotalSummary } from "./services.js";
+import { generateTotalSummary, StructuredSummary } from "./services.js";
 import { isSuccess } from "@beda.software/remote-data";
 import { CompositionSection } from "@aidbox/sdk-r4/types/hl7-fhir-r4-core/Composition.js";
+import { filterSummaryByKeys } from "./utils.js";
 
 export const createDevice = () => {
   return {
@@ -281,7 +282,12 @@ const generateProblemListSection = async (
     },
   };
 
-  const section = await prepareSection(validConditions, sectionData, config);
+  const section = prepareSection(
+    validConditions,
+    sectionData,
+    config,
+    "ProblemList"
+  );
 
   return section;
 };
@@ -309,7 +315,12 @@ const generateAllergyIntoleranceSection = async (
     },
   };
 
-  const section = prepareSection(validAllergies, sectionData, config);
+  const section = prepareSection(
+    validAllergies,
+    sectionData,
+    config,
+    "AllergyIntolerance"
+  );
 
   return section;
 };
@@ -337,7 +348,12 @@ const generateMedicationSummarySection = async (
     },
   };
 
-  const section = prepareSection(validMedications, sectionData, config);
+  const section = prepareSection(
+    validMedications,
+    sectionData,
+    config,
+    "MedicationSummary"
+  );
 
   return section;
 };
@@ -366,7 +382,12 @@ const generateImmunizationsSection = async (
     },
   };
 
-  const section = prepareSection(validImmunizations, sectionData, config);
+  const section = prepareSection(
+    validImmunizations,
+    sectionData,
+    config,
+    "Immunizations"
+  );
 
   return section;
 };
@@ -394,7 +415,12 @@ const generateHistoryOfPregnancySection = async (
     },
   };
 
-  const section = prepareSection(validObservations, sectionData, config);
+  const section = prepareSection(
+    validObservations,
+    sectionData,
+    config,
+    "HistoryOfPregnancy"
+  );
 
   return section;
 };
@@ -436,10 +462,45 @@ const emptyHandler = async (
   config: Config
 ) => {};
 
+export type SectionNameStructuredSummaryKies = {
+  [key in SectionName]: Array<keyof StructuredSummary>;
+};
+
+export const sectionNameStructuredSuumaryRelatedKeys: SectionNameStructuredSummaryKies =
+  {
+    AllergyIntolerance: ["allergies"],
+    CarePlans: ["care_plan"],
+    ClinicalImpressions: [],
+    Consents: [],
+    DeviceUseStatements: [],
+    Devices: [],
+    DiagnosticReports: ["recent_lab_results"],
+    DocumentReferences: [],
+    Encounters: ["encounters"],
+    Flags: [],
+    HistoryOfPregnancy: ["recent_lab_results", "vital_signs"],
+    ImagingStudies: [],
+    Immunizations: ["immunizations"],
+    MedicationSummary: ["medications"],
+    ObservationAlcoholUse: [],
+    ObservationLabPath: [],
+    ObservationPregnancyEdd: [],
+    ObservationPregnancyOutcome: [],
+    ObservationPregnancyStatus: [],
+    ObservationResultRadiology: [],
+    ObservationTobaccoUse: [],
+    ObservationVitalSigns: ["vital_signs"],
+    ProblemList: ["problem_list"],
+    Procedures: ["procedures"],
+    RelatedPersons: [],
+    Specimens: [],
+  };
+
 const prepareSection = async (
   relevantPatientData: PatientData,
   sectionData: Partial<CompositionSection>,
-  config: Config
+  config: Config,
+  sectionName: SectionName
 ): Promise<CompositionSection> => {
   let sectionSummary: string | undefined;
   if (config.app.scriberUrl) {
@@ -449,7 +510,10 @@ const prepareSection = async (
     );
 
     if (isSuccess(totalSummaryResponse)) {
-      sectionSummary = totalSummaryResponse.data.summary;
+      const sectionSummaryRowData = totalSummaryResponse.data.summary;
+      const parsedData: StructuredSummary = JSON.parse(sectionSummaryRowData);
+      const relatedKeys = sectionNameStructuredSuumaryRelatedKeys[sectionName];
+      sectionSummary = filterSummaryByKeys(parsedData, relatedKeys);
     }
   }
 

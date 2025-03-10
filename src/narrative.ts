@@ -46,7 +46,7 @@ const compositionNarrativeTemplate = `<div xmlns="http://www.w3.org/1999/xhtml">
 </div>`;
 
 const simpleNarrativeTemplate = `<div xmlns=\"http://www.w3.org/1999/xhtml\">{{info}}</div>`;
-const simpleNoInfoNarrativeTemplate = `<div xmlns='http://www.w3.org/1999/xhtml'>There is no information available about the subject's health problems or disabilities.</div>`;
+const simpleNoInfoNarrativeTemplate = "There is no information available about the subject's health problems or disabilities";
 
 export const generateCompositionNarrative = ({
   id,

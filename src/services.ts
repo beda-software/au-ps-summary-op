@@ -17,6 +17,20 @@ export interface TotalSummaryResult {
   summary: string;
 }
 
+export interface StructuredSummary {
+  demographics: string;
+  problem_list: string;
+  past_medical_history: string;
+  medications: string;
+  allergies: string;
+  immunizations: string;
+  procedures: string;
+  vital_signs: string;
+  recent_lab_results: string;
+  encounters: string;
+  care_plan: string;
+}
+
 export async function summurizeResources(
   scriberBaseUrl: string,
   patientData: PatientData
@@ -35,6 +49,7 @@ export async function aiSummurizeResource(
   resource: PatientDataResource
 ) {
   const resp = await serviceFetch<SummurizeResourceResult>(summarizeUrl, {
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify(resource),
     method: "POST",
   });
@@ -59,6 +74,7 @@ export async function generateTotalSummary(
 
   const url = new URL("summarize", scriberBaseUrl);
   const resp = await serviceFetch<TotalSummaryResult>(url, {
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ purpose: "General Summary", data: sourceString }),
     method: "POST",
   });
